@@ -1,0 +1,38 @@
+{
+  "timestamp": 1792077360347,
+  "state": "open",
+  "stats": {
+    "high": 590.0,
+    "low": 445.0,
+    "price_change": -20.5357,
+    "volume": 10.31,
+    "volume_usd": 6069.24,
+    "volume_notional": 6070.45
+  },
+  "greeks": {
+    "delta": -0.12865,
+    "gamma": 3e-05,
+    "vega": 34.70798,
+    "theta": -50.51751,
+    "rho": -4.45636
+  },
+  "index_price": 82137.19,
+  "instrument_name": "BTC_USDC-30OCT26-75000-P",
+  "last_price": 445.0,
+  "settlement_price": 571.89923308,
+  "min_price": 30.0,
+  "max_price": 2100.0,
+  "open_interest": 36.6,
+  "mark_price": 472.02,
+  "interest_rate": 0.0,
+  "estimated_delivery_price": 82137.19,
+  "best_ask_price": 470.0,
+  "best_bid_price": 465.0,
+  "mark_iv": 42.78,
+  "bid_iv": 42.58,
+  "ask_iv": 42.72,
+  "underlying_price": 82356.33,
+  "underlying_index": "BTC_USDC-30OCT26",
+  "best_ask_amount": 21.89,
+  "best_bid_amount": 10.0
+}

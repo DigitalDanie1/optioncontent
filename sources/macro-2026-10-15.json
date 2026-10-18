@@ -1,0 +1,41 @@
+{
+  "as_of": "2026-10-15",
+  "facts": [
+    {
+      "name": "CPI y/y",
+      "value": 3.7,
+      "release": "2026-10-14"
+    },
+    {
+      "name": "CPI m/m",
+      "value": 0.6,
+      "release": "2026-10-14"
+    },
+    {
+      "name": "Core CPI y/y",
+      "value": 2.6,
+      "release": "2026-10-14"
+    },
+    {
+      "name": "Core CPI m/m",
+      "value": 0.3,
+      "release": "2026-10-14"
+    },
+    {
+      "name": "Final-demand PPI y/y",
+      "value": 6.3,
+      "release": "2026-10-15"
+    },
+    {
+      "name": "Final-demand PPI m/m",
+      "value": 1.3,
+      "release": "2026-10-15"
+    }
+  ],
+  "sources": [
+    "https://www.bls.gov/news.release/cpi.nr0.htm",
+    "https://www.bls.gov/news.release/ppi.nr0.htm"
+  ],
+  "interpretation": "Persistent inflation pressure could constrain easing expectations; test against rates, dollar and options repricing, rather than infer a mechanical price move.",
+  "invalidation": "Cooling energy pressure and stable core inflation/rates would weaken a blanket bearish reading."
+}

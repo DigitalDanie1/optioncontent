@@ -1,0 +1,35 @@
+{
+  "checked_at_utc": "2026-10-14T15:39:30.455358+00:00",
+  "rows": [
+    {
+      "symbolId": 588,
+      "symbol": "AEVOUSDT",
+      "baseCoin": "AEVO",
+      "quoteCoin": "USDT",
+      "innovation": "0",
+      "status": "Trading",
+      "marginTrading": "utaOnly",
+      "stTag": "0",
+      "lotSizeFilter": {
+        "basePrecision": "0.01",
+        "quotePrecision": "0.0000001",
+        "minOrderQty": "0.01",
+        "maxOrderQty": "2400000",
+        "minOrderAmt": "5",
+        "maxOrderAmt": "200000",
+        "maxLimitOrderQty": "2400000",
+        "maxMarketOrderQty": "480000",
+        "postOnlyMaxLimitOrderSize": "12000000"
+      },
+      "priceFilter": {
+        "tickSize": "0.00001"
+      },
+      "riskParameters": {
+        "priceLimitRatioX": "0.02",
+        "priceLimitRatioY": "0.05"
+      },
+      "symbolType": "",
+      "xstockMultiplier": "1"
+    }
+  ]
+}

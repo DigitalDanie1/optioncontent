@@ -1,0 +1,46 @@
+{
+  "checked_date_sgt": "2026-10-14",
+  "scope": "Most recent relevant item verified in accessible sources; not exhaustive X timeline collection. Older dates explicitly shown.",
+  "items": [
+    {
+      "project": "Derive",
+      "date": "2026-10-13",
+      "title": "kHYPE, 옵션 담보로 사용 가능",
+      "body": "스테이킹 보상을 유지하며 Derive V3에서 옵션 거래 담보로 활용. Ethereum 이전은 Chainlink CCIP를 사용합니다.",
+      "short": "스테이킹 보상을 받으면서<br>Derive V3 옵션 담보로 활용.",
+      "source": "Derive X 인용 · TradingView",
+      "url": "https://www.tradingview.com/news/coinmarketcal:e389f207c094b:0-kinetiq-khype-debuts-on-ethereum-with-derive-v3-13-oct-2026/",
+      "status": "공식 게시물 인용 보도"
+    },
+    {
+      "project": "Aevo",
+      "date": "2026-10-05",
+      "title": "100만 AEVO 추가 바이백·소각",
+      "body": "거래 수수료로 100만 AEVO를 매입·소각했다고 발표. 누적 소각은 7,800만 개, 총 공급량의 7.8%라고 밝혔습니다.",
+      "short": "수수료로 100만 AEVO 매입·소각.<br>프로젝트 발표 기준 누적 7,800만 개.",
+      "source": "Aevo Updates · Telegram",
+      "url": "https://t.me/aevoupdates/534",
+      "status": "프로젝트 채널 발표"
+    },
+    {
+      "project": "Thetanuts",
+      "date": "2026-10-13",
+      "title": "BTC·ETH 옵션 리포트 갱신",
+      "body": "Market Calendar가 만기별 거래 계약수와 옵션 수급을 정리했습니다. 리포트 갱신이며 새 제품 출시 발표는 아닙니다.",
+      "short": "만기별 거래 계약수·옵션 수급 정리.<br>리포트 갱신 · 새 제품 출시 발표 아님.",
+      "source": "Thetanuts Market Calendar",
+      "url": "https://calendar.thetanuts.finance/",
+      "status": "공식 도메인 리포트"
+    },
+    {
+      "project": "Hypercall",
+      "date": "2026-10-05",
+      "title": "LTC·DOGE 옵션 지원 추진",
+      "body": "Luxxfolio와 보유 LTC·DOGE의 커버드콜 프로그램을 제안. 비구속적 의향서 단계이며 옵션 지원·실행은 확정되지 않았습니다.",
+      "short": "Luxxfolio와 커버드콜 프로그램 제안.<br>비구속적 의향서 · 실행·출시 미확정.",
+      "source": "Hypercall 공식 블로그",
+      "url": "https://blog.hypercall.xyz/luxxfolio-litecoin-options-strategy/",
+      "status": "추진 단계 · 미출시"
+    }
+  ]
+}

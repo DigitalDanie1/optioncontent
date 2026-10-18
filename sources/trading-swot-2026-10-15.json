@@ -1,0 +1,68 @@
+{
+  "as_of_sgt": "2026-10-15T23:16:01.668000+08:00",
+  "purpose": "BTC spot downside hedge, conditional educational content; not personalized sizing",
+  "decision": "Wait now; consider a bear put spread only on a confirmed break below 80k and failed reclaim, subject to fresh pricing/liquidity and a predetermined loss budget.",
+  "reference_index": 82137.19,
+  "venue": "Deribit CEX linear USDC reference, not an onchain executable quote",
+  "long": {
+    "instrument": "BTC_USDC-30OCT26-80000-P",
+    "side": "BUY",
+    "price_type": "best_ask",
+    "premium_usdc_per_btc": 1380.0,
+    "size_at_best": 30.27,
+    "timestamp": 1792077361668
+  },
+  "short": {
+    "instrument": "BTC_USDC-30OCT26-75000-P",
+    "side": "SELL",
+    "price_type": "best_bid",
+    "premium_usdc_per_btc": 465.0,
+    "size_at_best": 10.0,
+    "timestamp": 1792077360347
+  },
+  "equivalent_btc": 1,
+  "settlement": "USDC",
+  "contract_size": 1.0,
+  "expiry": "2026-10-30T08:00:00+00:00",
+  "cost": 915.0,
+  "max_expiry_loss": 915.0,
+  "max_expiry_gain": 4085.0,
+  "expiry_breakeven": 79085.0,
+  "assumptions": [
+    "Two legs executed together at displayed ask/bid; not a combo order quote or fill",
+    "1 BTC equivalent; illustrative normalization, not size recommendation",
+    "Fees, slippage and margin requirements excluded",
+    "Entry conditions may change the prices: reprice before execution",
+    "Onchain strikes, expiry, settlement, liquidity and contract size must be independently checked"
+  ],
+  "swot": [
+    [
+      "S",
+      "강점",
+      "만기 손실을 순지급액으로 제한. 단독 풋 매수보다 초기 비용을 줄인 하방 헤지."
+    ],
+    [
+      "W",
+      "약점",
+      "프리미엄·시간가치 소모. $75k 아래에서는 추가 하락의 만기 이익이 더 늘지 않음."
+    ],
+    [
+      "O",
+      "기회",
+      "물가·정책 변수로 위험회피가 이어지고 $80k 하방 이탈이 확인될 때 헤지 검토."
+    ],
+    [
+      "T",
+      "위협",
+      "급반등·이벤트 진정·IV 하락. 두 다리의 불리한 체결·유동성 부족도 손익을 훼손."
+    ]
+  ],
+  "market_context_snapshot_sgt": "2026-10-15T16:35:48+08:00",
+  "sources": [
+    "https://opshnz.com/#/strategy",
+    "https://www.deribit.com/api/v2/public/ticker?instrument_name=BTC_USDC-30OCT26-80000-P",
+    "https://www.deribit.com/api/v2/public/ticker?instrument_name=BTC_USDC-30OCT26-75000-P",
+    "https://www.deribit.com/api/v2/public/get_instrument?instrument_name=BTC_USDC-30OCT26-80000-P",
+    "https://www.optionseducation.org/strategies/all-strategies/bear-put-spread"
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "source": "https://opshnz.com/#/strategy",
+  "snapshot_at": "2026-10-15T08:33:24.686Z",
+  "market_at_unix_ms": 1792053348206,
+  "market_label_sgt": "10/15 16:35 SGT",
+  "market_source": "OPSHNZ embedded Derivatives Monkey data",
+  "assets": {
+    "BTC": {
+      "spot": 81249.28759559586,
+      "iv7": 32.810461140473045,
+      "iv30": 37.1358948320826,
+      "rv": {
+        "value": 38.589817851338786,
+        "vrp": -1.4539230192561874,
+        "tag": "fair",
+        "tenor_days": 30
+      },
+      "ivPct": {
+        "percentile": 86.71548117154812,
+        "tag": "extreme"
+      },
+      "gamma": {
+        "value": 25066844.86653924,
+        "regime": "balanced"
+      },
+      "putWall": {
+        "strike": 80000,
+        "oi": 18331.46715813
+      },
+      "callWall": {
+        "strike": 90000,
+        "oi": 30822.65015437
+      }
+    },
+    "ETH": {
+      "spot": 2374.4834481414396,
+      "iv7": 45.19306553306639,
+      "iv30": 49.103634058378546,
+      "rv": {
+        "value": 50.5740681899236,
+        "vrp": -1.4704341315450549,
+        "tag": "fair",
+        "tenor_days": 30
+      },
+      "ivPct": {
+        "percentile": 77.62209407100379,
+        "tag": "extreme"
+      },
+      "gamma": {
+        "value": 3516669.930252366,
+        "regime": "balanced"
+      },
+      "putWall": {
+        "strike": 2400,
+        "oi": 71083.13116408726
+      },
+      "callWall": {
+        "strike": 2500,
+        "oi": 89458.494055
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "name": "베어 풋 스프레드",
+      "en": "Bear put spread",
+      "when": "하락 이탈 후 회복 실패",
+      "legs": "풋 매수 + 더 낮은 행사가 풋 매도",
+      "risk": "만기 최대 손실 = 순지급 프리미엄. 최대 이익 = 행사가 차이 − 프리미엄.",
+      "example": "기초자산 100 가정: 100 풋 매수 / 95 풋 매도, 비용 2 → 손익분기 98 · 최대 손실 2 · 최대 이익 3.",
+      "source": "https://www.optionseducation.org/strategies/all-strategies/bear-put-spread"
+    },
+    {
+      "name": "불 콜 스프레드",
+      "en": "Bull call spread",
+      "when": "상승 돌파 후 재확인",
+      "legs": "콜 매수 + 더 높은 행사가 콜 매도",
+      "risk": "만기 최대 손실 = 순지급 프리미엄. 최대 이익 = 행사가 차이 − 프리미엄.",
+      "example": "기초자산 100 가정: 100 콜 매수 / 105 콜 매도, 비용 2 → 손익분기 102 · 최대 손실 2 · 최대 이익 3.",
+      "source": "https://www.optionseducation.org/videolibrary/debit-and-credit-verticals"
+    },
+    {
+      "name": "아이언 콘도르",
+      "en": "Iron condor",
+      "when": "이벤트 후 횡보 확인",
+      "legs": "풋·콜 매도 + 양쪽 바깥 보호 옵션 매수",
+      "risk": "만기 최대 이익 = 순수취 프리미엄. 최대 손실 = 더 넓은 날개 폭 − 프리미엄.",
+      "example": "90 풋 매수 / 95 풋 매도 / 105 콜 매도 / 110 콜 매수, 수취 1 → 손익분기 94·106 · 최대 손실 4 · 최대 이익 1.",
+      "source": "https://www.optionseducation.org/strategies/all-strategies/short-condor"
+    },
+    {
+      "name": "롱 스트래들",
+      "en": "Long straddle",
+      "when": "방향보다 큰 변동 예상",
+      "legs": "같은 행사가의 콜·풋을 함께 매수",
+      "risk": "만기 최대 손실 = 두 옵션의 총 프리미엄. 시간가치 감소·IV 하락에 유의.",
+      "example": "행사가 100 가정: 콜 3 + 풋 3 지급 → 손익분기 94·106 · 최대 손실 6.",
+      "source": "https://www.optionseducation.org/strategies/all-strategies/long-straddle"
+    }
+  ],
+  "original_scenarios": [
+    {
+      "then": "Bear put spread · trade a confirmed breakdown",
+      "how": "A hawkish surprise is a trigger to reassess, not an automatic sell signal.",
+      "entry": "After the release, wait for price to break support and fail to reclaim it. Skip if price holds support or put premiums have already jumped beyond your budget.",
+      "legs": "Buy a put near spot; sell a lower-strike put near your downside target. Use equal size, the same underlying and expiry, typically 7–21 days out.",
+      "exit": "Close both legs near the lower strike, on a reclaim of broken support, or before expiry. A price stop is an exit plan, not a guaranteed fill.",
+      "risk": "Maximum expiry loss: net premium paid. Maximum expiry gain: strike gap minus premium.",
+      "example": "Illustration only: spot 100; buy 100 put / sell 95 put for a net 2. Expiry break-even 98; max loss 2; max gain 3.",
+      "source": "https://prd-web.optionseducation.org/strategies/all-strategies/bear-put-spread",
+      "if": "Hot CPI or a hawkish Fed"
+    },
+    {
+      "then": "Bull call spread · trade a confirmed breakout",
+      "how": "A rate cut can also signal weaker growth. Use the price reaction to confirm the bullish thesis.",
+      "entry": "Wait for price to break resistance and hold a retest. Skip a rejected breakout or a spread whose cost leaves too little upside to your target.",
+      "legs": "Buy a call near spot; sell a higher-strike call near your upside target. Use equal size, the same underlying and expiry, typically 7–21 days out.",
+      "exit": "Close both legs near the upper strike, if price loses the breakout level, or before expiry.",
+      "risk": "Maximum expiry loss: net premium paid. Maximum expiry gain: strike gap minus premium.",
+      "example": "Illustration only: spot 100; buy 100 call / sell 105 call for a net 2. Expiry break-even 102; max loss 2; max gain 3.",
+      "source": "https://www.optionseducation.org/videolibrary/debit-and-credit-verticals",
+      "if": "Soft data or a dovish Fed — and price confirms"
+    },
+    {
+      "then": "Iron condor · sell a range with capped risk",
+      "how": "Consider only while option premiums remain rich versus your expected movement. Selling after volatility has already collapsed misses that repricing.",
+      "entry": "After the release, mark the range and confirm it is holding. Skip an active breakout, thin quotes, or a credit too small for the risk.",
+      "legs": "Sell a put below the range and a call above it; buy a lower put and a higher call as protection. Use equal size, one underlying and one expiry, typically 7–14 days out.",
+      "exit": "Example rule: close all four legs when half the opening credit is captured, when the range breaks, or before expiry. This rule is illustrative, not backtested.",
+      "risk": "Maximum expiry gain: credit received. Maximum expiry loss: wider wing gap minus credit.",
+      "example": "Illustration only: buy 90 put / sell 95 put / sell 105 call / buy 110 call for a net 1 credit. Expiry break-evens 94 and 106; max loss 4; max gain 1.",
+      "source": "https://www.optionseducation.org/strategies/all-strategies/short-condor",
+      "if": "Event passes; price stays inside its range"
+    },
+    {
+      "then": "Long straddle · buy movement only if fairly priced",
+      "how": "A shock alone is not a reason to buy volatility. The remaining move must justify the price of both options.",
+      "entry": "Compare the combined premium with your expected remaining move. Skip if panic premiums already price in that move; staying flat is a valid decision.",
+      "legs": "Buy a call and a put at the same strike near spot, with equal size, the same underlying and expiry, typically 7–14 days out.",
+      "exit": "Close both legs when the expected move arrives, if the catalyst fades, or before expiry. Time decay and falling implied volatility can hurt even after a price move.",
+      "risk": "Maximum expiry loss: total premium paid. Upside gain is uncapped; downside gain is capped by the underlying reaching zero.",
+      "example": "Illustration only: strike 100; pay 3 for the call + 3 for the put. Expiry break-evens 94 and 106; max loss 6. Earlier profit depends on volatility and time remaining.",
+      "source": "https://prd-web.optionseducation.org/strategies/all-strategies/long-straddle",
+      "if": "More large moves expected; direction unclear"
+    }
+  ]
+}

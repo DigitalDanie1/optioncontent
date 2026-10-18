@@ -1,0 +1,10 @@
+{
+  "name": "defidaniel-optioncontent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Weekly onchain options content in Korean and English",
+  "type": "module",
+  "engines": {"node": ">=22"},
+  "scripts": {"render": "node scripts/render-posters.mjs", "check": "python3 scripts/check.py"},
+  "devDependencies": {"playwright": "1.62.1"}
+}

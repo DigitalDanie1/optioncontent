@@ -1,0 +1,39 @@
+{
+  "checked_at_utc": "2026-10-14T15:39:30.455358+00:00",
+  "method": "public spot market APIs; active status only; selected major exchanges, not exhaustive",
+  "primary_exchanges": [
+    "Binance",
+    "Coinbase",
+    "Kraken",
+    "Bybit"
+  ],
+  "additional_exchange": "Gate",
+  "exchanges": {
+    "Derive": [
+      "Coinbase",
+      "Kraken",
+      "Gate"
+    ],
+    "Aevo": [
+      "Binance",
+      "Bybit",
+      "Kraken",
+      "Gate"
+    ],
+    "Thetanuts": [
+      "Gate"
+    ],
+    "Hypercall": [
+      "Binance",
+      "Kraken",
+      "Gate"
+    ]
+  },
+  "notes": [
+    "SYN Coinbase SYN-USD is delisted / trading_disabled=true",
+    "Bybit queried spot list does not contain NUTS; historical article is not current listing proof",
+    "Hypercall uses SYN, not a new Hypercall token",
+    "DIME not found in checked active CEX markets",
+    "TUNE migration to Bitune: exclude from main options token picks; ITHACA identity not independently matched"
+  ]
+}

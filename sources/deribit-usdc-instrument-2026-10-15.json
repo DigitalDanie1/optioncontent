@@ -1,0 +1,38 @@
+{
+  "state": "open",
+  "price_index": "btc_usdc",
+  "kind": "option",
+  "instrument_name": "BTC_USDC-30OCT26-80000-P",
+  "maker_commission": 0.0003,
+  "taker_commission": 0.0003,
+  "product_group": "BTC",
+  "underlying_type": "crypto",
+  "instrument_type": "linear",
+  "instrument_id": 683012,
+  "expiration_timestamp": 1793347200000,
+  "creation_timestamp": 1787817624000,
+  "is_active": true,
+  "contract_size": 1.0,
+  "tick_size": 5.0,
+  "strike": 80000.0,
+  "counter_currency": "USDC",
+  "option_type": "put",
+  "min_trade_amount": 0.01,
+  "block_trade_commission": 0.0003,
+  "block_trade_min_trade_amount": 25,
+  "block_trade_tick_size": 5.0,
+  "settlement_currency": "USDC",
+  "settlement_period": "month",
+  "base_currency": "BTC",
+  "index_id": 1000004,
+  "quote_currency": "USDC",
+  "tick_size_steps": [
+    {
+      "tick_size": 20.0,
+      "above_price": 1000.0
+    }
+  ],
+  "lot_size": 1,
+  "base_currency_uuid": "5b71fc48-3dd3-540c-809b-f8c94d0e68b5",
+  "quote_currency_uuid": "2b92315d-eab7-5bef-84fa-089a131333f5"
+}

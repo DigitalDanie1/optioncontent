@@ -1,0 +1,33 @@
+{
+  "parts": [
+    "주간 온체인",
+    "트레이딩 뷰",
+    "매크로 뷰"
+  ],
+  "snapshot_at": "2026-10-14T08:59:22.555Z",
+  "pre_tge_basis": "OPSHNZ stage pre; no confirmed token launch date or airdrop claim",
+  "ranking": [
+    {
+      "name": "Derive",
+      "vol7": 669227618
+    },
+    {
+      "name": "Paradex",
+      "vol7": 43389408
+    },
+    {
+      "name": "CallPut",
+      "vol7": 30774322
+    },
+    {
+      "name": "Rysk",
+      "vol7": 29506285
+    },
+    {
+      "name": "Dream",
+      "vol7": 23761105
+    }
+  ],
+  "large_trade_status": "No verified individual trade for this episode",
+  "classification_note": "Token and Pre-TGE projects are subsections of weekly onchain. Strategies, fundamentals and desk views belong to trading view. Macro separates BLS facts from conditional interpretation."
+}

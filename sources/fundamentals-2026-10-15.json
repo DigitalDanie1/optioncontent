@@ -1,0 +1,216 @@
+{
+  "source": "https://opshnz.com/#/fundamentals",
+  "at": "2026-10-15T08:33:24.686Z",
+  "totals": {
+    "premium": {
+      "d30": 88648066.42,
+      "prev30": 86744230.9,
+      "all": 991369237.66,
+      "d24": 3432485,
+      "m": [
+        19764614.34,
+        17183871.909999996,
+        31638667.95,
+        30801221.82,
+        62490932.470000006,
+        40953877.239999995,
+        44246411.18,
+        55564934.54999999,
+        44050274.730000004,
+        64252675.31,
+        84784587.17999999,
+        38854592.31
+      ]
+    },
+    "notional": {
+      "d30": 5114187390.93,
+      "prev30": 3382388387,
+      "all": 81434536475.67,
+      "d24": 232479215,
+      "m": [
+        494219978,
+        648206113,
+        834720858.84,
+        741604760.89,
+        2124441989,
+        1547962420.92,
+        1573788225.44,
+        1726482399.74,
+        2058511793,
+        2308163675.91,
+        4425644551.34,
+        2454654720.59
+      ]
+    }
+  },
+  "oi": {
+    "venues": {
+      "Paradex": {
+        "total": 87246522.21881081,
+        "byU": {
+          "ZEC": 1266900.4154869257,
+          "ETH": 29076703.200000007,
+          "BTC": 56202050.58196213,
+          "SOL": 254504.59020610002,
+          "US500": 149306.28,
+          "HYPE": 264245.6165806801,
+          "CL": 4210.65,
+          "XAU": 27417.044574942003,
+          "US100": 1183.84
+        }
+      },
+      "Aevo": {
+        "total": 13145402.24842726,
+        "byU": {
+          "ETH": 8313247.4821073,
+          "BTC": 4825117.0947669605,
+          "SOL": 7037.671553
+        }
+      }
+    },
+    "dTot": {},
+    "sources": {
+      "Derive": "https://docs.derive.xyz",
+      "Paradex": "https://docs.paradex.trade",
+      "Aevo": "https://api-docs.aevo.xyz"
+    }
+  },
+  "trades": [
+    {
+      "venue": "Paradex",
+      "market": "ETH-USD-25DEC26-7000-C",
+      "side": "BUY",
+      "size": 2000,
+      "premium": 2440,
+      "notional": 4745280,
+      "t": 1792037736779
+    },
+    {
+      "venue": "Paradex",
+      "market": "ETH-USD-25DEC26-4500-C",
+      "side": "SELL",
+      "size": 2000,
+      "premium": 10780,
+      "notional": 4745280,
+      "t": 1792037736756
+    },
+    {
+      "venue": "Paradex",
+      "market": "BTC-USD-25DEC26-100000-C",
+      "side": "SELL",
+      "size": 30,
+      "premium": 26582.4,
+      "notional": 2435825.7270138003,
+      "t": 1792037850584
+    },
+    {
+      "venue": "Paradex",
+      "market": "BTC-USD-25DEC26-125000-C",
+      "side": "BUY",
+      "size": 30,
+      "premium": 4358.7,
+      "notional": 2435825.7270138003,
+      "t": 1792037850588
+    },
+    {
+      "venue": "Paradex",
+      "market": "ETH-USD-17OCT26-2500-C",
+      "side": "BUY",
+      "size": 1000,
+      "premium": 4900,
+      "notional": 2372640,
+      "t": 1792035552630
+    },
+    {
+      "venue": "Paradex",
+      "market": "ETH-USD-25DEC26-3000-C",
+      "side": "SELL",
+      "size": 750,
+      "premium": 39757.5,
+      "notional": 1779480,
+      "t": 1792037718503
+    },
+    {
+      "venue": "Paradex",
+      "market": "BTC-USD-30OCT26-180000-C",
+      "side": "BUY",
+      "size": 4.159,
+      "premium": 0.12476999999999999,
+      "notional": 337686.6399550131,
+      "t": 1791976935914
+    },
+    {
+      "venue": "Paradex",
+      "market": "BTC-USD-30OCT26-180000-C",
+      "side": "BUY",
+      "size": 3.84,
+      "premium": 0.1152,
+      "notional": 311785.6930577664,
+      "t": 1791976226278
+    },
+    {
+      "venue": "Paradex",
+      "market": "BTC-USD-30OCT26-180000-C",
+      "side": "BUY",
+      "size": 3.651,
+      "premium": 0.10952999999999999,
+      "notional": 296439.99097757944,
+      "t": 1791975606340
+    },
+    {
+      "venue": "Paradex",
+      "market": "BTC-USD-27NOV26-85000-C",
+      "side": "BUY",
+      "size": 3.581,
+      "premium": 10688.461369999999,
+      "notional": 290756.3976145473,
+      "t": 1792024547703
+    },
+    {
+      "venue": "Paradex",
+      "market": "BTC-USD-27NOV26-91000-C",
+      "side": "SELL",
+      "size": 3.581,
+      "premium": 4708.370419999999,
+      "notional": 290756.3976145473,
+      "t": 1792024547722
+    },
+    {
+      "venue": "Paradex",
+      "market": "ETH-USD-26MAR27-7000-C",
+      "side": "BUY",
+      "size": 100,
+      "premium": 553,
+      "notional": 237264,
+      "t": 1792031905838
+    },
+    {
+      "venue": "Paradex",
+      "market": "ETH-USD-26MAR27-5000-C",
+      "side": "SELL",
+      "size": 100,
+      "premium": 1964.9999999999998,
+      "notional": 237264,
+      "t": 1792031905835
+    },
+    {
+      "venue": "Paradex",
+      "market": "ETH-USD-27NOV26-3500-C",
+      "side": "BUY",
+      "size": 73,
+      "premium": 623.42,
+      "notional": 173202.72,
+      "t": 1792036185702
+    },
+    {
+      "venue": "Paradex",
+      "market": "BTC-USD-30OCT26-180000-C",
+      "side": "BUY",
+      "size": 2.086,
+      "premium": 0.06258,
+      "notional": 169371.08221835954,
+      "t": 1791980108764
+    }
+  ],
+  "scope": "Aggregated sources in OPSHNZ; notional and premium are different metrics. OI coverage is partial; fills are Paradex-only records, no wallet attribution or verified multi-leg linkage."
+}

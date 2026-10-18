@@ -1,0 +1,140 @@
+Onchain Options Weekly | W42
+
+1. Weekly onchain: token projects + pre-TGE watch
+2. Trading view: flows, fundamentals, strategies and desks
+3. Macro view: releases, interpretation and what to watch
+
+by defidaniel
+
+---
+
+Part 1 — Weekly onchain
+
+1. Derive @DeriveXYZ
+kHYPE can collateralize options on Derive V3 while retaining HYPE staking rewards (Oct 13). Ethereum integration via Chainlink CCIP.
+
+---
+
+Part 1 — Weekly onchain
+
+2. Aevo @aevoxyz
+Announced another 1m AEVO bought back with exchange fees and burned (Oct 5). Reported cumulative burns: 78m tokens, 7.8% of supply.
+
+---
+
+Part 1 — Weekly onchain
+
+3. Thetanuts @ThetanutsFi
+BTC/ETH options report refreshed Oct 13: expiry-level traded contracts and flow. A report update, not a product launch.
+
+---
+
+Part 1 — Weekly onchain
+
+4. Hypercall @SynapseProtocol
+Proposed LTC/DOGE covered-call program with Luxxfolio (Oct 5). Non-binding letter of intent; implementation and launch not confirmed. SYN-linked ecosystem.
+
+---
+
+Part 1 — Weekly onchain
+
+5. Omen @omenapp
+Oct 9 design: cash-settled European options, 1x multiplier, divisible down to $1 notional. $1 is not the option premium.
+https://omen.trade/manifesto
+
+---
+
+Part 1 — Weekly onchain
+
+6. CallPut @CallPutApp
+24/7 synthetic stock, ETF and crypto options. Rolling 7D options notional: $30.77M. Product description, not a new-launch announcement.
+
+---
+
+Part 1 — Weekly onchain
+
+7. Rysk @ryskfinance
+Covered calls and cash-secured puts. Rolling 7D options notional: $29.51M.
+
+Pre-TGE status follows the snapshot; no confirmed TGE or airdrop implied.
+
+---
+
+Part 1 — Weekly onchain
+
+8. Dream @dreaming
+Mobile options app. Rolling 7D options notional: $23.76M.
+
+Pre-TGE is a tracker classification, not a confirmed token launch or airdrop.
+
+---
+
+Part 2 — Strategy decision
+
+BTC downside hedge: consider an Oct 30 80k/75k bear put spread only after a confirmed break below 80k and failed reclaim.
+
+Current stance: WAIT. Reference index $82,137 is above 80k. This is a conditional hedge, not an immediate buy.
+
+---
+
+Part 2 — Reference quote
+
+Deribit USDC, Oct 15 23:16 SGT, 1 BTC equivalent:
+Buy 80k put ask 1,380 / sell 75k put bid 465.
+Net debit 915 USDC.
+
+Expiry max loss 915 / max gain 4,085 / break-even 79,085. Fees/slippage excluded; not a fill or onchain quote.
+
+---
+
+Part 2 — SWOT / S + W
+
+Strength: defined downside-hedge cost, cheaper upfront than buying the 80k put alone.
+Weakness: premium/time decay; no further expiry payoff growth below 75k.
+
+No claim of positive expected value without a probability model.
+
+---
+
+Part 2 — SWOT / O + T
+
+Opportunity: inflation/policy risk plus a confirmed downside break.
+Threats: sharp rebound, IV decline, fading event risk and poor two-leg execution.
+
+Reprice at the trigger; a snapshot quote is not a promised entry cost.
+
+---
+
+Part 2 — Entry and invalidation
+
+No chase while BTC holds above 80k. Require a failed reclaim after a downside break and a debit within a predefined loss budget.
+
+After entry, reassess on a sustained reclaim or when the hedge is no longer needed.
+
+---
+
+Part 2 — Execution check
+
+Reference pricing is Deribit linear USDC, not a verified onchain quote. Match expiry, strikes, multiplier and settlement on the intended venue. Confirm two-leg liquidity.
+
+Trade-flow and desk-view sources remain available in the site.
+
+---
+
+Part 3 — Macro view
+
+US September CPI: +3.7% y/y, +0.6% m/m. Core CPI: +2.6% y/y, +0.3% m/m. Released Oct 14.
+
+September final-demand PPI: +6.3% y/y, +1.3% m/m. Released Oct 15.
+
+Sources: BLS CPI / PPI.
+
+---
+
+Part 3 — Macro view
+
+Persistent inflation could constrain easing expectations. Watch rates, the dollar, IV and put skew.
+
+If energy pressure cools and core inflation/rates stabilize, reassess a blanket bearish view.
+
+Facts and conditional interpretation are separate.
