@@ -1,0 +1,347 @@
+{
+  "registered_accounts": [
+    {
+      "project": "Derive",
+      "handle": "derivexyz",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Aevo",
+      "handle": "aevoxyz",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Thetanuts",
+      "handle": "ThetanutsFi",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Hypercall",
+      "handle": "SynapseProtocol",
+      "source": "https://opshnz.com/#/home",
+      "verification": "official_source_checked",
+      "verification_source": "https://hypercall.xyz/"
+    },
+    {
+      "project": "Paradex",
+      "handle": "tradeparadex",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "GammaSwap",
+      "handle": "GammaSwapLabs",
+      "source": "https://opshnz.com/#/home",
+      "verification": "official_source_checked",
+      "verification_source": "https://github.com/gammaswap"
+    },
+    {
+      "project": "Hegic",
+      "handle": "HegicOptions",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Deri",
+      "handle": "DeriProtocol",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "SOFA.org",
+      "handle": "SOFAorgDAO",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Typus",
+      "handle": "TypusFinance",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Toros",
+      "handle": "torosfinance",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Stryke",
+      "handle": "stryke_xyz",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Opium",
+      "handle": "Opium_Network",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Oddz",
+      "handle": "oddz_finance",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Ithaca",
+      "handle": "IthacaProtocol",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Auctus",
+      "handle": "AuctusOptions",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Antimatter",
+      "handle": "antimatterdefi",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Smilee",
+      "handle": "SmileeFinance",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "HedgeHood",
+      "handle": "0xHedgehood",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Dream",
+      "handle": "dreaming",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "CallPut",
+      "handle": "CallPutApp",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Joyride",
+      "handle": "JoyrideExchange",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Olive",
+      "handle": "Olive_Exchange",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "3Jane",
+      "handle": "3janexyz",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Volmex",
+      "handle": "volmexfinance",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Rysk",
+      "handle": "ryskfinance",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Panoptic",
+      "handle": "Panoptic_xyz",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Odette",
+      "handle": "odetteonchain",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Katana",
+      "handle": "Katana_HQ",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Opyn",
+      "handle": "opyn_",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Kyan",
+      "handle": "KyanExchange",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Dual Finance",
+      "handle": "DualFinance",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "TYMIO",
+      "handle": "TYMIOapp",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Carmine",
+      "handle": "CarmineOptions",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Lien",
+      "handle": "LienFinance",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Zomma",
+      "handle": "ZommaProtocol",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Prodigy.Fi",
+      "handle": "ProdigyFi",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Jasper Vault",
+      "handle": "jaspervault",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Margin Zero",
+      "handle": "marginzero_xyz",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "TON Hedge",
+      "handle": "tonhedge",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Hypersurface",
+      "handle": "hypersurfaceX",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Stochastic",
+      "handle": "stochastic_fin",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Omen",
+      "handle": "omenapp",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Tacticalls",
+      "handle": "tacticallsXYZ",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Heat",
+      "handle": "heat_fi",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "HARDCORE",
+      "handle": "JoinHARDCORE",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Optivi",
+      "handle": "optivixyz",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    },
+    {
+      "project": "Split Markets",
+      "handle": "splitmarkets",
+      "source": "https://opshnz.com/#/home",
+      "verification": "dashboard_registered",
+      "verification_source": null
+    }
+  ],
+  "missing_accounts": [
+    "Hunch"
+  ],
+  "source_snapshot_at": "2026-10-14T08:59:22.555Z",
+  "source_url": "https://opshnz.com/#/home",
+  "scope": "snapshot.projects only; refs.farms excluded",
+  "coverage_priority": "Options protocols with tokens and active major CEX spot markets first; DRV / AEVO lead, NUTS and SYN-linked Hypercall next."
+}
