@@ -5,6 +5,12 @@
 
 ![한국어 원페이저](assets/images/weekly-options-W42-ko.png)
 
+## 링크로 바로 열기
+
+[콘텐츠 작업실 실행](https://digitaldanie1.github.io/optioncontent/) — 원본 로컬 HTML과 같은 페이지입니다. GitHub 저장소의 파일 미리보기 대신 이 링크를 사용하세요.
+
+원고 저장은 접속한 브라우저에만 적용됩니다. 로컬 파일에서 저장한 초안이 웹으로 자동 이동하지는 않습니다.
+
 ## 다른 맥북에서 열기
 
 ```sh
