@@ -61,7 +61,7 @@ jobs:
         if: steps.mode.outputs.mode != 'preview'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID }}
           TELEGRAM_STATE_DIR: ${{ runner.temp }}/telegram-state
           MODE: ${{ steps.mode.outputs.mode }}
         run: node scripts/telegram-publish.mjs "$MODE"
