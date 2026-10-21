@@ -22,12 +22,13 @@ if(width+height>10000||Math.max(width/height,height/width)>20)throw Error('Photo
 const eligible=config.approved===true&&Number.isFinite(Date.parse(config.validUntil))&&Date.now()<=Date.parse(config.validUntil);
 console.log(JSON.stringify({id:config.id,approved:config.approved,validUntil:config.validUntil,eligible,textLength:text.length,photo:[width,height],steps:['Korean one-pager photo','Korean full text']},null,2));
 if(mode==='preview'){console.log('Preview only. No Telegram requests.');process.exit(0);}
-const token=process.env.TELEGRAM_BOT_TOKEN,chat=process.env.TELEGRAM_CHAT_ID;
+const token=process.env.TELEGRAM_BOT_TOKEN?.trim(),chat=process.env.TELEGRAM_CHAT_ID?.trim();
 if(!token||!chat)throw Error('Configure TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in GitHub Actions secrets');
+if(!/^\d+:[A-Za-z0-9_-]{20,}$/.test(token))throw Error('TELEGRAM_BOT_TOKEN format invalid: store only the BotFather token (digits:letters), without the instruction text or quotes');
 async function api(method,body){
  let response;
  try{response=await fetch(`https://api.telegram.org/bot${token}/${method}`,{method:'POST',body,signal:AbortSignal.timeout(60000)});}catch{throw Error(`Telegram ${method}: transport failed; do not blindly retry a send`);}
- let data;try{data=await response.json();}catch{throw Error(`Telegram ${method}: unreadable response`);}
+ let data;try{data=await response.json();}catch{throw Error(`Telegram ${method}: non-JSON response (HTTP ${response.status}); verify the BotFather token`);}
  if(!response.ok||!data.ok)throw Error(`Telegram ${method} failed (HTTP ${response.status}, code ${data.error_code||'unknown'}). Check token, channel and posting permission.`);
  return data.result;
 }
