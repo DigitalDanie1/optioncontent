@@ -74,6 +74,10 @@ python3 scripts/check.py
 
 `npm run render`는 이미지 두 장을 덮어씁니다. 기존 ZIP 묶음은 자동 갱신하지 않으므로 이미지 수정 후 다시 묶으세요. `npm install` 없이도 완성된 페이지와 이미지·영상은 볼 수 있습니다.
 
+## 텔레그램 공지방 자동 게시
+
+봇을 공지방 관리자로 연결하면 승인한 회차의 한국어 원페이저와 글을 자동 게시합니다. [연결·사용 안내](publish/README.md)를 따라 GitHub Secrets를 설정하세요. [게시 도구 실행](https://github.com/DigitalDanie1/optioncontent/actions/workflows/telegram-publish.yml)에서 `preview` / `check` / `send`를 선택할 수 있습니다. 현재 과거 회차는 발송 차단 상태입니다.
+
 ## X / Grok 자료 수집 (선택)
 
 [project-x-accounts.json](project-x-accounts.json)에 옵션 프로젝트 49개 중 X 계정 48개가 등록되어 있습니다. Hunch의 공식 계정은 미확인입니다.

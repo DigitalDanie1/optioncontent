@@ -1,0 +1,67 @@
+name: Telegram channel publisher
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'preview: no requests / check: verify bot / send: publish approved episode'
+        type: choice
+        options: [preview, check, send]
+        default: preview
+  push:
+    branches: [main]
+    paths: [publish/telegram.json]
+permissions:
+  contents: write
+concurrency:
+  group: telegram-channel-publisher
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Preview and validate files
+        run: node scripts/telegram-publish.mjs preview
+      - name: Select mode
+        id: mode
+        env:
+          EVENT: ${{ github.event_name }}
+          INPUT_MODE: ${{ inputs.mode }}
+        run: |
+          if [ "$EVENT" = workflow_dispatch ]; then
+            echo "mode=$INPUT_MODE" >> "$GITHUB_OUTPUT"
+          elif node -e "const c=require('./publish/telegram.json');process.exit(c.approved===true&&Date.now()<=Date.parse(c.validUntil)?0:1)"; then
+            echo "mode=send" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=preview" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Prepare persistent delivery receipts
+        if: steps.mode.outputs.mode == 'send'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git show-ref --verify --quiet refs/remotes/origin/telegram-state; then
+            git worktree add --detach "$RUNNER_TEMP/telegram-state" origin/telegram-state
+          else
+            git worktree add --detach "$RUNNER_TEMP/telegram-state" HEAD
+            cd "$RUNNER_TEMP/telegram-state"
+            git checkout --orphan telegram-state
+            git rm -rf . >/dev/null
+            printf '{}\n' > telegram-receipts.json
+            git add telegram-receipts.json
+            git commit -m 'Initialize Telegram delivery receipts'
+            git push origin HEAD:telegram-state
+          fi
+      - name: Check or publish to announcement channel
+        if: steps.mode.outputs.mode != 'preview'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_STATE_DIR: ${{ runner.temp }}/telegram-state
+          MODE: ${{ steps.mode.outputs.mode }}
+        run: node scripts/telegram-publish.mjs "$MODE"
