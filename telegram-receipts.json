@@ -3,8 +3,9 @@
     "digest": "e6c3aa46851f487668f1194512efc938b15b6471ad928ac1d3a0592d0f93fc37",
     "steps": {
       "photo": {
-        "status": "sending",
-        "at": "2026-10-21T13:24:23.633Z"
+        "status": "sent",
+        "message_id": 2191,
+        "at": "2026-10-21T13:24:27.685Z"
       }
     }
   }
