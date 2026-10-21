@@ -43,18 +43,12 @@ if(member.status!=='creator'&&!(member.status==='administrator'&&member.can_post
 console.log('Bot and announcement-channel posting permission verified.');
 if(mode==='check')process.exit(0);
 if(mode==='draft'){
- const webhook=await api('getWebhookInfo',new URLSearchParams());
- if(webhook.url)throw Error('Bot has an active webhook; private-chat discovery stopped without changing it');
  const admins=await api('getChatAdministrators',form({chat_id:chat}));
- const owners=new Set(admins.filter(a=>a.status==='creator').map(a=>a.user.id));
- const updates=await api('getUpdates',new URLSearchParams({timeout:'0',limit:'100'}));
- console.log(JSON.stringify({update_count:updates.length,update_types:updates.map(u=>Object.keys(u).filter(k=>k!=='update_id')).flat(),private_messages:updates.filter(u=>u.message?.chat?.type==='private').length,owner_private_messages:updates.filter(u=>u.message?.chat?.type==='private'&&owners.has(u.message.from?.id)).length,start_messages:updates.filter(u=>/^\/start(?:@\w+)?(?:\s|$)/.test(u.message?.text||'')).length,owner_count:owners.size}));
- const starts=updates.map(u=>u.message).filter(m=>m?.chat?.type==='private'&&owners.has(m.from?.id)&&/^\/start(?:@\w+)?(?:\s|$)/.test(m.text||''));
- const privateIds=[...new Set(starts.map(m=>m.chat.id))];
- if(privateIds.length!==1)throw Error('PRIVATE_START_REQUIRED: send /start to this bot from the announcement-channel owner account, then retry');
- chat=String(privateIds[0]);
+ const owners=[...new Set(admins.filter(a=>a.status==='creator').map(a=>a.user.id))];
+ if(owners.length!==1)throw Error('Private draft requires exactly one announcement-channel owner');
+ chat=String(owners[0]);
  channel=await api('getChat',form({chat_id:chat}));
- if(channel.type!=='private')throw Error('Draft destination must be private');
+ if(channel.type!=='private'||String(channel.id)!==chat)throw Error('PRIVATE_START_REQUIRED: start the bot from the announcement-channel owner account');
  console.log('Verified private chat belongs to the announcement-channel owner. Draft will not go to the channel.');
  if(!Number.isFinite(Date.parse(config.validUntil))||Date.now()>Date.parse(config.validUntil))throw Error('Draft expired; renew the preview expiry');
 }else if(!eligible)throw Error('Publication blocked: approve a current episode and set a valid expiry first');

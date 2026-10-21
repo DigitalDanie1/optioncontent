@@ -25,7 +25,7 @@ test('Telegram preview, stale guard, delivery receipts and duplicate suppression
   config.approved=true;write();let sent=run('send');assert.equal(sent.status,0,sent.stderr);
   sent=run('send');assert.equal(sent.status,0,sent.stderr);
   const calls=fs.readFileSync(log,'utf8');assert.equal(calls.split('sendPhoto').length-1,1);assert.equal(calls.split('sendMessage').length-1,1);
-  config.id='private-draft';config.approved=false;write();const draft=run('draft');assert.equal(draft.status,0,draft.stderr);assert(draft.stdout.includes('Draft will not go to the channel'));
+  config.id='private-draft';config.approved=false;write();const draft=run('draft');assert.equal(draft.status,0,draft.stderr);assert(draft.stdout.includes('Draft will not go to the channel'));assert(!fs.readFileSync(log,'utf8').includes('getUpdates'));
   config.id='uncertain';config.approved=true;write();const failed=spawnSync(process.execPath,['--import',mock,path.join(fixture,'scripts/telegram-publish.mjs'),'send'],{encoding:'utf8',env:{...process.env,TELEGRAM_BOT_TOKEN:'123456789:ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghi',TELEGRAM_CHAT_ID:'@mock',TELEGRAM_STATE_DIR:state,TEST_CALLS:log,TEST_FAIL:'sendPhoto'}});assert.notEqual(failed.status,0);
   const before=fs.readFileSync(log,'utf8').split('sendPhoto').length;assert.notEqual(run('send').status,0);assert.equal(fs.readFileSync(log,'utf8').split('sendPhoto').length,before);
  }finally{fs.rmSync(tmp,{recursive:true,force:true});}
