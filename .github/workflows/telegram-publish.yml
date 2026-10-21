@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'preview: no requests / check: verify bot / send: publish approved episode'
+        description: 'preview / check / draft: owner private chat / send: approved channel post'
         type: choice
-        options: [preview, check, send]
+        options: [preview, check, draft, send]
         default: preview
   push:
     branches: [main]
@@ -35,13 +35,11 @@ jobs:
         run: |
           if [ "$EVENT" = workflow_dispatch ]; then
             echo "mode=$INPUT_MODE" >> "$GITHUB_OUTPUT"
-          elif node -e "const c=require('./publish/telegram.json');process.exit(c.approved===true&&Date.now()<=Date.parse(c.validUntil)?0:1)"; then
-            echo "mode=send" >> "$GITHUB_OUTPUT"
           else
             echo "mode=preview" >> "$GITHUB_OUTPUT"
           fi
       - name: Prepare persistent delivery receipts
-        if: steps.mode.outputs.mode == 'send'
+        if: steps.mode.outputs.mode == 'send' || steps.mode.outputs.mode == 'draft'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

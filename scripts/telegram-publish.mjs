@@ -5,7 +5,7 @@ import {fileURLToPath} from 'node:url';
 import {execFileSync} from 'node:child_process';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const mode=process.argv[2]||'preview';
-if(!['preview','send','check'].includes(mode)) throw Error('Use preview, check or send');
+if(!['preview','send','check','draft'].includes(mode)) throw Error('Use preview, check, draft or send');
 const config=JSON.parse(await fs.readFile(path.join(root,'publish/telegram.json'),'utf8'));
 async function asset(name){
  const target=path.resolve(root,name);
@@ -22,7 +22,8 @@ if(width+height>10000||Math.max(width/height,height/width)>20)throw Error('Photo
 const eligible=config.approved===true&&Number.isFinite(Date.parse(config.validUntil))&&Date.now()<=Date.parse(config.validUntil);
 console.log(JSON.stringify({id:config.id,approved:config.approved,validUntil:config.validUntil,eligible,textLength:text.length,photo:[width,height],steps:['Korean one-pager photo','Korean full text']},null,2));
 if(mode==='preview'){console.log('Preview only. No Telegram requests.');process.exit(0);}
-const token=process.env.TELEGRAM_BOT_TOKEN?.trim(),chat=process.env.TELEGRAM_CHAT_ID?.trim();
+const token=process.env.TELEGRAM_BOT_TOKEN?.trim();
+let chat=process.env.TELEGRAM_CHAT_ID?.trim();
 if(!token||!chat)throw Error('Configure TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in GitHub Actions secrets');
 if(!/^\d+:[A-Za-z0-9_-]{20,}$/.test(token))throw Error('TELEGRAM_BOT_TOKEN format invalid: store only the BotFather token (digits:letters), without the instruction text or quotes');
 async function api(method,body){
@@ -34,14 +35,28 @@ async function api(method,body){
 }
 const form=values=>{const f=new FormData();for(const[k,v]of Object.entries(values))f.set(k,String(v));return f;};
 const me=await api('getMe',new URLSearchParams());
-const channel=await api('getChat',form({chat_id:chat}));
+let channel=await api('getChat',form({chat_id:chat}));
 if(channel.type!=='channel')throw Error('Destination must be a Telegram announcement channel');
 const member=await api('getChatMember',form({chat_id:chat,user_id:me.id}));
 console.log(JSON.stringify({bot_username:me.username,channel_username:channel.username,bot_role:member.status,can_post_messages:member.can_post_messages===true}));
 if(member.status!=='creator'&&!(member.status==='administrator'&&member.can_post_messages))throw Error('Add the bot as channel administrator with Post Messages permission');
 console.log('Bot and announcement-channel posting permission verified.');
 if(mode==='check')process.exit(0);
-if(!eligible)throw Error('Publication blocked: approve a current episode and set a valid expiry first');
+if(mode==='draft'){
+ const webhook=await api('getWebhookInfo',new URLSearchParams());
+ if(webhook.url)throw Error('Bot has an active webhook; private-chat discovery stopped without changing it');
+ const admins=await api('getChatAdministrators',form({chat_id:chat}));
+ const owners=new Set(admins.filter(a=>a.status==='creator').map(a=>a.user.id));
+ const updates=await api('getUpdates',new URLSearchParams({timeout:'0',limit:'100'}));
+ const starts=updates.map(u=>u.message).filter(m=>m?.chat?.type==='private'&&owners.has(m.from?.id)&&/^\/start(?:@\w+)?(?:\s|$)/.test(m.text||''));
+ const privateIds=[...new Set(starts.map(m=>m.chat.id))];
+ if(privateIds.length!==1)throw Error('PRIVATE_START_REQUIRED: send /start to this bot from the announcement-channel owner account, then retry');
+ chat=String(privateIds[0]);
+ channel=await api('getChat',form({chat_id:chat}));
+ if(channel.type!=='private')throw Error('Draft destination must be private');
+ console.log('Verified private chat belongs to the announcement-channel owner. Draft will not go to the channel.');
+ if(!Number.isFinite(Date.parse(config.validUntil))||Date.now()>Date.parse(config.validUntil))throw Error('Draft expired; renew the preview expiry');
+}else if(!eligible)throw Error('Publication blocked: approve a current episode and set a valid expiry first');
 const stateDir=process.env.TELEGRAM_STATE_DIR;
 if(!stateDir)throw Error('TELEGRAM_STATE_DIR must point to the persistent telegram-state Git checkout');
 const stateFile=path.join(stateDir,'telegram-receipts.json');

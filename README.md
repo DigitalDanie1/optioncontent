@@ -76,7 +76,7 @@ python3 scripts/check.py
 
 ## 텔레그램 공지방 자동 게시
 
-봇을 공지방 관리자로 연결하면 승인한 회차의 한국어 원페이저와 글을 자동 게시합니다. [연결·사용 안내](publish/README.md)를 따라 GitHub Secrets를 설정하세요. [게시 도구 실행](https://github.com/DigitalDanie1/optioncontent/actions/workflows/telegram-publish.yml)에서 `preview` / `check` / `send`를 선택할 수 있습니다. 현재 과거 회차는 발송 차단 상태입니다.
+현재 개인 채팅 검토 우선 모드입니다. 봇 개인 채팅으로 원고를 보낸 뒤 확정한 회차만 공지방에 게시합니다. push 자동 게시는 꺼져 있습니다. [연결·사용 안내](publish/README.md)를 따라 GitHub Secrets를 설정하세요. [게시 도구 실행](https://github.com/DigitalDanie1/optioncontent/actions/workflows/telegram-publish.yml)에서 `preview` / `check` / `draft` / `send`를 선택할 수 있습니다. 현재 과거 회차는 발송 차단 상태입니다.
 
 ## X / Grok 자료 수집 (선택)
 
