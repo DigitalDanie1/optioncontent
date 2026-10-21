@@ -37,6 +37,7 @@ const me=await api('getMe',new URLSearchParams());
 const channel=await api('getChat',form({chat_id:chat}));
 if(channel.type!=='channel')throw Error('Destination must be a Telegram announcement channel');
 const member=await api('getChatMember',form({chat_id:chat,user_id:me.id}));
+console.log(JSON.stringify({bot_username:me.username,channel_username:channel.username,bot_role:member.status,can_post_messages:member.can_post_messages===true}));
 if(member.status!=='creator'&&!(member.status==='administrator'&&member.can_post_messages))throw Error('Add the bot as channel administrator with Post Messages permission');
 console.log('Bot and announcement-channel posting permission verified.');
 if(mode==='check')process.exit(0);
