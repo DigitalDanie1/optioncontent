@@ -48,6 +48,7 @@ if(mode==='draft'){
  const admins=await api('getChatAdministrators',form({chat_id:chat}));
  const owners=new Set(admins.filter(a=>a.status==='creator').map(a=>a.user.id));
  const updates=await api('getUpdates',new URLSearchParams({timeout:'0',limit:'100'}));
+ console.log(JSON.stringify({update_count:updates.length,update_types:updates.map(u=>Object.keys(u).filter(k=>k!=='update_id')).flat(),private_messages:updates.filter(u=>u.message?.chat?.type==='private').length,owner_private_messages:updates.filter(u=>u.message?.chat?.type==='private'&&owners.has(u.message.from?.id)).length,start_messages:updates.filter(u=>/^\/start(?:@\w+)?(?:\s|$)/.test(u.message?.text||'')).length,owner_count:owners.size}));
  const starts=updates.map(u=>u.message).filter(m=>m?.chat?.type==='private'&&owners.has(m.from?.id)&&/^\/start(?:@\w+)?(?:\s|$)/.test(m.text||''));
  const privateIds=[...new Set(starts.map(m=>m.chat.id))];
  if(privateIds.length!==1)throw Error('PRIVATE_START_REQUIRED: send /start to this bot from the announcement-channel owner account, then retry');
