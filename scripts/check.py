@@ -12,7 +12,7 @@ class Links(HTMLParser):
         for key, value in attrs:
             if key in ('src', 'href', 'poster') and value:
                 self.links.append(value)
-for relative in ['index.html', 'assets/bear-put-spread-payoff.html', 'scripts/weekly-ko-W42.html', 'scripts/weekly-en-W42.html']:
+for relative in ['index.html', 'studio.html', 'assets/bear-put-spread-payoff.html', 'scripts/weekly-ko-W42.html', 'scripts/weekly-en-W42.html']:
     file = root / relative
     text = file.read_text()
     parser = Links(); parser.feed(text)
@@ -22,7 +22,7 @@ for relative in ['index.html', 'assets/bear-put-spread-payoff.html', 'scripts/we
             continue
         target = file.parent / unquote(urlsplit(url).path)
         if not target.exists(): errors.append(f'{relative}: missing {url}')
-text = (root/'index.html').read_text()
+text = (root/'studio.html').read_text()
 match = re.search(r'<script[^>]*id="weekly-data"[^>]*>(.*?)</script>', text, re.S)
 data = json.loads(match[1])
 assert len(data['tweets']) == 17

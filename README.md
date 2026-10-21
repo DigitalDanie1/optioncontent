@@ -1,5 +1,9 @@
 # 외노자 다니엘의 옵션 이야기
 
+**업로드 달력**에서 날짜별 시간·채널·형식·준비 상태를 관리합니다. 모바일은 목록 보기로 시작합니다. 일정은 브라우저에 저장되며 JSON 내보내기·불러오기로 옮길 수 있습니다. 달력 등록은 자동 게시 예약이 아닙니다.
+
+기존 복사·다운로드 화면은 [콘텐츠 작업실](studio.html)로 이동했습니다.
+
 **주간 온체인 옵션 돌아보기** — 옵션 프로토콜에 집중하는 콘텐츠 작업실입니다.
 텔레그램용 한국어, X용 영어 글과 한·영 원페이저, 옵션 손익 도표를 한 화면에서 확인하고 복사·다운로드할 수 있습니다.
 
@@ -27,7 +31,8 @@ Git이 없다면 GitHub의 **Code → Download ZIP**으로 받아 압축을 풀�
 
 | 용도 | 파일 |
 | --- | --- |
-| 콘텐츠 작업실 | [index.html](index.html) |
+| 업로드 달력 | [index.html](index.html) |
+| 콘텐츠 작업실 | [studio.html](studio.html) |
 | 한국어 이미지 | [weekly-options-W42-ko.png](assets/images/weekly-options-W42-ko.png) |
 | 영어 이미지 | [weekly-options-W42-en.png](assets/images/weekly-options-W42-en.png) |
 | 한·영 이미지 묶음 | [weekly-options-W42-ko-en.zip](assets/weekly-options-W42-ko-en.zip) |
@@ -58,7 +63,7 @@ Git이 없다면 GitHub의 **Code → Download ZIP**으로 받아 압축을 풀�
 
 ## 수정과 이미지 재생성
 
-- 페이지·복사 글: `index.html`의 `weekly-data` JSON 및 관련 HTML을 수정합니다.
+- 페이지·복사 글: `studio.html`의 `weekly-data` JSON 및 관련 HTML을 수정합니다.
 - 배포용 텍스트: `assets/*-W42.txt`도 함께 갱신합니다.
 - 이미지 원본: `scripts/weekly-ko-W42.html`, `scripts/weekly-en-W42.html`입니다. 두 언어의 수치·날짜를 함께 수정하세요.
 - 다음 회차에는 파일명, 날짜, 출처, 페이지의 다운로드 링크와 JSON 이미지 경로도 함께 바꾸세요.
