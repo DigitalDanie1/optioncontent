@@ -33,7 +33,7 @@ async function api(method,body){
  return data.result;
 }
 const form=values=>{const f=new FormData();for(const[k,v]of Object.entries(values))f.set(k,String(v));return f;};
-const me=await api('getMe',form({}));
+const me=await api('getMe',new URLSearchParams());
 const channel=await api('getChat',form({chat_id:chat}));
 if(channel.type!=='channel')throw Error('Destination must be a Telegram announcement channel');
 const member=await api('getChatMember',form({chat_id:chat,user_id:me.id}));
