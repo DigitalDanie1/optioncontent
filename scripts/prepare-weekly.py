@@ -42,7 +42,11 @@ for e in editor['events']:
 audit={}
 for venue,url in [('Coinbase','https://api.exchange.coinbase.com/products'),('Gate','https://api.gateio.ws/api/v4/spot/currency_pairs'),('Binance','https://api.binance.com/api/v3/exchangeInfo')]:
  try:
-  data=json.loads(fetch(url));write(folder/(venue.lower()+'-spot.json'),data)
+  rawResponse=fetch(url);data=json.loads(rawResponse)
+  field='base_currency' if venue=='Coinbase' else 'base' if venue=='Gate' else 'baseAsset'
+  items=data['symbols'] if venue=='Binance' else data
+  selected=[r for r in items if r.get(field) in {'DRV','AEVO','NUTS','SYN'}]
+  write(folder/(venue.lower()+'-spot.json'),{'scope':'Selected option tokens only; full response not stored','fullResponseSha256':hashlib.sha256(rawResponse.encode()).hexdigest(),'records':selected})
   if venue=='Coinbase':pairs={r['base_currency'] for r in data if r.get('status')=='online' and not r.get('trading_disabled')}
   elif venue=='Gate':pairs={r['base'] for r in data if r.get('trade_status')=='tradable'}
   else:pairs={r['baseAsset'] for r in data['symbols'] if r.get('status')=='TRADING' and r.get('isSpotTradingAllowed',True)}
