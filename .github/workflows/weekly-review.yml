@@ -8,7 +8,7 @@ on:
       operation:
         description: Prepare assets, deliver ready draft, or recover both
         type: choice
-        options: [prepare, deliver, recover]
+        options: [prepare, deliver, recover, verify]
         default: prepare
 permissions:
   contents: write
@@ -48,7 +48,7 @@ jobs:
         env:
           OPERATION: ${{ steps.operation.outputs.value }}
         run: |
-          if [ "$OPERATION" = prepare ] || [ "$OPERATION" = recover ]; then
+          if [ "$OPERATION" = prepare ] || [ "$OPERATION" = recover ] || [ "$OPERATION" = verify ]; then
             echo 'needed=true' >> "$GITHUB_OUTPUT"
           elif node scripts/check-weekly-ready.mjs; then
             echo 'needed=false' >> "$GITHUB_OUTPUT"
@@ -70,7 +70,7 @@ jobs:
           python scripts/update-calendar-status.py prepared
           node --test scripts/telegram-publish.test.mjs
       - name: Commit prepared assets
-        if: steps.prepare.outputs.needed == 'true'
+        if: steps.prepare.outputs.needed == 'true' && steps.operation.outputs.value != 'verify'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -80,24 +80,24 @@ jobs:
             git push origin HEAD:main
           fi
       - name: Validate delivery date and exact assets
-        if: steps.operation.outputs.value != 'prepare'
+        if: steps.operation.outputs.value == 'deliver' || steps.operation.outputs.value == 'recover'
         run: node scripts/check-weekly-ready.mjs
       - name: Prepare persistent delivery receipts
-        if: steps.operation.outputs.value != 'prepare'
+        if: steps.operation.outputs.value == 'deliver' || steps.operation.outputs.value == 'recover'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git fetch origin telegram-state
           git worktree add --detach "$RUNNER_TEMP/telegram-state" FETCH_HEAD
       - name: Send only to owner private bot chat
-        if: steps.operation.outputs.value != 'prepare'
+        if: steps.operation.outputs.value == 'deliver' || steps.operation.outputs.value == 'recover'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID }}
           TELEGRAM_STATE_DIR: ${{ runner.temp }}/telegram-state
         run: node scripts/telegram-publish.mjs draft
       - name: Record private delivery on calendar
-        if: steps.operation.outputs.value != 'prepare'
+        if: steps.operation.outputs.value == 'deliver' || steps.operation.outputs.value == 'recover'
         run: |
           python scripts/update-calendar-status.py delivered
           git add index.html
