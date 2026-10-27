@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-10-27T13:04:02.301Z",
+  "preparedAt": "2026-10-27T13:08:25.108Z",
   "sourceWindowStart": "2026-10-20",
   "sourceWindowEnd": "2026-10-26",
   "snapshotAt": "2026-10-26T09:18:29.366Z",
@@ -46,8 +46,8 @@
   "hashes": {
     "assets/weekly/2026-W44-review-2026-10-27/telegram.txt": "8bab2534115005ba7c602e68be7f9684ef9d7cffbfdf0892b3dec1804f38a324",
     "assets/weekly/2026-W44-review-2026-10-27/onepager-ko.png": "fe6aba8669a1b13c684921b11ec39fbeb07f7b8c62f0146a7a1daf26c8d5a7bb",
-    "assets/weekly/2026-W44-review-2026-10-27/onepager-en.png": "d02ef6f31ef4312cae9c53db4b453e25e311998225d80f5f6d78de23a4cfb197",
-    "assets/weekly/2026-W44-review-2026-10-27/x.txt": "fe2c67d2c31da55eb0710711b2d1e3dad4835a985facb901c8065e4671b72bec"
+    "assets/weekly/2026-W44-review-2026-10-27/onepager-en.png": "8d76021aa3c9f3d5edd2dcf32fe99d7a117493c6bff6c8031d4991adcd664ac3",
+    "assets/weekly/2026-W44-review-2026-10-27/x.txt": "c5602e24f058929f1631ba217bf358cdedfab52462b9b3abe732176c45f5b4b7"
   },
   "validated": true
 }

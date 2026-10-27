@@ -13,6 +13,7 @@ try{
  for(const lang of ['ko','en']){
   await page.goto(pathToFileURL(path.join(root,`scripts/current-${lang}.html`)).href);
   await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode()));});
+  if(lang==='en'&&await page.evaluate(()=>/[가-힣]/.test(document.body.innerText)))throw Error('Korean text left in English poster');
   const overlap=await page.evaluate(()=>[...document.querySelectorAll('.cols section')].some(e=>e.getBoundingClientRect().bottom>document.querySelector('footer').getBoundingClientRect().top-10));
   if(overlap)throw Error('Poster footer overlap: '+lang);
   await page.locator('.card').screenshot({path:path.join(root,lang==='ko'?build.photo:build.englishPhoto)});

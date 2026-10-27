@@ -1,6 +1,6 @@
 {
-  "scope": "Selected option tokens only; full response is not stored",
-  "fullResponseSha256": "08a6098129526ace9891c2d3d1fcf2135eb711efb0edce9f7158d8b6e5b1ef77",
+  "scope": "Selected option tokens only; full response not stored",
+  "fullResponseSha256": "344b0119523e2693b8ad258af1b7ad265b0e4e2da766ff1c7c6f82fb81d3ff45",
   "records": [
     {
       "id": "AEVO_USDT",

@@ -68,7 +68,7 @@ jobs:
           node scripts/render-weekly.mjs
           python scripts/check.py
           python scripts/update-calendar-status.py prepared
-          node --test scripts/telegram-publish.test.mjs
+          node --test scripts/telegram-publish.test.mjs scripts/check-weekly-ready.test.mjs
       - name: Commit prepared assets
         if: steps.prepare.outputs.needed == 'true' && steps.operation.outputs.value != 'verify'
         run: |

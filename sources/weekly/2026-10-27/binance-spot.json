@@ -1,6 +1,6 @@
 {
-  "scope": "Selected option tokens only; full response is not stored",
-  "fullResponseSha256": "29c7869833c0e325cd1fbf8470c30ba95faa23defc644f39f1e8803c8618a3e3",
+  "scope": "Selected option tokens only; full response not stored",
+  "fullResponseSha256": "db8ac6c695d83468b0267eb1c6e5be48380e25cf765ee6b7dd713aa9f7e83bc0",
   "records": [
     {
       "symbol": "SYNBTC",

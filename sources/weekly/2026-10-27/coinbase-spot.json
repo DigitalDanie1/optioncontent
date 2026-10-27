@@ -1,6 +1,6 @@
 {
-  "scope": "Selected option tokens only; full response is not stored",
-  "fullResponseSha256": "6705183b9692492e1526aad93959c6527f120354eef300b1350f648f698de596",
+  "scope": "Selected option tokens only; full response not stored",
+  "fullResponseSha256": "6100eea2cf744acb5591b353a734cd560aa4790610ea047aa9abeab1cd673e6c",
   "records": [
     {
       "id": "DRV-USD",

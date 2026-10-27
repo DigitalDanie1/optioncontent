@@ -46,7 +46,7 @@ OPSHNZ snapshot: 10/26 17:18 SGT. Missing volume is not zero.
 
 Hypercall / SYN
 Price $0.153016
-Rolling 7D options notional: 미집계
+Rolling 7D options notional: N/A
 
 OPSHNZ snapshot: 10/26 17:18 SGT. Missing volume is not zero.
 
