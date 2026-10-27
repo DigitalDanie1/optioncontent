@@ -1,0 +1,81 @@
+Onchain Options Weekly | 2026-W44
+
+Metrics as of 10/26 17:18 SGT. Source-backed project review, conditional strategy education and macro watch.
+
+Options, every week — defidaniel.
+
+---
+
+Derive | 2026-10-23
+
+Celestia published a Derive V3 case study covering custody, proofs and data availability. Partner commentary, not a new listing.
+https://blog.celestia.org/derive-scaling-the-largest-onchain-options-exchange-with-celestia/
+
+---
+
+Hypercall | 2026-10-26
+
+Covered calls were announced as coming soon. This is a product preview, not confirmation that the feature is live.
+https://blog.hypercall.xyz/physically-settled-covered-calls/
+
+---
+
+Derive / DRV
+Price $0.348779
+Rolling 7D options notional: $639.17M
+
+OPSHNZ snapshot: 10/26 17:18 SGT. Missing volume is not zero.
+
+---
+
+Aevo / AEVO
+Price $0.02119182
+Rolling 7D options notional: $17.10M
+
+OPSHNZ snapshot: 10/26 17:18 SGT. Missing volume is not zero.
+
+---
+
+Thetanuts / NUTS
+Price $0.00095624
+Rolling 7D options notional: $189,698
+
+OPSHNZ snapshot: 10/26 17:18 SGT. Missing volume is not zero.
+
+---
+
+Hypercall / SYN
+Price $0.153016
+Rolling 7D options notional: 미집계
+
+OPSHNZ snapshot: 10/26 17:18 SGT. Missing volume is not zero.
+
+---
+
+BTC 30D IV 36.26% / RV 36.26%
+As of 10/26 17:20 SGT.
+
+Historical realised volatility is not a forecast. This comparison alone does not establish a short-volatility edge.
+
+---
+
+Illustrative bear put spread:
+Buy 100 put, sell 95 put, pay net 2. Same underlying/expiry, equal size.
+
+Expiry max loss 2; max profit 3; break-even 98. Not live prices. Fees/slippage excluded.
+
+---
+
+SWOT | Bear put spread
+
+S: capped loss, lower debit than a standalone put.
+W: theta decay, capped gain.
+O: reassess after a confirmed breakdown.
+T: rebound, IV decline, poor leg execution.
+
+---
+
+Macro watch | FOMC meeting · Oct 27–28, US dates
+
+Watch rates, USD, BTC and IV/skew reactions. A policy surprise is not an automatic directional signal.
+https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm

@@ -1,7 +1,7 @@
 (()=>{
 'use strict';
 const $=id=>document.getElementById(id),KEY='defidaniel-content-calendar-v1';
-const channels=['텔레그램','X','봇 미리보기'],formats=['글','원페이저','영상'],statuses=['기획','제작중','검토대기','게시예정','게시완료'];
+const channels=['텔레그램','X','봇 미리보기'],formats=['글','원페이저','영상'],statuses=['기획','제작중','검토대기','준비실패','게시예정','게시완료'];
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Singapore',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 const parse=s=>{const[y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d,12);};
@@ -10,7 +10,7 @@ const dateLabel=s=>new Intl.DateTimeFormat('ko-KR',{month:'long',day:'numeric',w
 function validEvent(e){return e&&typeof e.id==='string'&&e.id.length<=150&&typeof e.title==='string'&&e.title.trim().length>0&&e.title.length<=100&&/^\d{4}-\d{2}-\d{2}$/.test(e.date)&&key(parse(e.date))===e.date&&/^([01]\d|2[0-3]):[0-5]\d$/.test(e.time)&&channels.includes(e.channel)&&statuses.includes(e.status)&&Array.isArray(e.formats)&&e.formats.length>0&&e.formats.every(f=>formats.includes(f))&&typeof e.note==='string'&&e.note.length<=1000&&typeof e.link==='string'&&(!e.link||/^https?:\/\//i.test(e.link));}
 const seed=JSON.parse($('calendar-seed').textContent);let removedSeedIds=[];
 let events=structuredClone(seed),selected=today,month=parse(today),view=matchMedia('(max-width:760px)').matches?'list':'month';
-try{const saved=JSON.parse(localStorage.getItem(KEY));const rows=Array.isArray(saved)?saved:saved?.events;if(Array.isArray(rows)&&rows.every(validEvent)){removedSeedIds=Array.isArray(saved?.removedSeedIds)?saved.removedSeedIds:[];events=[...rows,...seed.filter(e=>!rows.some(r=>r.id===e.id)&&!removedSeedIds.includes(e.id))];}}catch{}
+try{const saved=JSON.parse(localStorage.getItem(KEY));const rows=Array.isArray(saved)?saved:saved?.events;if(Array.isArray(rows)&&rows.every(validEvent)){removedSeedIds=Array.isArray(saved?.removedSeedIds)?saved.removedSeedIds:[];events=[...rows.map(r=>{const latest=seed.find(e=>e.id===r.id);return latest&&Date.parse(latest.updatedAt||'')>Date.parse(r.updatedAt||'1970-01-01')?latest:r;}),...seed.filter(e=>!rows.some(r=>r.id===e.id)&&!removedSeedIds.includes(e.id))];}}catch{}
 let toastTimer;
 function toast(t){$('calendarToast').textContent=t;$('calendarToast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('calendarToast').hidden=true,3500);}
 function save(){try{localStorage.setItem(KEY,JSON.stringify({events,removedSeedIds}));return true;}catch{toast('저장 공간이 부족하거나 저장이 차단됐어요. 일정을 내보내 주세요.');return false;}}
@@ -44,7 +44,7 @@ function openForm(id){
  const e=events.find(e=>e.id===id);$('eventForm').reset();$('eventId').value=e?.id||'';$('dialogTitle').textContent=e?'일정 수정':'일정 추가';$('eventTitle').value=e?.title||'';$('eventDate').value=e?.date||selected;$('eventTime').value=e?.time||'21:00';$('eventChannel').value=e?.channel||'텔레그램';$('eventStatus').value=e?.status||'기획';$('eventLink').value=e?.link||'';$('eventNote').value=e?.note||'';
  document.querySelectorAll('input[name=format]').forEach(c=>c.checked=(e?.formats||['글']).includes(c.value));$('deleteEvent').hidden=!e;$('eventDialog').showModal();$('eventTitle').focus();
 }
-$('eventForm').addEventListener('submit',e=>{e.preventDefault();const id=$('eventId').value;const item={id:id||globalThis.crypto?.randomUUID?.()||`${Date.now()}-${Math.random().toString(36).slice(2)}`,title:$('eventTitle').value.trim(),date:$('eventDate').value,time:$('eventTime').value,channel:$('eventChannel').value,status:$('eventStatus').value,formats:[...document.querySelectorAll('input[name=format]:checked')].map(c=>c.value),link:$('eventLink').value.trim(),note:$('eventNote').value.trim()};
+$('eventForm').addEventListener('submit',e=>{e.preventDefault();const id=$('eventId').value;const item={updatedAt:new Date().toISOString(),id:id||globalThis.crypto?.randomUUID?.()||`${Date.now()}-${Math.random().toString(36).slice(2)}`,title:$('eventTitle').value.trim(),date:$('eventDate').value,time:$('eventTime').value,channel:$('eventChannel').value,status:$('eventStatus').value,formats:[...document.querySelectorAll('input[name=format]:checked')].map(c=>c.value),link:$('eventLink').value.trim(),note:$('eventNote').value.trim()};
  if(!validEvent(item)){toast('제목·날짜·시간과 콘텐츠 형식을 확인해 주세요.');return;}
  const index=events.findIndex(e=>e.id===id);if(index>=0)events[index]=item;else events.push(item);const stored=save();$('eventDialog').close();selectDate(item.date);if(stored)toast('일정을 저장했어요. 자동 발송은 하지 않습니다.');
 });

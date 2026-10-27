@@ -1,8 +1,8 @@
 {
-  "id": "private-mobile-preview-2026-10-21",
+  "id": "2026-W44-review-2026-10-27",
   "approved": false,
-  "validUntil": "2026-10-21T15:27:27.516144+00:00",
-  "text": "assets/telegram-mobile-preview-2026-10-21.txt",
-  "photo": "assets/images/weekly-options-W42-ko.png",
-  "caption": "🧪 모바일 가독성 테스트 · 과거 회차\n주간 온체인 옵션 돌아보기\n자료: 2026.10.14–15 기준 / 현재 시세 아님\n\n아래 본문에서 핵심 내용을 읽고, 이미지는 눌러 확대해 주세요."
+  "validUntil": "2026-10-27T23:59:59.999999+08:00",
+  "text": "assets/weekly/2026-W44-review-2026-10-27/telegram.txt",
+  "photo": "assets/weekly/2026-W44-review-2026-10-27/onepager-ko.png",
+  "caption": "2026-W44 · 주간 온체인 옵션 검토본\n지표 10/26 17:18 SGT · 공식 발표 날짜 개별 표시"
 }

@@ -1,0 +1,21 @@
+{
+  "news": [
+    {
+      "project": "Derive", "date": "2026-10-23",
+      "url": "https://blog.celestia.org/derive-scaling-the-largest-onchain-options-exchange-with-celestia/",
+      "verify": "Derive",
+      "ko": "Celestia가 Derive V3 사례를 공개. 이더리움 보관·증명과 데이터 가용성 구조를 설명한 파트너 발표입니다. 신규 상장 공지가 아닙니다.",
+      "en": "Celestia published a Derive V3 case study covering custody, proofs and data availability. Partner commentary, not a new listing."
+    },
+    {
+      "project": "Hypercall", "date": "2026-10-26",
+      "url": "https://blog.hypercall.xyz/physically-settled-covered-calls/",
+      "verify": "Covered Calls",
+      "ko": "커버드콜 기능을 예고. 공식 글은 coming soon으로 안내하므로 출시 완료로 해석하지 않습니다.",
+      "en": "Covered calls were announced as coming soon. This is a product preview, not confirmation that the feature is live."
+    }
+  ],
+  "events": [
+    {"date":"2026-10-27","endDate":"2026-10-28","ko":"FOMC 회의 · 미국 현지 날짜 10/27–28","en":"FOMC meeting · Oct 27–28, US dates","url":"https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm","verify":"27-28"}
+  ]
+}

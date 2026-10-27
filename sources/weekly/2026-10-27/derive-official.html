@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/assets/built/index.css?v=HzmGDETeNNyXlB6s" />
+    <script src="/assets/built/index.js?v=c7LmJ30S952QDO_U" defer></script>
+
+    <title>Derive: Scaling the Largest Onchain Options Exchange with Celestia</title>
+
+    <style>
+        :root {
+            --button-bg-color: var(--color-darkgrey);
+            --button-text-color: #fff;
+        }
+        
+        /* Hide only elements with data-truncate attribute until truncation is complete */
+        /* Only apply truncation above 1000px viewport width */
+        @media (min-width: 1001px) {
+            [data-truncate] {
+                opacity: 0;
+                transition: opacity 0.1s ease-in;
+            }
+            
+            /* Class to show content after truncation */
+            .content-ready {
+                opacity: 1 !important;
+            }
+            
+            /* Fallback to ensure content becomes visible after 0.5 seconds even if JS fails */
+            [data-truncate] {
+                animation: showContent 0s 0.5s forwards;
+            }
+            
+            @keyframes showContent {
+                to {
+                    opacity: 1;
+                }
+            }
+        }
+    </style>
+
+    <meta name="description" content="This case study explores Derive, an onchain options exchange and why it chose to build on Celestia.">
+    <link rel="icon" href="https://blog.celestia.org/content/images/size/w256h256/2021/06/favicon.png" type="image/png">
+    <link rel="canonical" href="https://blog.celestia.org/derive-scaling-the-largest-onchain-options-exchange-with-celestia/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Celestia Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Derive: Scaling the Largest Onchain Options Exchange with Celestia">
+    <meta property="og:description" content="This case study explores Derive, an onchain options exchange and why it chose to build on Celestia.">
+    <meta property="og:url" content="https://blog.celestia.org/derive-scaling-the-largest-onchain-options-exchange-with-celestia/">
+    <meta property="og:image" content="https://blog.celestia.org/content/images/size/w1200/2026/10/title-derive-final.png">
+    <meta property="article:published_time" content="2026-10-23T12:49:44.000Z">
+    <meta property="article:modified_time" content="2026-10-23T21:28:30.000Z">
+    <meta property="article:tag" content="Case Studies">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Derive: Scaling the Largest Onchain Options Exchange with Celestia">
+    <meta name="twitter:description" content="This case study explores Derive, an onchain options exchange and why it chose to build on Celestia.">
+    <meta name="twitter:url" content="https://blog.celestia.org/derive-scaling-the-largest-onchain-options-exchange-with-celestia/">
+    <meta name="twitter:image" content="https://blog.celestia.org/content/images/size/w1200/2026/10/title-derive-final.png">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Alex Santos">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Case Studies">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="634">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Celestia Blog",
+        "url": "https://blog.celestia.org/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.celestia.org/content/images/2025/03/celestia-blog-logo-black-1.png"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Alex Santos",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.celestia.org/content/images/size/w1200/2026/05/LinkedinPhoto.jpeg",
+            "width": 1200,
+            "height": 800
+        },
+        "url": "https://blog.celestia.org/author/alex-santos/",
+        "sameAs": [
+            "http://linkedin.com/in/alex-santos-4a4ab21b0"
+        ]
+    },
+    "headline": "Derive: Scaling the Largest Onchain Options Exchange with Celestia",
+    "url": "https://blog.celestia.org/derive-scaling-the-largest-onchain-options-exchange-with-celestia/",
+    "datePublished": "2026-10-23T12:49:44.000Z",
+    "dateModified": "2026-10-23T21:28:30.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.celestia.org/content/images/size/w1200/2026/10/title-derive-final.png",
+        "width": 1200,
+        "height": 634
+    },
+    "keywords": "Case Studies",
+    "description": "This case study explores Derive, an onchain options exchange that accounts for 95% of onchain premium volume at the time of writing, and why it chose to build on Celestia. \n\n\nDerive: the largest onchain options venue\n\nDerive is an onchain options exchange built for professional traders, market makers, and funds. It supports options, perpetual futures, and block trades through a request-for-quote (RFQ) system, with portfolio margin across more than 20 collateral types.\n\nAs of October 2026, Derive",
+    "mainEntityOfPage": "https://blog.celestia.org/derive-scaling-the-largest-onchain-options-exchange-with-celestia/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 6.72">
+    <link rel="alternate" type="application/rss+xml" title="Celestia Blog" href="https://blog.celestia.org/rss/">
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.72/umd/portal.min.js" data-i18n="true" data-ghost="https://blog.celestia.org/" data-key="b1073dbfe30c92662ed3e52d20" data-api="https://blog.celestia.org/ghost/api/content/" data-locale="en" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.9/umd/sodo-search.min.js" data-key="b1073dbfe30c92662ed3e52d20" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.9/umd/main.css" data-sodo-search="https://blog.celestia.org/" data-locale="en" crossorigin="anonymous"></script>
+    
+    <link href="https://blog.celestia.org/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=ShRHxgy4po8zN-Wf"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=WwnU9jw5ancNC8Gc">
+    <script defer src="/public/member-attribution.min.js?v=AKG4hWena9j3yX3I"></script><style>:root {--ghost-accent-color: #7b2bf9;}</style>
+    <style>
+    /*.gh-canvas .article-image {
+        grid-column: main-start/main-end !important;
+    }*/
+    .gh-head-logo img {
+		max-height: 35px;
+	}
+    
+    /* Branding */
+    .site-header-content p {
+        color: #000; /* Subtitle color */
+    }
+    .gh-head, .site-header-content {
+        background: #fff; /* Menu background */
+    }
+    .gh-head {
+        border-bottom: 1px solid rgba(8, 14, 20, 0.1); /* Menu bottom border */
+    }
+    .home-template .gh-head {
+        border-bottom: 0px;
+    }
+    .gh-head-menu .nav a {
+        color: var(--color-darkgrey); /* Menu links color */
+    }
+    .gh-burger-box {
+        color: #000; /* Burger icon color */
+    }
+    .site-logo { /* Replace logo on front page */
+        display: block;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: url(/content/images/2021/10/g162.png) no-repeat;
+        height: 55px;
+        width: 315px;
+        padding-left: 315px;
+    }
+    
+	table, th, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+        padding: 7px;
+	}
+    thead {
+        font-weight: bold;
+    }
+    td {
+        word-break: normal;
+    }
+</style>
+
+<script async defer data-domain="blog.celestia.org" src="https://plausible.celestia.org/js/plausible.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="post-template tag-case-studies">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head">
+        <nav class="gh-head-inner inner gh-container">
+
+            <div class="gh-head-brand">
+                <a class="gh-head-logo" href="https://blog.celestia.org">
+                        <img src="https://blog.celestia.org/content/images/2025/03/celestia-blog-logo-black-1.png" alt="Celestia Blog" />
+                </a>
+            </div>
+            <div class="gh-head-actions">
+                    <a class="gh-head-button" href="https://celestia.org/" target="_blank" rel="noopener">
+                        <span>Website</span>
+                       <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.71789 12.0721L11.1818 4.60823" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+                            <path d="M11.6311 11.0759V4.00486H4.56004" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel"/>
+                        </svg> 
+                    </a>
+            </div>
+        </nav>
+    </header>
+
+<div class="site-content">
+    
+
+    <main id="site-main" class="site-main">
+    <article class="article post tag-case-studies ">
+
+        <header class="article-header gh-canvas">
+
+            <section class="article-tag">
+                <a href="https://blog.celestia.org/tag/case-studies/">Case Studies</a>
+            </section>
+
+            <h1 class="article-title">Derive: Scaling the Largest Onchain Options Exchange with Celestia</h1>
+
+
+            <div class="article-byline">
+                <section class="article-byline-content">
+                    <ul class="author-list">
+                        <li class="author-list-item">
+                            <a href="/author/alex-santos/" class="author-avatar">
+                                <img class="author-profile-image" src="/content/images/size/w100/2026/05/LinkedinPhoto.jpeg" alt="Alex Santos" />
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="article-byline-meta">
+                        <h4 class="author-name"><a href="/author/alex-santos/">Alex Santos</a></h4>
+                        <div class="byline-meta-content">
+                            <time class="byline-meta-date" datetime="2026-10-23">Oct 23, 2026</time>
+                            <span class="byline-reading-time"><span class="bull">&bull;</span> 3 min read</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <figure class="article-image">
+                <img
+                    srcset="/content/images/size/w300/2026/10/title-derive-final.png 300w,
+                            /content/images/size/w600/2026/10/title-derive-final.png 600w,
+                            /content/images/size/w1200/2026/10/title-derive-final.png 1000w,
+                            /content/images/size/w2000/2026/10/title-derive-final.png 2000w"
+                    sizes="(min-width: 1400px) 1400px, 92vw"
+                    src="/content/images/size/w2000/2026/10/title-derive-final.png"
+                    alt="Derive: Scaling the Largest Onchain Options Exchange with Celestia"
+                />
+            </figure>
+        </header>
+
+        <section class="gh-content gh-canvas">
+            <p><em>This case study explores Derive, an onchain options exchange that accounts for 95% of onchain premium volume at the time of writing, and why it chose to build on Celestia.&nbsp;</em></p><h2 id="derive-the-largest-onchain-options-venue"><strong>Derive: the largest onchain options venue</strong></h2><p>Derive is an onchain options exchange built for professional traders, market makers, and funds. It supports options, perpetual futures, and block trades through a request-for-quote (RFQ) system, with portfolio margin across more than 20 collateral types.</p><p>As of October 2026, Derive is the largest onchain options venue, accounting for about 95% of onchain options premium volume and having processed over $40B in cumulative notional volume.</p><h2 id="how-derive-works"><strong>How Derive works</strong></h2><p>Derive recently launched V3, a major upgrade to support its next chapter of rapid growth with three key advantages over their previous design:</p><ul><li><strong>Capacity:</strong> an order-of-magnitude increase in throughput</li><li><strong>Custody:</strong> Ethereum-native custody, validity-proven state, and an escape hatch on L1</li><li><strong>Speed:</strong> faster market listings and product launches due to a simpler architecture</li></ul><p>Derive V3 achieves this by splitting the exchange into four layers:</p><figure class="kg-card kg-image-card"><img src="https://blog.celestia.org/content/images/2026/10/table-final.png" class="kg-image" alt="" loading="lazy" width="2000" height="1050" srcset="https://blog.celestia.org/content/images/size/w600/2026/10/table-final.png 600w, https://blog.celestia.org/content/images/size/w1000/2026/10/table-final.png 1000w, https://blog.celestia.org/content/images/size/w1600/2026/10/table-final.png 1600w, https://blog.celestia.org/content/images/size/w2400/2026/10/table-final.png 2400w" sizes="(min-width: 720px) 720px"></figure><p>Thanks to the V3 upgrade, Derive can now handle thousands of positions cross-margined in a single portfolio, and continue matching orders during a market-wide spike. Easier <a href="https://insights.derive.xyz/builder-codes/?ref=blog.celestia.org"><u>integration support</u></a> also means that more wallets can offer deals like "protect my ETH below $3,000," and more yield products can offer "earn while willing to sell at $6,000," powered under the hood by Derive.</p><h2 id="what-celestia-provides"><strong>What Celestia provides</strong></h2><p>Celestia ensures that user funds are safe in case the Derive operator goes offline or becomes malicious.</p><p>The validity proofs prove to Ethereum that a batch of changes is valid, but they do not tell anyone what those changes are. If the only copy of that data sat in Derive's database, a user would not be able to check their balance or withdraw if Derive went offline.</p><p>To fix this, every batch's state diff is published to Celestia, which provides two important guarantees:</p><p><strong>Users retain their self-custody without Derive:</strong> The data needed to rebuild the full exchange state is public. Derive's database becomes a convenience instead of a dependency because if Derive went offline tomorrow, a user’s funds would still be sitting in the Ethereum contracts, and the data to prove what they are owed would still be on Celestia. They could withdraw without Derive’s permission, and even without Derive existing.</p><p><strong>Anyone can take over settlement:</strong> The Ethereum contracts force the sequencer to process withdrawals in the order they arrive. If one sits unprocessed for two weeks, anyone can fetch the data from Celestia, run Derive’s exchange binary and propose new batches. Withdrawals continue to flow even without Derive's cooperation.</p><h2 id="why-derive-uses-celestia"><strong>Why Derive uses Celestia</strong><br></h2><blockquote>"Celestia provides the highest potential scale, economic predictability and infrastructure maturity.<br><br>The speed of putting the Celestia client in the zkVM program was substantially simpler than we had thought."<br><br>- Josh Kim, CTO at Derive</blockquote><p>Derive has been using Celestia since January 2024, with 43,082 blobs and 42.52 GiB in its namespace so far. When upgrading to V3, Derive is continuing to use Celestia for three reasons:</p><p><strong>Predictable fees:</strong> Applications like Derive need predictable operating costs to ensure their economic model works, and one of their input costs is data availability fees.</p><p>Fees from alternative data availability providers fluctuate significantly over time depending on network congestion, making operating costs hard to forecast. Celestia’s fees have remained stable since launch because the network continues to scale and avoid congestion.</p><p>With 150 MB/s of capacity on Celestia mainnet and a robust scaling roadmap, Derive can rest assured that Celestia’s fees will remain stable into the future and Derive’s DA costs will remain predictable.</p><p><strong>Room to scale:</strong> V3 increases Derive’s throughput capacity on the exchange by an order of magnitude, but that only matters if the data layer underneath can keep up. Fortunately, <a href="https://blog.celestia.org/celestia-fibre-hits-3-tb-s/"><u>Celestia recently upgraded to Fibre</u></a> which raised its throughput to 150 MB/s on mainnet and demonstrated the ability to hit 3 Tb/s in a recent benchmark.At Derive’s current rates, they could increase their data consumption by many orders of magnitude before hitting Celestia’s limits. This gives them ample headroom to scale their exchange in V3 and in the future.</p><p><strong>Easy integration:</strong> In Derive’s design, a valid proof must verify the inclusion of the state diff data on Celestia. This means implementing a client of the DA layer within Derive’s zkVM program, which can be extremely difficult. Celestia’s pre-built Rust client made this integration work simple and straightforward.</p><h2 id="looking-ahead"><strong>Looking ahead</strong></h2><p>Celestia Labs is excited to continue supporting Derive as it builds the next generation of onchain options on V3 and beyond. As more of global finance moves onchain, Derive and other onchain markets can count on Celestia to help protect their users’ funds with cheap, reliable, and scalable data availability.</p><p>If you are building an exchange, a payments system, or any onchain financial product that requires extreme scale, <a href="https://celestia.org/contact/?ref=blog.celestia.org" rel="noreferrer">let’s talk.</a></p>
+        </section>
+
+
+    </article>
+</main>
+
+
+            <aside class="read-more-wrap">
+                <div class="read-more inner">
+                        
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/midnight-network-a-case-study-in-using-data-availability-for-peer-to-peer-networking/">
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/2026/08/Midnight-Network_--1-.png 300w,
+                    /content/images/size/w600/2026/08/Midnight-Network_--1-.png 600w,
+                    /content/images/size/w1200/2026/08/Midnight-Network_--1-.png 1000w,
+                    /content/images/size/w2000/2026/08/Midnight-Network_--1-.png 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/2026/08/Midnight-Network_--1-.png"
+            alt="Midnight Network: A Case Study in Using Data Availability for Peer-to-Peer Networking"
+            loading="lazy"
+        />
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/midnight-network-a-case-study-in-using-data-availability-for-peer-to-peer-networking/">
+            <header class="post-card-header">
+                <div class="post-card-header-container">
+                    <span class="post-card-byline-date"><time datetime="2026-08-24">Aug 24, 2026</time> <span class="bull">&bull;</span> 5 min read</span>
+                </div>
+                <h2 class="post-card-title">Midnight Network: A Case Study in Using Data Availability for Peer-to-Peer Networking</h2>
+            </header>
+        </a>
+
+        <div class="post-card-readmore">
+            <a href="/midnight-network-a-case-study-in-using-data-availability-for-peer-to-peer-networking/"><span>Read More</span>
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.71789 12.0721L11.1818 4.60823" stroke="#7B2BF9" stroke-width="1.5" stroke-linecap="square"/>
+                <path d="M11.6311 11.0759V4.00486H4.56004" stroke="#7B2BF9" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel"/>
+            </svg> 
+            </a>
+        </div>
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/celestia-labs-acquires-sovereign-labs-to-build-high-performance-custom-blockchains/">
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/2026/07/Celestia-Acquires-Sovereign-Labs-blog.png 300w,
+                    /content/images/size/w600/2026/07/Celestia-Acquires-Sovereign-Labs-blog.png 600w,
+                    /content/images/size/w1200/2026/07/Celestia-Acquires-Sovereign-Labs-blog.png 1000w,
+                    /content/images/size/w2000/2026/07/Celestia-Acquires-Sovereign-Labs-blog.png 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/2026/07/Celestia-Acquires-Sovereign-Labs-blog.png"
+            alt="Celestia Labs Acquires Sovereign Labs To Build High-Performance Custom Blockchains"
+            loading="lazy"
+        />
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/celestia-labs-acquires-sovereign-labs-to-build-high-performance-custom-blockchains/">
+            <header class="post-card-header">
+                <div class="post-card-header-container">
+                    <span class="post-card-byline-date"><time datetime="2026-07-15">Jul 15, 2026</time> <span class="bull">&bull;</span> 2 min read</span>
+                </div>
+                <h2 class="post-card-title">Celestia Labs Acquires Sovereign Labs To Build High-Performance Custom Blockchains</h2>
+            </header>
+        </a>
+
+        <div class="post-card-readmore">
+            <a href="/celestia-labs-acquires-sovereign-labs-to-build-high-performance-custom-blockchains/"><span>Read More</span>
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.71789 12.0721L11.1818 4.60823" stroke="#7B2BF9" stroke-width="1.5" stroke-linecap="square"/>
+                <path d="M11.6311 11.0759V4.00486H4.56004" stroke="#7B2BF9" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel"/>
+            </svg> 
+            </a>
+        </div>
+    </div>
+
+</article>
+                </div>
+            </aside>
+
+
+
+</div>
+
+   <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="https://blog.celestia.org">Celestia Blog</a> &copy; 2026</section>
+            <nav class="site-footer-nav">
+                <ul class="nav">
+    <li class="nav-website"><a href="https://celestia.org">Website</a></li>
+    <li class="nav-x"><a href="https://x.com/celestia">X</a></li>
+    <li class="nav-discord"><a href="https://discord.com/invite/YsnTPcSfWQ">Discord</a></li>
+    <li class="nav-telegram"><a href="https://t.me/CelestiaCommunity">Telegram</a></li>
+    <li class="nav-github"><a href="https://github.com/CelestiaOrg">GitHub</a></li>
+</ul>
+
+            </nav>
+            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-fTl/qcO1VgvKtOMApX2PdZzkziyr2stM65GYPLGuYMnuMm1z2JLJG6XVU7C/mR+E7xBUqCivykuhlzfqxXBXbg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+ <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+     var swiper = new Swiper(".mySwiper", {
+      autoHeight: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      speed: 400,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a511e7613db45ffd',t:'MTc5MzEwNjIzNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"2f5faeb3a3874ee8a084027c66dea8e5","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

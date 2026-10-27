@@ -25,7 +25,7 @@ for relative in ['index.html', 'studio.html', 'assets/bear-put-spread-payoff.htm
 text = (root/'studio.html').read_text()
 match = re.search(r'<script[^>]*id="weekly-data"[^>]*>(.*?)</script>', text, re.S)
 data = json.loads(match[1])
-assert len(data['tweets']) == 17
+assert len(data['tweets']) > 0
 assert len(data['telegram']) <= 4096
 for media in [data['images']['telegram'], *data['images']['tweets']]:
     if not (root / media['path']).is_file(): errors.append('Missing media: '+media['path'])

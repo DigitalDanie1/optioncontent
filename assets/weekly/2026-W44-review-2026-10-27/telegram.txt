@@ -1,0 +1,61 @@
+주간 온체인 옵션 돌아보기 · 2026-W44
+자료 확인 2026-10-27 / 지표 10/26 17:18 SGT
+
+【1부】주간 온체인
+
+Derive · 10-23
+Celestia가 Derive V3 사례를 공개. 이더리움 보관·증명과 데이터 가용성 구조를 설명한 파트너 발표입니다. 신규 상장 공지가 아닙니다.
+https://blog.celestia.org/derive-scaling-the-largest-onchain-options-exchange-with-celestia/
+
+Hypercall · 10-26
+커버드콜 기능을 예고. 공식 글은 coming soon으로 안내하므로 출시 완료로 해석하지 않습니다.
+https://blog.hypercall.xyz/physically-settled-covered-calls/
+
+토큰 프로젝트 · 데이터 업데이트
+• Derive · DRV $0.348779
+  옵션 명목 거래량 7D $639.17M · 현물 Coinbase, Gate
+• Aevo · AEVO $0.02119182
+  옵션 명목 거래량 7D $17.10M · 현물 Gate, Binance
+• Thetanuts · NUTS $0.00095624
+  옵션 명목 거래량 7D $189,698 · 현물 Gate
+• Hypercall · SYN $0.153016
+  옵션 명목 거래량 7D 미집계 · 현물 Gate, Binance
+
+Pre-TGE 관찰
+• CallPut: 7D $24.56M
+• Rysk: 7D $16.34M
+• Dream: 7D 미집계
+※ 미집계는 0이 아닙니다. Pre-TGE는 토큰·에어드롭 확정이 아닙니다. 현물 확인 범위는 이번에 응답한 거래소 API만 포함합니다.
+
+【2부】트레이딩 뷰
+
+기본 판단: 관망, 새 호가 확인 우선
+BTC 30D IV 36.26% / RV 36.26%
+기준 10/26 17:20 SGT · OPSHNZ 집계.
+과거 실현 변동성과 IV 비교만으로 매도 우위나 방향을 단정하지 않습니다.
+
+조건부 학습 사례: 베어 풋 스프레드
+행사가 100 풋 매수 / 95 풋 매도.
+순비용 2를 가정한 설명용 예시이며 실제 호가·BTC 달러 가격이 아닙니다.
+
+만기 가격 ≤95 → 최대 이익 +3
+만기 가격 98 → 손익 0
+만기 가격 ≥100 → 최대 손실 −2
+수수료·슬리피지 제외. 만기 전 손익은 다릅니다.
+
+SWOT
+S 손실 상한·단독 풋 대비 비용 절감
+W 시간가치 소모·하락 이익 상한
+O 실제 하방 이탈·회복 실패 확인 시 재검토
+T 반등·IV 하락·두 다리 체결 위험
+
+【3부】매크로 뷰
+
+• FOMC 회의 · 미국 현지 날짜 10/27–28
+https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+
+확인된 일정과 방향성 전망은 다릅니다.
+정책 결과 → 금리·달러 반응 → BTC 가격·IV·풋 스큐 순서로 확인합니다. 금리 하락만으로 상승을 단정하지 않습니다.
+
+원페이저·근거: https://optioncontent.vercel.app/studio.html
+옵션 하면, defidaniel.
