@@ -1,29 +1,22 @@
 {
-  "preparedAt": "2026-10-27T13:08:25.108Z",
-  "sourceWindowStart": "2026-10-20",
-  "sourceWindowEnd": "2026-10-26",
-  "snapshotAt": "2026-10-26T09:18:29.366Z",
-  "deliveryDate": "2026-10-27",
-  "configId": "2026-W44-review-2026-10-27",
-  "text": "assets/weekly/2026-W44-review-2026-10-27/telegram.txt",
-  "photo": "assets/weekly/2026-W44-review-2026-10-27/onepager-ko.png",
-  "englishPhoto": "assets/weekly/2026-W44-review-2026-10-27/onepager-en.png",
-  "englishText": "assets/weekly/2026-W44-review-2026-10-27/x.txt",
-  "sources": "sources/weekly/2026-10-27",
+  "preparedAt": "2026-11-01T16:38:09.360Z",
+  "sourceWindowStart": "2026-10-26",
+  "sourceWindowEnd": "2026-11-01",
+  "snapshotAt": "2026-11-01T07:26:12.178Z",
+  "deliveryDate": "2026-11-02",
+  "configId": "2026-W45-review-2026-11-02",
+  "text": "assets/weekly/2026-W45-review-2026-11-02/telegram.txt",
+  "photo": "assets/weekly/2026-W45-review-2026-11-02/onepager-ko.png",
+  "englishPhoto": "assets/weekly/2026-W45-review-2026-11-02/onepager-en.png",
+  "englishText": "assets/weekly/2026-W45-review-2026-11-02/x.txt",
+  "sources": "sources/weekly/2026-11-02",
   "limitations": [
+    "Binance spot check unavailable: HTTPError",
     "No executable quotes; payoff is an illustrative 100/95 debit-2 example.",
     "No exhaustive X timeline collection.",
     "No new video produced."
   ],
   "news": [
-    {
-      "project": "Derive",
-      "date": "2026-10-23",
-      "url": "https://blog.celestia.org/derive-scaling-the-largest-onchain-options-exchange-with-celestia/",
-      "verify": "Derive",
-      "ko": "Celestia가 Derive V3 사례를 공개. 이더리움 보관·증명과 데이터 가용성 구조를 설명한 파트너 발표입니다. 신규 상장 공지가 아닙니다.",
-      "en": "Celestia published a Derive V3 case study covering custody, proofs and data availability. Partner commentary, not a new listing."
-    },
     {
       "project": "Hypercall",
       "date": "2026-10-26",
@@ -33,21 +26,12 @@
       "en": "Covered calls were announced as coming soon. This is a product preview, not confirmation that the feature is live."
     }
   ],
-  "macro": [
-    {
-      "date": "2026-10-27",
-      "endDate": "2026-10-28",
-      "ko": "FOMC 회의 · 미국 현지 날짜 10/27–28",
-      "en": "FOMC meeting · Oct 27–28, US dates",
-      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
-      "verify": "27-28"
-    }
-  ],
+  "macro": [],
   "hashes": {
-    "assets/weekly/2026-W44-review-2026-10-27/telegram.txt": "8bab2534115005ba7c602e68be7f9684ef9d7cffbfdf0892b3dec1804f38a324",
-    "assets/weekly/2026-W44-review-2026-10-27/onepager-ko.png": "fe6aba8669a1b13c684921b11ec39fbeb07f7b8c62f0146a7a1daf26c8d5a7bb",
-    "assets/weekly/2026-W44-review-2026-10-27/onepager-en.png": "8d76021aa3c9f3d5edd2dcf32fe99d7a117493c6bff6c8031d4991adcd664ac3",
-    "assets/weekly/2026-W44-review-2026-10-27/x.txt": "c5602e24f058929f1631ba217bf358cdedfab52462b9b3abe732176c45f5b4b7"
+    "assets/weekly/2026-W45-review-2026-11-02/telegram.txt": "bb60cc5b1e97561773b74d9f124f9f6804682f6313cb7d653354ee8eb43d077d",
+    "assets/weekly/2026-W45-review-2026-11-02/onepager-ko.png": "85c7c8b0a6ec66e326f9f7d285dc2d6b19da991c3f555ce11af97a51da66abc3",
+    "assets/weekly/2026-W45-review-2026-11-02/onepager-en.png": "5a29eea2cebd365e317ef8604a2bb91689d6fc8004f5ea19c3b23fa55336d3e2",
+    "assets/weekly/2026-W45-review-2026-11-02/x.txt": "56519b2439062721850535190a6210b313d587402af8b089bf96450cf5ef7231"
   },
   "validated": true
 }

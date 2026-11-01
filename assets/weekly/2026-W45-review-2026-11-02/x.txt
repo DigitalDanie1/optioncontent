@@ -1,0 +1,67 @@
+Onchain Options Weekly | 2026-W45
+
+Metrics as of 11/01 15:26 SGT. Source-backed project review, conditional strategy education and macro watch.
+
+Options, every week — defidaniel.
+
+---
+
+Hypercall | 2026-10-26
+
+Covered calls were announced as coming soon. This is a product preview, not confirmation that the feature is live.
+https://blog.hypercall.xyz/physically-settled-covered-calls/
+
+---
+
+Derive / DRV
+Price $0.32324
+Rolling 7D options notional: $727.37M
+
+OPSHNZ snapshot: 11/01 15:26 SGT. Missing volume is not zero.
+
+---
+
+Aevo / AEVO
+Price $0.02053431
+Rolling 7D options notional: $21.02M
+
+OPSHNZ snapshot: 11/01 15:26 SGT. Missing volume is not zero.
+
+---
+
+Thetanuts / NUTS
+Price $0.00096149
+Rolling 7D options notional: $117,199
+
+OPSHNZ snapshot: 11/01 15:26 SGT. Missing volume is not zero.
+
+---
+
+Hypercall / SYN
+Price $0.157216
+Rolling 7D options notional: $7.05M
+
+OPSHNZ snapshot: 11/01 15:26 SGT. Missing volume is not zero.
+
+---
+
+BTC 30D IV 37.56% / RV 32.24%
+As of 11/01 15:28 SGT.
+
+Historical realised volatility is not a forecast. This comparison alone does not establish a short-volatility edge.
+
+---
+
+Illustrative bear put spread:
+Buy 100 put, sell 95 put, pay net 2. Same underlying/expiry, equal size.
+
+Expiry max loss 2; max profit 3; break-even 98. Not live prices. Fees/slippage excluded.
+
+---
+
+SWOT | Bear put spread
+
+S: capped loss, lower debit than a standalone put.
+W: theta decay, capped gain.
+O: reassess after a confirmed breakdown.
+T: rebound, IV decline, poor leg execution.
