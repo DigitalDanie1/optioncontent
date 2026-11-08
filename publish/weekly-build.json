@@ -1,30 +1,21 @@
 {
-  "preparedAt": "2026-11-01T16:38:03.958572+00:00",
-  "sourceWindowStart": "2026-10-26",
-  "sourceWindowEnd": "2026-11-01",
-  "snapshotAt": "2026-11-01T07:26:12.178Z",
-  "deliveryDate": "2026-11-02",
-  "configId": "2026-W45-review-2026-11-02",
-  "text": "assets/weekly/2026-W45-review-2026-11-02/telegram.txt",
-  "photo": "assets/weekly/2026-W45-review-2026-11-02/onepager-ko.png",
-  "englishPhoto": "assets/weekly/2026-W45-review-2026-11-02/onepager-en.png",
-  "englishText": "assets/weekly/2026-W45-review-2026-11-02/x.txt",
-  "sources": "sources/weekly/2026-11-02",
+  "preparedAt": "2026-11-08T16:32:53.496457+00:00",
+  "sourceWindowStart": "2026-11-02",
+  "sourceWindowEnd": "2026-11-08",
+  "snapshotAt": "2026-11-08T07:12:54.901Z",
+  "deliveryDate": "2026-11-09",
+  "configId": "2026-W46-review-2026-11-09",
+  "text": "assets/weekly/2026-W46-review-2026-11-09/telegram.txt",
+  "photo": "assets/weekly/2026-W46-review-2026-11-09/onepager-ko.png",
+  "englishPhoto": "assets/weekly/2026-W46-review-2026-11-09/onepager-en.png",
+  "englishText": "assets/weekly/2026-W46-review-2026-11-09/x.txt",
+  "sources": "sources/weekly/2026-11-09",
   "limitations": [
     "Binance spot check unavailable: HTTPError",
     "No executable quotes; payoff is an illustrative 100/95 debit-2 example.",
     "No exhaustive X timeline collection.",
     "No new video produced."
   ],
-  "news": [
-    {
-      "project": "Hypercall",
-      "date": "2026-10-26",
-      "url": "https://blog.hypercall.xyz/physically-settled-covered-calls/",
-      "verify": "Covered Calls",
-      "ko": "커버드콜 기능을 예고. 공식 글은 coming soon으로 안내하므로 출시 완료로 해석하지 않습니다.",
-      "en": "Covered calls were announced as coming soon. This is a product preview, not confirmation that the feature is live."
-    }
-  ],
+  "news": [],
   "macro": []
 }

@@ -1,0 +1,60 @@
+Onchain Options Weekly | 2026-W46
+
+Metrics as of 11/08 15:12 SGT. Source-backed project review, conditional strategy education and macro watch.
+
+Options, every week — defidaniel.
+
+---
+
+Derive / DRV
+Price $0.319992
+Rolling 7D options notional: $686.31M
+
+OPSHNZ snapshot: 11/08 15:12 SGT. Missing volume is not zero.
+
+---
+
+Aevo / AEVO
+Price $0.01892323
+Rolling 7D options notional: $14.91M
+
+OPSHNZ snapshot: 11/08 15:12 SGT. Missing volume is not zero.
+
+---
+
+Thetanuts / NUTS
+Price $0.00095703
+Rolling 7D options notional: $66,891
+
+OPSHNZ snapshot: 11/08 15:12 SGT. Missing volume is not zero.
+
+---
+
+Hypercall / SYN
+Price $0.143158
+Rolling 7D options notional: $15.63M
+
+OPSHNZ snapshot: 11/08 15:12 SGT. Missing volume is not zero.
+
+---
+
+BTC 30D IV 37.95% / RV 34.05%
+As of 11/08 15:15 SGT.
+
+Historical realised volatility is not a forecast. This comparison alone does not establish a short-volatility edge.
+
+---
+
+Illustrative bear put spread:
+Buy 100 put, sell 95 put, pay net 2. Same underlying/expiry, equal size.
+
+Expiry max loss 2; max profit 3; break-even 98. Not live prices. Fees/slippage excluded.
+
+---
+
+SWOT | Bear put spread
+
+S: capped loss, lower debit than a standalone put.
+W: theta decay, capped gain.
+O: reassess after a confirmed breakdown.
+T: rebound, IV decline, poor leg execution.

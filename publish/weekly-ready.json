@@ -1,37 +1,28 @@
 {
-  "preparedAt": "2026-11-01T16:38:09.360Z",
-  "sourceWindowStart": "2026-10-26",
-  "sourceWindowEnd": "2026-11-01",
-  "snapshotAt": "2026-11-01T07:26:12.178Z",
-  "deliveryDate": "2026-11-02",
-  "configId": "2026-W45-review-2026-11-02",
-  "text": "assets/weekly/2026-W45-review-2026-11-02/telegram.txt",
-  "photo": "assets/weekly/2026-W45-review-2026-11-02/onepager-ko.png",
-  "englishPhoto": "assets/weekly/2026-W45-review-2026-11-02/onepager-en.png",
-  "englishText": "assets/weekly/2026-W45-review-2026-11-02/x.txt",
-  "sources": "sources/weekly/2026-11-02",
+  "preparedAt": "2026-11-08T16:32:57.657Z",
+  "sourceWindowStart": "2026-11-02",
+  "sourceWindowEnd": "2026-11-08",
+  "snapshotAt": "2026-11-08T07:12:54.901Z",
+  "deliveryDate": "2026-11-09",
+  "configId": "2026-W46-review-2026-11-09",
+  "text": "assets/weekly/2026-W46-review-2026-11-09/telegram.txt",
+  "photo": "assets/weekly/2026-W46-review-2026-11-09/onepager-ko.png",
+  "englishPhoto": "assets/weekly/2026-W46-review-2026-11-09/onepager-en.png",
+  "englishText": "assets/weekly/2026-W46-review-2026-11-09/x.txt",
+  "sources": "sources/weekly/2026-11-09",
   "limitations": [
     "Binance spot check unavailable: HTTPError",
     "No executable quotes; payoff is an illustrative 100/95 debit-2 example.",
     "No exhaustive X timeline collection.",
     "No new video produced."
   ],
-  "news": [
-    {
-      "project": "Hypercall",
-      "date": "2026-10-26",
-      "url": "https://blog.hypercall.xyz/physically-settled-covered-calls/",
-      "verify": "Covered Calls",
-      "ko": "커버드콜 기능을 예고. 공식 글은 coming soon으로 안내하므로 출시 완료로 해석하지 않습니다.",
-      "en": "Covered calls were announced as coming soon. This is a product preview, not confirmation that the feature is live."
-    }
-  ],
+  "news": [],
   "macro": [],
   "hashes": {
-    "assets/weekly/2026-W45-review-2026-11-02/telegram.txt": "bb60cc5b1e97561773b74d9f124f9f6804682f6313cb7d653354ee8eb43d077d",
-    "assets/weekly/2026-W45-review-2026-11-02/onepager-ko.png": "85c7c8b0a6ec66e326f9f7d285dc2d6b19da991c3f555ce11af97a51da66abc3",
-    "assets/weekly/2026-W45-review-2026-11-02/onepager-en.png": "5a29eea2cebd365e317ef8604a2bb91689d6fc8004f5ea19c3b23fa55336d3e2",
-    "assets/weekly/2026-W45-review-2026-11-02/x.txt": "56519b2439062721850535190a6210b313d587402af8b089bf96450cf5ef7231"
+    "assets/weekly/2026-W46-review-2026-11-09/telegram.txt": "a8e8c76f3810e92ad5f1ba98213925aa64d98877e6822c377ebf951c8bc91e6b",
+    "assets/weekly/2026-W46-review-2026-11-09/onepager-ko.png": "dd39d8b6a8302ce5b1dee6f85f0c6b4854d23fd461578e61ae1848dc6b3510a7",
+    "assets/weekly/2026-W46-review-2026-11-09/onepager-en.png": "e5eb48355c80f32c819f6aecb05e57c5f5dcc553148aa1442d24d7dc421fb002",
+    "assets/weekly/2026-W46-review-2026-11-09/x.txt": "d19b53674eae051dfc88436b1b3a18ce59def940fc4e6119b9532d515b64c99d"
   },
   "validated": true
 }
