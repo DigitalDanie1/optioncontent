@@ -64,6 +64,7 @@ jobs:
       - name: Prepare fresh source-backed review
         if: steps.prepare.outputs.needed == 'true'
         run: |
+          python -m unittest discover -s scripts -p 'test_*.py'
           python scripts/prepare-weekly.py
           node scripts/render-weekly.mjs
           python scripts/check.py

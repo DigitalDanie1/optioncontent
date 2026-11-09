@@ -4,6 +4,7 @@ from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup
 import json, urllib.request, ssl, hashlib, html, re, sys
+from official_sources import discover
 ROOT=Path(__file__).resolve().parents[1];SGT=ZoneInfo('Asia/Singapore');now=datetime.now(timezone.utc);local=now.astimezone(SGT);day=local.date();stamp=day.isoformat();iso=day.isocalendar();week=f'{iso.year}-W{iso.week:02d}';cid=f'{week}-review-{stamp}';folder=ROOT/'sources/weekly'/stamp;folder.mkdir(parents=True,exist_ok=True)
 ctx=ssl.create_default_context()
 try:
@@ -26,7 +27,11 @@ raw=fetch('https://opshnz.com/');i=raw.index('const BOOT = ')+len('const BOOT = 
 if age>timedelta(hours=72) or age<timedelta(minutes=-15):raise SystemExit('OPSHNZ snapshot is stale or future-dated; no ready record created')
 write(folder/'opshnz.json',boot);sourceTime=at.astimezone(SGT).strftime('%m/%d %H:%M SGT');projects={p['name']:p for p in snap['projects']};news=[];events=[];limits=[]
 editor=json.loads((ROOT/'publish/editorial.json').read_text())
-for n in editor['news']:
+autoNews,autoEvents,discoveryErrors=discover(fetch,day,folder)
+limits.extend(discoveryErrors)
+write(folder/'discovery.json',{'checkedAt':now.isoformat(),'automatic':True,'news':autoNews,'events':autoEvents,'limits':discoveryErrors})
+candidates=autoNews+[n for n in editor['news'] if n['project'] not in {x['project'] for x in autoNews}]
+for n in candidates:
  try:
   published=datetime.fromisoformat(n['date']).date()
   if not day-timedelta(days=7)<=published<=day:continue
@@ -34,7 +39,9 @@ for n in editor['news']:
   if n['verify'].lower() not in body.lower():raise ValueError('source verification phrase missing')
   (folder/(n['project'].lower()+'-official.html')).write_text(page);news.append(n)
  except Exception as e:limits.append(f"Official news {n['project']} unavailable: {type(e).__name__}")
-for e in editor['events']:
+# At most two verified stories keep the fixed one-page layout and mobile copy readable.
+news=news[:2]
+for e in autoEvents or editor['events']:
  if day<=datetime.fromisoformat(e['endDate']).date()<=day+timedelta(days=7):
   try:
    page=fetch(e['url']);body=BeautifulSoup(page,'html.parser').get_text(' ',strip=True)

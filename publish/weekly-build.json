@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-11-08T16:32:53.496457+00:00",
+  "preparedAt": "2026-11-09T03:43:12.340820+00:00",
   "sourceWindowStart": "2026-11-02",
   "sourceWindowEnd": "2026-11-08",
   "snapshotAt": "2026-11-08T07:12:54.901Z",
@@ -11,11 +11,34 @@
   "englishText": "assets/weekly/2026-W46-review-2026-11-09/x.txt",
   "sources": "sources/weekly/2026-11-09",
   "limitations": [
-    "Binance spot check unavailable: HTTPError",
+    "Official news Aevo unavailable: ValueError",
     "No executable quotes; payoff is an illustrative 100/95 debit-2 example.",
     "No exhaustive X timeline collection.",
     "No new video produced."
   ],
-  "news": [],
+  "news": [
+    {
+      "project": "Derive",
+      "date": "2026-11-06",
+      "url": "https://insights.derive.xyz/road-to-expiry-with-kinetiq/",
+      "title": "Road to Expiry with Kinetiq",
+      "source": "https://insights.derive.xyz/rss/",
+      "originalTitle": "Road to Expiry with Kinetiq",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: Road to Expiry with Kinetiq",
+      "en": "Official update: Road to Expiry with Kinetiq. Publication verified; read the source for product status and terms.",
+      "verify": "Road to Expiry with Kinetiq"
+    },
+    {
+      "project": "Hypercall",
+      "date": "2026-11-06",
+      "url": "https://blog.hypercall.xyz/hypercall-vaults/",
+      "title": "Hypercall vaults: putting strategies at the heart of the exchange",
+      "source": "https://blog.hypercall.xyz/",
+      "originalTitle": "Hypercall vaults: putting strategies at the heart of the exchange",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: Hypercall vaults: putting strategies at the heart of the exchange",
+      "en": "Official update: Hypercall vaults: putting strategies at the heart of the exchange. Publication verified; read the source for product status and terms.",
+      "verify": "Hypercall vaults: putting strategies at the h"
+    }
+  ],
   "macro": []
 }

@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-11-08T16:32:57.657Z",
+  "preparedAt": "2026-11-09T03:43:33.630Z",
   "sourceWindowStart": "2026-11-02",
   "sourceWindowEnd": "2026-11-08",
   "snapshotAt": "2026-11-08T07:12:54.901Z",
@@ -11,18 +11,41 @@
   "englishText": "assets/weekly/2026-W46-review-2026-11-09/x.txt",
   "sources": "sources/weekly/2026-11-09",
   "limitations": [
-    "Binance spot check unavailable: HTTPError",
+    "Official news Aevo unavailable: ValueError",
     "No executable quotes; payoff is an illustrative 100/95 debit-2 example.",
     "No exhaustive X timeline collection.",
     "No new video produced."
   ],
-  "news": [],
+  "news": [
+    {
+      "project": "Derive",
+      "date": "2026-11-06",
+      "url": "https://insights.derive.xyz/road-to-expiry-with-kinetiq/",
+      "title": "Road to Expiry with Kinetiq",
+      "source": "https://insights.derive.xyz/rss/",
+      "originalTitle": "Road to Expiry with Kinetiq",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: Road to Expiry with Kinetiq",
+      "en": "Official update: Road to Expiry with Kinetiq. Publication verified; read the source for product status and terms.",
+      "verify": "Road to Expiry with Kinetiq"
+    },
+    {
+      "project": "Hypercall",
+      "date": "2026-11-06",
+      "url": "https://blog.hypercall.xyz/hypercall-vaults/",
+      "title": "Hypercall vaults: putting strategies at the heart of the exchange",
+      "source": "https://blog.hypercall.xyz/",
+      "originalTitle": "Hypercall vaults: putting strategies at the heart of the exchange",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: Hypercall vaults: putting strategies at the heart of the exchange",
+      "en": "Official update: Hypercall vaults: putting strategies at the heart of the exchange. Publication verified; read the source for product status and terms.",
+      "verify": "Hypercall vaults: putting strategies at the h"
+    }
+  ],
   "macro": [],
   "hashes": {
-    "assets/weekly/2026-W46-review-2026-11-09/telegram.txt": "a8e8c76f3810e92ad5f1ba98213925aa64d98877e6822c377ebf951c8bc91e6b",
-    "assets/weekly/2026-W46-review-2026-11-09/onepager-ko.png": "dd39d8b6a8302ce5b1dee6f85f0c6b4854d23fd461578e61ae1848dc6b3510a7",
-    "assets/weekly/2026-W46-review-2026-11-09/onepager-en.png": "e5eb48355c80f32c819f6aecb05e57c5f5dcc553148aa1442d24d7dc421fb002",
-    "assets/weekly/2026-W46-review-2026-11-09/x.txt": "d19b53674eae051dfc88436b1b3a18ce59def940fc4e6119b9532d515b64c99d"
+    "assets/weekly/2026-W46-review-2026-11-09/telegram.txt": "5ce40f410e79d1b8a84df7862ad1b97dbe53febec4fac2354badcfdf0b1fd500",
+    "assets/weekly/2026-W46-review-2026-11-09/onepager-ko.png": "28393f588911d5cc9dcf5758ceb99753ba7ccfbd93e7e75ca5345bd5a1ae4f90",
+    "assets/weekly/2026-W46-review-2026-11-09/onepager-en.png": "77c325af67c1dfd18a12c047c7cb478df08eec1870912eb3601e8ff02baff009",
+    "assets/weekly/2026-W46-review-2026-11-09/x.txt": "762710a49c363c81aa4d134385e7e4e7c28090a6e6174510c39d3e0a8b7f3398"
   },
   "validated": true
 }

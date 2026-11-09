@@ -1,0 +1,336 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v4.16.19"><meta name="theme-color" content="#0c0c0d"><meta name="color-scheme" content="dark"><title>Hypercall vaults: putting strategies at the heart of the exchange · Hypercall Blog</title><meta name="description" content="Vaults bring managed strategies to Hypercall's exchange: USDC lending, SLP market making and covered calls. Choose the exposure and put capital behind the strategy."><meta name="keywords" content="Hypercall, vaults, USDC lending, SLP, covered calls, Hyperliquid, options, product-update, launch, options trading, on-chain options, DeFi options, crypto options"><meta name="author" content="Hypercall"><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="googlebot" content="index, follow"><link rel="canonical" href="https://blog.hypercall.xyz/hypercall-vaults/"><!-- Open Graph --><meta property="og:site_name" content="Hypercall Blog"><meta property="og:type" content="article"><meta property="og:title" content="Hypercall vaults: putting strategies at the heart of the exchange"><meta property="og:description" content="Vaults bring managed strategies to Hypercall's exchange: USDC lending, SLP market making and covered calls. Choose the exposure and put capital behind the strategy."><meta property="og:url" content="https://blog.hypercall.xyz/hypercall-vaults/"><meta property="og:image" content="https://blog.hypercall.xyz/og/hypercall-vaults.png"><meta property="og:image:alt" content="Hypercall vaults: putting strategies at the heart of the exchange"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2026-11-06T00:00:00.000Z"><meta property="article:modified_time" content="2026-11-06T00:00:00.000Z"><meta property="article:author" content="Hypercall"><meta property="article:tag" content="product-update"><meta property="article:tag" content="launch"><meta property="article:section" content="product-update"><meta property="article:publisher" content="https://hypercall.xyz"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hypercall_xyz"><meta name="twitter:creator" content="@hypercall_xyz"><meta name="twitter:title" content="Hypercall vaults: putting strategies at the heart of the exchange"><meta name="twitter:description" content="Vaults bring managed strategies to Hypercall's exchange: USDC lending, SLP market making and covered calls. Choose the exposure and put capital behind the strategy."><meta name="twitter:image" content="https://blog.hypercall.xyz/og/hypercall-vaults.png"><meta name="twitter:image:alt" content="Hypercall vaults: putting strategies at the heart of the exchange"><!-- Icons --><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.svg" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- Feeds & sitemap --><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Hypercall Blog" href="/rss.xml"><!-- Font preload for LCP --><link rel="preload" as="font" type="font/woff2" href="/fonts/instrument-serif-regular.woff2" crossorigin><link rel="preload" as="font" type="font/woff2" href="/fonts/instrument-sans-regular.woff2" crossorigin><!-- Preconnect (static site, but keeps future integrations snappy) --><link rel="dns-prefetch" href="https://hypercall.xyz"><link rel="dns-prefetch" href="https://docs.hypercall.xyz"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"BlogPosting","headline":"Hypercall vaults: putting strategies at the heart of the exchange","description":"Vaults bring managed strategies to Hypercall's exchange: USDC lending, SLP market making and covered calls. Choose the exposure and put capital behind the strategy.","image":["https://blog.hypercall.xyz/og/hypercall-vaults.png"],"datePublished":"2026-11-06T00:00:00.000Z","dateModified":"2026-11-06T00:00:00.000Z","author":{"@type":"Person","name":"Hypercall"},"publisher":{"@type":"Organization","name":"Hypercall","url":"https://hypercall.xyz","logo":{"@type":"ImageObject","url":"https://blog.hypercall.xyz/hypercall-lime.svg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.hypercall.xyz/hypercall-vaults/"},"keywords":"Hypercall, vaults, USDC lending, SLP, covered calls, Hyperliquid, options, product-update, launch","articleSection":"product update","inLanguage":"en-US","url":"https://blog.hypercall.xyz/hypercall-vaults/"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://blog.hypercall.xyz/"},{"@type":"ListItem","position":2,"name":"Hypercall vaults: putting strategies at the heart of the exchange","item":"https://blog.hypercall.xyz/hypercall-vaults/"}]}]</script><script>
+  (function () {
+    if (typeof window === 'undefined' || !window.fetch) return;
+    var _fetch = window.fetch;
+
+    function isLowPriorityUrl(input) {
+      try {
+        var url =
+          typeof input === 'string'
+            ? input
+            : input && input.url
+            ? input.url
+            : '';
+        return url.indexOf('vs.hypercall.xyz') !== -1 ||
+          url.indexOf('analytics.ahrefs.com') !== -1 ||
+          url.indexOf('google-analytics.com') !== -1 ||
+          url.indexOf('googletagmanager.com') !== -1;
+      } catch (e) {}
+      return false;
+    }
+
+    window.fetch = function (input, init) {
+      if (isLowPriorityUrl(input)) {
+        return _fetch.call(
+          this,
+          input,
+          Object.assign({}, init, { priority: 'low' }),
+        );
+      }
+      return _fetch.apply(this, arguments);
+    };
+  })();
+</script><script>(function(){const GA_ID = "G-45MNVXHM79";
+
+  // Skip analytics on localhost and preview deployments.
+  var _h = window.location.hostname;
+  if (_h === 'localhost' || _h === '127.0.0.1' || _h.endsWith('.pages.dev')) {
+    window.gtag = function () {};
+    // bail — don't load GA at all
+  } else {
+  // Establish dataLayer + gtag stub synchronously so anything on the page
+  // can queue events before the script actually loads.
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+
+  // Defer the network request for gtag.js itself until the browser is
+  // idle (post-load), so it sits behind everything the user actually
+  // came here for.
+  function loadGA() {
+    if (window.__gaLoaded) return;
+    window.__gaLoaded = true;
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+  if (document.readyState === 'complete') {
+    (window.requestIdleCallback || ((fn) => setTimeout(fn, 1)))(loadGA);
+  } else {
+    window.addEventListener(
+      'load',
+      () => (window.requestIdleCallback || ((fn) => setTimeout(fn, 1)))(loadGA),
+      { once: true },
+    );
+  }
+  } // end production-only guard
+})();</script><script>(function(){const POSTHOG_KEY = "phc_qXq4boKRd94HhxgfWdXFMEVjXFe4FPqBJsEvm2tRWJrf";
+const POSTHOG_HOST = "https://vs.hypercall.xyz";
+const POSTHOG_UI_HOST = "https://us.posthog.com";
+
+  // Skip analytics on localhost and preview deployments.
+  var _h = window.location.hostname;
+  if (_h === 'localhost' || _h === '127.0.0.1' || _h.endsWith('.pages.dev')) {
+    window.posthog = { capture: function(){}, init: function(){}, identify: function(){} };
+  } else {
+  // Standard PostHog snippet, lightly trimmed. This synchronous block only
+  // installs the stub; the real bundle is fetched by loadPostHog() below.
+  !(function (t, e) {
+    var o, n, p, r;
+    if (e.__SV) return;
+    window.posthog = e;
+    e._i = [];
+    e.init = function (i, s, a) {
+      function g(t, e) {
+        var o = e.split('.');
+        if (o.length === 2) {
+          t = t[o[0]];
+          e = o[1];
+        }
+        t[e] = function () {
+          t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+        };
+      }
+      (p = t.createElement('script')).type = 'text/javascript';
+      p.crossOrigin = 'anonymous';
+      p.async = true;
+      p.src =
+        s.api_host.replace('.i.posthog.com', '-assets.i.posthog.com') +
+        '/static/array.js';
+      (r = t.getElementsByTagName('script')[0]).parentNode.insertBefore(p, r);
+      var u = e;
+      for (
+        void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
+          u.people = u.people || [],
+          u.toString = function (t) {
+            var e = 'posthog';
+            return (
+              'posthog' !== a && (e += '.' + a),
+              t || (e += ' (stub)'),
+              e
+            );
+          },
+          u.people.toString = function () {
+            return u.toString(1) + '.people (stub)';
+          },
+          o =
+            'init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ts $s createPersonProfile Es opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug I As getPageViewId captureTraceFeedback captureTraceMetric'.split(
+              ' '
+            ),
+          n = 0;
+        n < o.length;
+        n++
+      )
+        g(u, o[n]);
+      e._i.push([i, s, a]);
+    };
+    e.__SV = 1;
+  })(document, window.posthog || []);
+
+  // Defer actual bundle fetch until post-load idle time.
+  function loadPostHog() {
+    if (window.__phLoaded) return;
+    window.__phLoaded = true;
+    try {
+      window.posthog.init(POSTHOG_KEY, {
+        api_host: POSTHOG_HOST,
+        ui_host: POSTHOG_UI_HOST,
+        defaults: '2026-01-30',
+        capture_pageview: true,
+        capture_pageleave: true,
+        persistence: 'localStorage+cookie',
+      });
+    } catch (e) {
+      // Don't let analytics break the page
+      console && console.warn && console.warn('posthog init failed', e);
+    }
+  }
+  if (document.readyState === 'complete') {
+    (window.requestIdleCallback || ((fn) => setTimeout(fn, 1)))(loadPostHog);
+  } else {
+    window.addEventListener(
+      'load',
+      () => (window.requestIdleCallback || ((fn) => setTimeout(fn, 1)))(loadPostHog),
+      { once: true },
+    );
+  }
+  } // end production-only guard
+})();</script><script src="https://analytics.ahrefs.com/analytics.js" data-key="CGRj3EE/ltbXKEx3gtZitg" async fetchpriority="low"></script><link rel="stylesheet" href="/_astro/_slug_.DFd_9xHN.css">
+<style>.share[data-astro-cid-zllr3mxm]{display:flex;align-items:center;gap:20px;padding:32px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:56px 0 40px}.share-label[data-astro-cid-zllr3mxm]{font-family:var(--font-sans);font-size:11px;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:.1em}.share-links[data-astro-cid-zllr3mxm]{display:flex;gap:10px;flex-wrap:wrap}.share-link[data-astro-cid-zllr3mxm]{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid var(--border-strong);border-radius:8px;background:var(--bg-elev);color:var(--fg-muted);font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:color .12s ease,border-color .12s ease,background .12s ease}.share-link[data-astro-cid-zllr3mxm]:hover{color:var(--lime);border-color:var(--lime-dim);background:#a9fa380f}.share-link[data-astro-cid-zllr3mxm] svg[data-astro-cid-zllr3mxm]{flex-shrink:0;transition:transform .12s ease}.share-link[data-astro-cid-zllr3mxm]:hover svg[data-astro-cid-zllr3mxm]{transform:scale(1.1)}.share-link[data-astro-cid-zllr3mxm].copied{color:var(--lime);border-color:var(--lime-dim)}@media (max-width: 640px){.share[data-astro-cid-zllr3mxm]{flex-direction:column;align-items:flex-start;gap:14px;padding:24px 0;margin:40px 0 28px}.share-links[data-astro-cid-zllr3mxm]{gap:8px}.share-link[data-astro-cid-zllr3mxm]{padding:7px 10px;font-size:10.5px}.share-link[data-astro-cid-zllr3mxm] span[data-astro-cid-zllr3mxm]{display:none}.share-link[data-astro-cid-zllr3mxm][data-share=copy] span[data-astro-cid-zllr3mxm].copy-label{display:inline}}.post-video[data-astro-cid-fzx4jmue]{margin-bottom:32px}.post-video[data-astro-cid-fzx4jmue] video[data-astro-cid-fzx4jmue]{display:block;width:100%;aspect-ratio:16 / 9;background:#000}
+</style></head> <body> <header class="site"> <div class="inner"> <a href="/" class="brand" aria-label="Hypercall — home"> <img src="/hypercall-lime.svg" alt="Hypercall" width="110" height="22"> </a> <nav aria-label="Primary"> <a href="/">Blog</a> <a href="https://insights.hypercall.xyz/" class="hide-xs">Insights</a> <a href="https://docs.hypercall.xyz" class="hide-sm">Docs</a> <a href="#subscribe">Subscribe</a> <a href="https://app.hypercall.xyz">App ↗</a> </nav> </div> </header> <main id="main">  <article itemscope itemtype="https://schema.org/BlogPosting" data-astro-cid-fzx4jmue> <meta itemprop="datePublished" content="2026-11-06T00:00:00.000Z"> <meta itemprop="dateModified" content="2026-11-06T00:00:00.000Z"> <meta itemprop="author" content="Hypercall"> <meta itemprop="url" content="https://blog.hypercall.xyz/hypercall-vaults/"> <header class="post wrap-prose" data-astro-cid-fzx4jmue> <div class="eyebrow" data-astro-cid-fzx4jmue>product update</div> <h1 class="post-title" itemprop="headline" data-astro-cid-fzx4jmue>Hypercall vaults: putting strategies at the heart of the exchange</h1> <div class="post-meta" data-astro-cid-fzx4jmue> <time datetime="2026-11-06T00:00:00.000Z" data-astro-cid-fzx4jmue>NOVEMBER 6, 2026</time> <span class="dot" data-astro-cid-fzx4jmue></span> <span data-astro-cid-fzx4jmue>Hypercall</span> <span class="dot" data-astro-cid-fzx4jmue></span> <span data-astro-cid-fzx4jmue>6 min read</span> </div> </header> <meta itemprop="image" content="https://blog.hypercall.xyz/og/hypercall-vaults.png">  <div class="prose wrap-prose" itemprop="articleBody" data-astro-cid-fzx4jmue> <p>Vaults are a key product in Hypercall’s next chapter. They bring a new way to participate in its markets: choose a strategy and put capital behind it, without managing every trade yourself.</p>
+<p>Pick the exposure, not every strike and expiry. A vault brings position sizing, collateral management and trading decisions inside a managed strategy. You choose the book you want to participate in. The manager runs it.</p>
+<p>This is a product launch with a bigger ambition. Alongside Hypercall’s existing USDC lending pool, managed vaults can bring options expertise to users who want the strategy without running the book. Financing traders, providing liquidity and earning option premium are different opportunities. Vaults give those opportunities a clearer product form, and this is only the beginning for managed vaults on Hypercall.</p>
+<h2 id="one-platform-different-ways-to-participate">One platform. Different ways to participate.</h2>
+<p>The opportunity is to bring more participants into the same trading ecosystem. Lending supplies financing to portfolio-margin traders. SLP is designed to let depositors participate in options market making. Covered-call strategies offer another way to put an underlying asset to work. Each product gives capital a distinct role.</p>
+<p>Each strategy has its own earning engine. Understanding it lets you choose deliberately, rather than treating every yield headline as the same opportunity.</p>
+<h2 id="two-ways-to-put-usdc-to-work">Two ways to put USDC to work</h2>
+<p>Hypercall’s existing USDC lending pool and SLP do different jobs. The lending pool finances portfolio-margin accounts. SLP is designed to run an options market-making book. One earns interest on loans; the other takes trading risk to earn spread and other strategy returns.</p>
+<h2 id="usdc-lending-power-the-trading-engine">USDC lending: power the trading engine</h2>
+<p>Portfolio-margin traders hold collateral on HyperCore, but pay option premiums and expiry settlements in USDC on Hypercall. If their Hypercall cash is short, the pool can finance the gap automatically, subject to margin and liquidity checks. Selling an option does not itself draw a loan. Cash reaching the borrower’s Hypercall account repays debt before any surplus is swept back to HyperCore.</p>
+<p><a href="https://docs.hypercall.xyz/docs/margining/pm-lending-pool/">For lenders, depositing USDC mints pool shares.</a> Interest increases the pool’s net asset value and share price rather than arriving as a separate payout. Idle cash earns no interest. The reserve factor directs 15% of borrower interest to a separate first-loss reserve; lenders receive the remaining share through pool value.</p>
+<h2 id="why-utilization-changes-the-rate">Why utilization changes the rate</h2>
+<p>Utilization is borrowed USDC divided by available cash plus loans. The <a href="https://api.hypercall.xyz/v1/pm-pool">production pool’s published rate model</a> starts at 0% borrow APR, reaches 4% at 60% utilization, then rises steeply to 100% at full utilization. That steep section is a liquidity signal, designed to encourage repayment and attract cash when the pool is tight.</p>
+<p>With utilization u written as a decimal, borrower APR is 0.04 × u / 0.60 up to the kink. Above it, borrower APR is 0.04 + 0.96 × (u - 0.60) / 0.40. Lender APR is borrower APR × utilization × (1 - 0.15).</p>
+<h2 id="illustrative-utilization-scenarios">Illustrative utilization scenarios</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Utilization</th><th>Borrower APR</th><th>Lender APR</th></tr></thead><tbody><tr><td>50%</td><td>3.33%</td><td>1.42%</td></tr><tr><td>80%</td><td>52.00%</td><td>35.36%</td></tr><tr><td>100%</td><td>100.00%</td><td>85.00%</td></tr></tbody></table>
+<p>These are annualized rate snapshots under the production model observed November 5, 2026, not promised returns. They are APR, not APY. Borrowing interest compounds continuously on a 365-day year, and rates change as utilization changes; multiplying a quoted APR by a year does not describe a guaranteed realized return.</p>
+<p>At 100% utilization, no unborrowed cash remains in this simplified scenario. A high displayed rate can come with delayed withdrawals, not easy income. Lending withdrawals run through hourly epochs with one epoch of notice, then pay first in, first out as cash allows. The one-to-two-hour eligibility window is not a guaranteed payout time. Queued shares continue earning interest and bearing losses until paid.</p>
+<p>Lending is not risk-free. Recoveries from borrower collateral and a finite first-loss reserve stand ahead of lenders, but any remaining loan loss reduces the share price. The reserve also has settlement obligations ahead of covering written-off loans. Smart-contract, engine, liquidity and USDC risks remain. A reserve factor is a funding rule, not a guarantee that losses are covered.</p>
+<h2 id="slp-participate-in-the-market-making-engine">SLP: participate in the market-making engine</h2>
+<p>SLP takes the opportunity a step further: USDC for shares in a book designed to quote Hypercall options and hedge on Hyperliquid. Instead of placing every quote yourself, you can participate in the strategy behind the liquidity. Its core earning engine is the bid-ask spread: getting paid to provide the other side of a trade. Capturing that spread takes good pricing and hedging. Informed flow, hedge costs and large market moves can still turn a profitable-looking spread into a loss.</p>
+<p><a href="https://blog.hypercall.xyz/slp-and-covered-call-vaults/">The earlier SLP announcement</a> describes a basis hedge as a way to manage delta: long spot, short a perp, then adjust the short as the options exposure changes. The remaining short can collect funding when funding is favorable. That is a source of variable return, not a fixed coupon; it does not eliminate options tail risk.</p>
+<p>SLP is also intended to compete with outside makers for the announced 1 million SYN monthly maker program. Rewards are based on eligible premium flow won, not simply time spent quoting. Related-account and self-trades are excluded, and rewards are subject to review. The pool is shared across qualifying makers, not a fixed SLP yield or a promised allocation to each depositor.</p>
+<p>The prior blog also describes potential liquidation-auction participation and ways to deploy idle cash. Box-spread financing was explicitly described as coming soon, and parts of spot-in-vault support were still being built. Those are possibilities to follow as they ship, not assumptions inside a return estimate.</p>
+<h2 id="built-for-strategies-not-just-deposits">Built for strategies, not just deposits</h2>
+<p><a href="https://blog.hypercall.xyz/managed-vaults-are-coming/">The managed-vault design</a> gives this product category a foundation to grow on: engine-based valuation, defined trading authority and a clear separation from withdrawal authority. The published design also describes mandate checks, high-water-mark performance fees and a process for paying withdrawal queues. These are meaningful building blocks for managed strategies on an exchange, while strategy and operational risks remain.</p>
+<p>Each product pairs its strategy with its own fees, caps, settlement cadence and withdrawal terms. The USDC pool’s hourly withdrawal epochs apply to lending, not automatically to SLP. SLP’s final published terms will define its deposit and withdrawal experience.</p>
+<h2 id="covered-calls-are-a-separate-exposure">Covered calls are a separate exposure</h2>
+<p>A covered-call strategy owns an asset and sells calls against it. The premium is the payment for giving up upside above the strike. If the asset falls, the premium can soften the loss, but it does not remove the downside. If it rallies through the strike, simply holding the asset can do better. A single-stock vault also brings concentrated exposure and tokenized-stock issuer risk.</p>
+<h2 id="only-the-beginning-for-managed-vaults">Only the beginning for managed vaults</h2>
+<p>USDC lending supports the cash needs of active traders. SLP aims to turn market-making expertise into a strategy depositors can participate in. Covered calls bring a different trade-off: option premium in exchange for capped upside, while retaining the asset’s downside. Together, these products show why a strategy platform can be more useful than a single yield product.</p>
+<h2 id="a-bigger-opportunity-with-a-clear-choice">A bigger opportunity, with a clear choice</h2>
+<p>The bigger vision is a home for managed strategies on Hypercall: a place where users choose the exposure and managers focus on execution. SLP and the wider vault lineup are a starting point for that vision. As new strategies are developed and validated, the opportunity is to turn more of the exchange’s trading capabilities into products users can participate in.</p>
+<p>Before depositing, check each product’s mandate, manager, fees, limits and withdrawal terms. Backtested results, where shown, are historical models, not live returns or a promise of what comes next.</p>
+<p>Hypercall’s markets are the foundation. Vaults make the strategies around those markets a product in their own right. That is what makes this launch exciting: more ways for capital to participate, a larger role for strategy managers and the beginning of a broader managed-vaults offering. Choose the strategy. Put capital behind the opportunity. This is only the beginning.</p>
+<p>Vault deposits carry risk, including loss of principal. This post is not investment advice. Availability and access are subject to the final published terms.</p> </div> <div class="wrap-prose" data-astro-cid-fzx4jmue> <aside class="share" aria-label="Share this post" data-astro-cid-zllr3mxm> <div class="share-label" data-astro-cid-zllr3mxm>Share</div> <div class="share-links" data-astro-cid-zllr3mxm> <a href="https://twitter.com/intent/tweet?text=Hypercall%20vaults%3A%20putting%20strategies%20at%20the%20heart%20of%20the%20exchange&url=https%3A%2F%2Fblog.hypercall.xyz%2Fhypercall-vaults%2F&via=hypercall_xyz" target="_blank" rel="noopener noreferrer" class="share-link" data-share="twitter" aria-label="Share on X / Twitter" data-astro-cid-zllr3mxm> <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-astro-cid-zllr3mxm> <path d="M18.244 2H21l-6.52 7.45L22 22h-6.828l-4.77-6.206L4.875 22H2.12l6.977-7.97L2 2h6.914l4.338 5.715L18.244 2Zm-1.194 18h1.564L7.04 4H5.36L17.05 20Z" data-astro-cid-zllr3mxm></path> </svg> <span data-astro-cid-zllr3mxm>X</span> </a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.hypercall.xyz%2Fhypercall-vaults%2F" target="_blank" rel="noopener noreferrer" class="share-link" data-share="linkedin" aria-label="Share on LinkedIn" data-astro-cid-zllr3mxm> <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-astro-cid-zllr3mxm> <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13Zm1.78 13.02H3.56V9h3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z" data-astro-cid-zllr3mxm></path> </svg> <span data-astro-cid-zllr3mxm>LinkedIn</span> </a> <a href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fblog.hypercall.xyz%2Fhypercall-vaults%2F&t=Hypercall%20vaults%3A%20putting%20strategies%20at%20the%20heart%20of%20the%20exchange" target="_blank" rel="noopener noreferrer" class="share-link" data-share="hackernews" aria-label="Share on Hacker News" data-astro-cid-zllr3mxm> <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-astro-cid-zllr3mxm> <path d="M3 3h18v18H3V3Zm8.55 11.2V18h1v-3.8L15.8 7h-1.2l-1.8 3.75c-.2.45-.4.85-.55 1.25h-.05c-.15-.4-.3-.8-.55-1.25L9.85 7H8.55l3 7.2Z" data-astro-cid-zllr3mxm></path> </svg> <span data-astro-cid-zllr3mxm>HN</span> </a> <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fblog.hypercall.xyz%2Fhypercall-vaults%2F&title=Hypercall%20vaults%3A%20putting%20strategies%20at%20the%20heart%20of%20the%20exchange" target="_blank" rel="noopener noreferrer" class="share-link" data-share="reddit" aria-label="Share on Reddit" data-astro-cid-zllr3mxm> <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-astro-cid-zllr3mxm> <path d="M22 12.14a2.14 2.14 0 0 0-3.62-1.54 10.46 10.46 0 0 0-5.68-1.8l.97-4.58 3.18.67a1.53 1.53 0 1 0 .15-.9l-3.56-.75a.43.43 0 0 0-.51.33l-1.08 5.1a10.46 10.46 0 0 0-5.75 1.78A2.14 2.14 0 1 0 3.2 14.74a4.2 4.2 0 0 0-.05.65c0 3.3 3.84 5.97 8.58 5.97 4.74 0 8.57-2.67 8.57-5.97 0-.22-.01-.44-.04-.66A2.13 2.13 0 0 0 22 12.14ZM7 13.71a1.43 1.43 0 1 1 2.86 0 1.43 1.43 0 0 1-2.86 0Zm7.97 3.81c-.95.95-2.76 1.02-3.3 1.02-.53 0-2.35-.07-3.29-1.02a.36.36 0 0 1 .51-.51c.6.6 1.87.81 2.78.81.92 0 2.19-.21 2.79-.81a.36.36 0 0 1 .51.51Zm-.17-2.38a1.43 1.43 0 1 1 0-2.86 1.43 1.43 0 0 1 0 2.86Z" data-astro-cid-zllr3mxm></path> </svg> <span data-astro-cid-zllr3mxm>Reddit</span> </a> <button type="button" class="share-link" data-share="copy" aria-label="Copy link" data-url="https://blog.hypercall.xyz/hypercall-vaults/" data-astro-cid-zllr3mxm> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-zllr3mxm> <rect x="9" y="9" width="13" height="13" rx="2" ry="2" data-astro-cid-zllr3mxm></rect> <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" data-astro-cid-zllr3mxm></path> </svg> <span class="copy-label" data-astro-cid-zllr3mxm>Copy link</span> </button> </div> </aside>  <script>
+  (function () {
+    if (typeof document === 'undefined') return;
+
+    // Capture share-click events in PostHog + GA4 so we can see which
+    // posts actually get shared and where.
+    document.addEventListener('click', (e) => {
+      const t = e.target instanceof Element ? e.target.closest('[data-share]') : null;
+      if (!t) return;
+      const kind = t.getAttribute('data-share');
+      const title = document.title;
+      try {
+        window.posthog && window.posthog.capture && window.posthog.capture('blog_share_click', {
+          share_to: kind,
+          post_title: title,
+          post_url: location.href,
+        });
+      } catch {}
+      try {
+        window.gtag && window.gtag('event', 'share', {
+          method: kind,
+          content_type: 'blog_post',
+          item_id: location.pathname,
+        });
+      } catch {}
+
+      if (kind === 'copy') {
+        e.preventDefault();
+        const url = t.getAttribute('data-url') || location.href;
+        const done = () => {
+          t.classList.add('copied');
+          const label = t.querySelector('.copy-label');
+          const original = label ? label.textContent : 'Copy link';
+          if (label) label.textContent = 'Copied';
+          setTimeout(() => {
+            t.classList.remove('copied');
+            if (label) label.textContent = original;
+          }, 1600);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, done);
+        } else {
+          const ta = document.createElement('textarea');
+          ta.value = url;
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); } catch {}
+          document.body.removeChild(ta);
+          done();
+        }
+      }
+    });
+  })();
+</script> </div> </article>  </main> <section id="subscribe" class="subscribe-section"> <div class="subscribe-inner"> <div class="subscribe-kicker">The Hypercall letter</div> <h2>Volatility, flow and market structure, in your inbox.</h2> <p>A weekly read on what moved, what it cost, and what it means. No shilling, no price targets.</p> <form action="https://buttondown.com/api/emails/embed-subscribe/hypercall" method="post" target="_blank"> <input type="hidden" name="embed" value="1"> <input type="hidden" name="tag" value="blog"> <input type="hidden" name="metadata__source" value="blog"> <label for="blog-subscribe-email">Email address</label> <input id="blog-subscribe-email" type="email" name="email" required placeholder="you@desk.com"> <button type="submit">Subscribe</button> </form> </div> </section> <footer class="site"> <div class="inner"> <span>© 2026 HYPERCALL</span> <span>OPTIONS. ON HYPERLIQUID.</span> </div> <p class="legal">
+The information provided is for educational and informational purposes only and does not constitute financial advice. Always consult a licensed professional before making investment decisions. By using this site you agree to the  <a href="https://app.hypercall.xyz/legal/terms?s=f884">Terms of Use</a> 
+and  <a href="https://app.hypercall.xyz/legal/privacy?s=f884">Privacy Policy</a>.
+</p> </footer> <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer" data-astro-cid-gixpweiw> <button class="lightbox-close" type="button" aria-label="Close image viewer" data-astro-cid-gixpweiw>×</button> <img class="lightbox-img" alt="" data-astro-cid-gixpweiw> <div class="lightbox-caption" data-astro-cid-gixpweiw></div> </div>  <script>
+  (function () {
+    if (typeof document === 'undefined') return;
+    const lb = document.getElementById('lightbox');
+    if (!lb) return;
+    const lbImg = lb.querySelector('.lightbox-img');
+    const lbCaption = lb.querySelector('.lightbox-caption');
+    const lbClose = lb.querySelector('.lightbox-close');
+    let prevOverflow = '';
+
+    const open = (src, alt, caption) => {
+      lbImg.src = src;
+      lbImg.alt = alt || '';
+      lbCaption.textContent = caption || alt || '';
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden', 'false');
+      prevOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+    };
+
+    const close = () => {
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = prevOverflow;
+      // Clear src after transition so the next open animates in.
+      setTimeout(() => { lbImg.src = ''; }, 200);
+    };
+
+    // Delegate clicks on any <img> inside .prose.
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!(target instanceof HTMLImageElement)) return;
+      if (!target.closest('.prose')) return;
+      e.preventDefault();
+      // Prefer the largest variant from srcset if present.
+      let src = target.currentSrc || target.src;
+      if (target.srcset) {
+        const biggest = target.srcset
+          .split(',')
+          .map((s) => s.trim().split(/\s+/))
+          .sort((a, b) => parseInt(b[1] || '0') - parseInt(a[1] || '0'))[0];
+        if (biggest) src = new URL(biggest[0], location.href).toString();
+      }
+      // Use figcaption text if we're inside a <figure>.
+      const fig = target.closest('figure');
+      const captionEl = fig && fig.querySelector('figcaption');
+      open(src, target.alt, captionEl ? captionEl.textContent : target.alt);
+    });
+
+    lbClose.addEventListener('click', close);
+    lb.addEventListener('click', (e) => {
+      if (e.target === lb) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lb.classList.contains('open')) close();
+    });
+  })();
+</script> </body></html> 

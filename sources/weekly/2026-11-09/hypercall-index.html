@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v4.16.19"><meta name="theme-color" content="#0c0c0d"><meta name="color-scheme" content="dark"><title>Hypercall Blog · Options on Hyperliquid</title><meta name="description" content="Product updates, engineering notes, and research from the team building Hypercall — options on Hyperliquid. Weekly dispatches from testnet, new features, and behind-the-scenes looks at how we're building the options layer."><meta name="keywords" content="Hypercall blog, Hypercall product updates, Hyperliquid options, options on Hyperliquid, DeFi options trading, on-chain options, testnet updates, Hypercall, Hyperliquid, options trading, DeFi options, crypto options"><meta name="author" content="Hypercall"><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="googlebot" content="index, follow"><link rel="canonical" href="https://blog.hypercall.xyz/"><!-- Open Graph --><meta property="og:site_name" content="Hypercall Blog"><meta property="og:type" content="website"><meta property="og:title" content="Hypercall Blog"><meta property="og:description" content="Product updates, engineering notes, and research from the team building Hypercall — options on Hyperliquid. Weekly dispatches from testnet, new features, and behind-the-scenes looks at how we're building the options layer."><meta property="og:url" content="https://blog.hypercall.xyz/"><meta property="og:image" content="https://blog.hypercall.xyz/og/default.png"><meta property="og:image:alt" content="Hypercall Blog"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="en_US"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hypercall_xyz"><meta name="twitter:creator" content="@hypercall_xyz"><meta name="twitter:title" content="Hypercall Blog"><meta name="twitter:description" content="Product updates, engineering notes, and research from the team building Hypercall — options on Hyperliquid. Weekly dispatches from testnet, new features, and behind-the-scenes looks at how we're building the options layer."><meta name="twitter:image" content="https://blog.hypercall.xyz/og/default.png"><meta name="twitter:image:alt" content="Hypercall Blog"><!-- Icons --><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.svg" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- Feeds & sitemap --><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Hypercall Blog" href="/rss.xml"><!-- Font preload for LCP --><link rel="preload" as="font" type="font/woff2" href="/fonts/instrument-serif-regular.woff2" crossorigin><link rel="preload" as="font" type="font/woff2" href="/fonts/instrument-sans-regular.woff2" crossorigin><!-- Preconnect (static site, but keeps future integrations snappy) --><link rel="dns-prefetch" href="https://hypercall.xyz"><link rel="dns-prefetch" href="https://docs.hypercall.xyz"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","@id":"https://blog.hypercall.xyz/#website","url":"https://blog.hypercall.xyz/","name":"Hypercall Blog","inLanguage":"en-US","publisher":{"@type":"Organization","name":"Hypercall"}},{"@context":"https://schema.org","@type":"Blog","@id":"https://blog.hypercall.xyz/#blog","url":"https://blog.hypercall.xyz/","name":"Hypercall Blog","description":"Product updates, engineering notes, and research from the team building Hypercall — options on Hyperliquid.","publisher":{"@type":"Organization","name":"Hypercall","url":"https://hypercall.xyz","logo":{"@type":"ImageObject","url":"https://blog.hypercall.xyz/hypercall-lime.svg"},"sameAs":["https://twitter.com/hypercall_xyz","https://docs.hypercall.xyz","https://hypercall.xyz"]},"blogPost":[{"@type":"BlogPosting","headline":"Hypercall vaults: putting strategies at the heart of the exchange","description":"Vaults bring managed strategies to Hypercall's exchange: USDC lending, SLP market making and covered calls. Choose the exposure and put capital behind the strategy.","datePublished":"2026-11-06T00:00:00.000Z","url":"https://blog.hypercall.xyz/hypercall-vaults/","author":{"@type":"Person","name":"Hypercall"}},{"@type":"BlogPosting","headline":"Why Hypercall chose Elysium","description":"Why Hypercall is deploying onto Elysium, with room to scale its options infrastructure while keeping hedging native to HyperCore.","datePublished":"2026-11-05T00:00:00.000Z","url":"https://blog.hypercall.xyz/why-hypercall-chose-elysium/","author":{"@type":"Person","name":"Hypercall"}},{"@type":"BlogPosting","headline":"Know your trade before you take it","description":"Hypercall's new UI components are live: estimated outcomes while you build, an interactive price chart, and simple mode.","datePublished":"2026-11-04T00:00:00.000Z","url":"https://blog.hypercall.xyz/know-your-trade-before-you-take-it/","author":{"@type":"Person","name":"Hypercall"}},{"@type":"BlogPosting","headline":"SLP, Covered Call Vaults and 1M SYN a Month for Market Makers","description":"How we bootstrap the liquidity flywheel on Hypercall: SLP, covered call vaults and 1M SYN a month for the makers who win the most flow. How each one makes money, and how each one loses it.","datePublished":"2026-10-29T00:00:00.000Z","url":"https://blog.hypercall.xyz/slp-and-covered-call-vaults/","author":{"@type":"Person","name":"Hypercall"}},{"@type":"BlogPosting","headline":"Managed Vaults Are Coming to Hypercall","description":"Two years ago the basis trade on Hyperliquid paid about 30%. Now it pays about 7%. If you want yield you have to take real risk, options are the cleanest way to do it, and vaults let someone good run it for you.","datePublished":"2026-10-27T00:00:00.000Z","url":"https://blog.hypercall.xyz/managed-vaults-are-coming/","author":{"@type":"Person","name":"Hypercall"}},{"@type":"BlogPosting","headline":"Covered Calls Are Coming to Hypercall","description":"Stocks came to Hyperliquid as perps first. Now the spot is arriving, and spot needs two things: lending and yield. Covered calls are the yield, and they are coming to Hypercall soon.","datePublished":"2026-10-26T00:00:00.000Z","url":"https://blog.hypercall.xyz/physically-settled-covered-calls/","author":{"@type":"Person","name":"Hypercall"}},{"@type":"BlogPosting","headline":"RFQ V2 Is Live: Better Fills on Size","description":"Makers compete for your options package, every leg fills as one trade, your account stays hidden if you want it to, and one signature splits the order across makers, all or none. RFQ V2 is live on the Hypercall API.","datePublished":"2026-10-16T00:00:00.000Z","url":"https://blog.hypercall.xyz/rfq-v2-is-live/","author":{"@type":"Person","name":"Hypercall"}},{"@type":"BlogPosting","headline":"LTC and DOGE Options on Hyperliquid, Proposed With Luxxfolio","description":"Hypercall plans to fast-track LTC and DOGE options on Hyperliquid. The first proposed program is with Luxxfolio, a Litecoin-first miner that would sell covered calls on part of its treasury.","datePublished":"2026-10-05T00:00:00.000Z","url":"https://blog.hypercall.xyz/luxxfolio-litecoin-options-strategy/","author":{"@type":"Person","name":"Hypercall"}},{"@type":"BlogPosting","headline":"$1,000 worth of HYPE a day in trading rewards","description":"$1,000 worth of HYPE a day in trading rewards, split equally between makers and takers. Live now on Hypercall for a seven-day pilot.","datePublished":"2026-09-16T18:00:00.000Z","url":"https://blog.hypercall.xyz/hype-trading-rewards/","author":{"@type":"Person","name":"Hypercall"}},{"@type":"BlogPosting","headline":"Markets Close. Risk Doesn't. Hypercall Is Integrating Block Scholes.","description":"Hypercall is integrating Block Scholes volatility oracles, bringing specialist derivatives data to the pricing and risk challenges of crypto and real-world assets.","datePublished":"2026-09-16T00:00:00.000Z","url":"https://blog.hypercall.xyz/block-scholes-volatility-oracles/","author":{"@type":"Person","name":"Hypercall"}}]}]</script><script>
+  (function () {
+    if (typeof window === 'undefined' || !window.fetch) return;
+    var _fetch = window.fetch;
+
+    function isLowPriorityUrl(input) {
+      try {
+        var url =
+          typeof input === 'string'
+            ? input
+            : input && input.url
+            ? input.url
+            : '';
+        return url.indexOf('vs.hypercall.xyz') !== -1 ||
+          url.indexOf('analytics.ahrefs.com') !== -1 ||
+          url.indexOf('google-analytics.com') !== -1 ||
+          url.indexOf('googletagmanager.com') !== -1;
+      } catch (e) {}
+      return false;
+    }
+
+    window.fetch = function (input, init) {
+      if (isLowPriorityUrl(input)) {
+        return _fetch.call(
+          this,
+          input,
+          Object.assign({}, init, { priority: 'low' }),
+        );
+      }
+      return _fetch.apply(this, arguments);
+    };
+  })();
+</script><script>(function(){const GA_ID = "G-45MNVXHM79";
+
+  // Skip analytics on localhost and preview deployments.
+  var _h = window.location.hostname;
+  if (_h === 'localhost' || _h === '127.0.0.1' || _h.endsWith('.pages.dev')) {
+    window.gtag = function () {};
+    // bail — don't load GA at all
+  } else {
+  // Establish dataLayer + gtag stub synchronously so anything on the page
+  // can queue events before the script actually loads.
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+
+  // Defer the network request for gtag.js itself until the browser is
+  // idle (post-load), so it sits behind everything the user actually
+  // came here for.
+  function loadGA() {
+    if (window.__gaLoaded) return;
+    window.__gaLoaded = true;
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+  if (document.readyState === 'complete') {
+    (window.requestIdleCallback || ((fn) => setTimeout(fn, 1)))(loadGA);
+  } else {
+    window.addEventListener(
+      'load',
+      () => (window.requestIdleCallback || ((fn) => setTimeout(fn, 1)))(loadGA),
+      { once: true },
+    );
+  }
+  } // end production-only guard
+})();</script><script>(function(){const POSTHOG_KEY = "phc_qXq4boKRd94HhxgfWdXFMEVjXFe4FPqBJsEvm2tRWJrf";
+const POSTHOG_HOST = "https://vs.hypercall.xyz";
+const POSTHOG_UI_HOST = "https://us.posthog.com";
+
+  // Skip analytics on localhost and preview deployments.
+  var _h = window.location.hostname;
+  if (_h === 'localhost' || _h === '127.0.0.1' || _h.endsWith('.pages.dev')) {
+    window.posthog = { capture: function(){}, init: function(){}, identify: function(){} };
+  } else {
+  // Standard PostHog snippet, lightly trimmed. This synchronous block only
+  // installs the stub; the real bundle is fetched by loadPostHog() below.
+  !(function (t, e) {
+    var o, n, p, r;
+    if (e.__SV) return;
+    window.posthog = e;
+    e._i = [];
+    e.init = function (i, s, a) {
+      function g(t, e) {
+        var o = e.split('.');
+        if (o.length === 2) {
+          t = t[o[0]];
+          e = o[1];
+        }
+        t[e] = function () {
+          t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+        };
+      }
+      (p = t.createElement('script')).type = 'text/javascript';
+      p.crossOrigin = 'anonymous';
+      p.async = true;
+      p.src =
+        s.api_host.replace('.i.posthog.com', '-assets.i.posthog.com') +
+        '/static/array.js';
+      (r = t.getElementsByTagName('script')[0]).parentNode.insertBefore(p, r);
+      var u = e;
+      for (
+        void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
+          u.people = u.people || [],
+          u.toString = function (t) {
+            var e = 'posthog';
+            return (
+              'posthog' !== a && (e += '.' + a),
+              t || (e += ' (stub)'),
+              e
+            );
+          },
+          u.people.toString = function () {
+            return u.toString(1) + '.people (stub)';
+          },
+          o =
+            'init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ts $s createPersonProfile Es opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug I As getPageViewId captureTraceFeedback captureTraceMetric'.split(
+              ' '
+            ),
+          n = 0;
+        n < o.length;
+        n++
+      )
+        g(u, o[n]);
+      e._i.push([i, s, a]);
+    };
+    e.__SV = 1;
+  })(document, window.posthog || []);
+
+  // Defer actual bundle fetch until post-load idle time.
+  function loadPostHog() {
+    if (window.__phLoaded) return;
+    window.__phLoaded = true;
+    try {
+      window.posthog.init(POSTHOG_KEY, {
+        api_host: POSTHOG_HOST,
+        ui_host: POSTHOG_UI_HOST,
+        defaults: '2026-01-30',
+        capture_pageview: true,
+        capture_pageleave: true,
+        persistence: 'localStorage+cookie',
+      });
+    } catch (e) {
+      // Don't let analytics break the page
+      console && console.warn && console.warn('posthog init failed', e);
+    }
+  }
+  if (document.readyState === 'complete') {
+    (window.requestIdleCallback || ((fn) => setTimeout(fn, 1)))(loadPostHog);
+  } else {
+    window.addEventListener(
+      'load',
+      () => (window.requestIdleCallback || ((fn) => setTimeout(fn, 1)))(loadPostHog),
+      { once: true },
+    );
+  }
+  } // end production-only guard
+})();</script><script src="https://analytics.ahrefs.com/analytics.js" data-key="CGRj3EE/ltbXKEx3gtZitg" async fetchpriority="low"></script><link rel="stylesheet" href="/_astro/_slug_.DFd_9xHN.css"></head> <body> <header class="site"> <div class="inner"> <a href="/" class="brand" aria-label="Hypercall — home"> <img src="/hypercall-lime.svg" alt="Hypercall" width="110" height="22"> </a> <nav aria-label="Primary"> <a href="/">Blog</a> <a href="https://insights.hypercall.xyz/" class="hide-xs">Insights</a> <a href="https://docs.hypercall.xyz" class="hide-sm">Docs</a> <a href="#subscribe">Subscribe</a> <a href="https://app.hypercall.xyz">App ↗</a> </nav> </div> </header> <main id="main">  <section class="hero wrap-wide"> <div class="eyebrow">Writing · Product &amp; Engineering</div> <h1>Notes from <br><em>the options layer</em></h1> <p class="lede">
+Product updates, engineering dispatches, and the occasional look behind the curtain. Written by the team building Hypercall.
+</p> </section> <section class="post-list-section wrap-wide" aria-labelledby="all-posts"> <h2 class="section" id="all-posts">All posts</h2> <ul class="post-list"> <li> <a href="/hypercall-vaults/" class="row" aria-label="Read Hypercall vaults: putting strategies at the heart of the exchange"> <time class="date" datetime="2026-11-06T00:00:00.000Z">NOV 06, 2026</time> <div> <h3>Hypercall vaults: putting strategies at the heart of the exchange</h3> <p class="desc">Vaults bring managed strategies to Hypercall&#39;s exchange: USDC lending, SLP market making and covered calls. Choose the exposure and put capital behind the strategy.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/why-hypercall-chose-elysium/" class="row" aria-label="Read Why Hypercall chose Elysium"> <time class="date" datetime="2026-11-05T00:00:00.000Z">NOV 05, 2026</time> <div> <h3>Why Hypercall chose Elysium</h3> <p class="desc">Why Hypercall is deploying onto Elysium, with room to scale its options infrastructure while keeping hedging native to HyperCore.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/know-your-trade-before-you-take-it/" class="row" aria-label="Read Know your trade before you take it"> <time class="date" datetime="2026-11-04T00:00:00.000Z">NOV 04, 2026</time> <div> <h3>Know your trade before you take it</h3> <p class="desc">Hypercall&#39;s new UI components are live: estimated outcomes while you build, an interactive price chart, and simple mode.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/slp-and-covered-call-vaults/" class="row" aria-label="Read SLP, Covered Call Vaults and 1M SYN a Month for Market Makers"> <time class="date" datetime="2026-10-29T00:00:00.000Z">OCT 29, 2026</time> <div> <h3>SLP, Covered Call Vaults and 1M SYN a Month for Market Makers</h3> <p class="desc">How we bootstrap the liquidity flywheel on Hypercall: SLP, covered call vaults and 1M SYN a month for the makers who win the most flow. How each one makes money, and how each one loses it.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/managed-vaults-are-coming/" class="row" aria-label="Read Managed Vaults Are Coming to Hypercall"> <time class="date" datetime="2026-10-27T00:00:00.000Z">OCT 27, 2026</time> <div> <h3>Managed Vaults Are Coming to Hypercall</h3> <p class="desc">Two years ago the basis trade on Hyperliquid paid about 30%. Now it pays about 7%. If you want yield you have to take real risk, options are the cleanest way to do it, and vaults let someone good run it for you.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/physically-settled-covered-calls/" class="row" aria-label="Read Covered Calls Are Coming to Hypercall"> <time class="date" datetime="2026-10-26T00:00:00.000Z">OCT 26, 2026</time> <div> <h3>Covered Calls Are Coming to Hypercall</h3> <p class="desc">Stocks came to Hyperliquid as perps first. Now the spot is arriving, and spot needs two things: lending and yield. Covered calls are the yield, and they are coming to Hypercall soon.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/rfq-v2-is-live/" class="row" aria-label="Read RFQ V2 Is Live: Better Fills on Size"> <time class="date" datetime="2026-10-16T00:00:00.000Z">OCT 16, 2026</time> <div> <h3>RFQ V2 Is Live: Better Fills on Size</h3> <p class="desc">Makers compete for your options package, every leg fills as one trade, your account stays hidden if you want it to, and one signature splits the order across makers, all or none. RFQ V2 is live on the Hypercall API.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/luxxfolio-litecoin-options-strategy/" class="row" aria-label="Read LTC and DOGE Options on Hyperliquid, Proposed With Luxxfolio"> <time class="date" datetime="2026-10-05T00:00:00.000Z">OCT 05, 2026</time> <div> <h3>LTC and DOGE Options on Hyperliquid, Proposed With Luxxfolio</h3> <p class="desc">Hypercall plans to fast-track LTC and DOGE options on Hyperliquid. The first proposed program is with Luxxfolio, a Litecoin-first miner that would sell covered calls on part of its treasury.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/hype-trading-rewards/" class="row" aria-label="Read $1,000 worth of HYPE a day in trading rewards"> <time class="date" datetime="2026-09-16T18:00:00.000Z">SEP 16, 2026</time> <div> <h3>$1,000 worth of HYPE a day in trading rewards</h3> <p class="desc">$1,000 worth of HYPE a day in trading rewards, split equally between makers and takers. Live now on Hypercall for a seven-day pilot.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/block-scholes-volatility-oracles/" class="row" aria-label="Read Markets Close. Risk Doesn't. Hypercall Is Integrating Block Scholes."> <time class="date" datetime="2026-09-16T00:00:00.000Z">SEP 16, 2026</time> <div> <h3>Markets Close. Risk Doesn&#39;t. Hypercall Is Integrating Block Scholes.</h3> <p class="desc">Hypercall is integrating Block Scholes volatility oracles, bringing specialist derivatives data to the pricing and risk challenges of crypto and real-world assets.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/introducing-hypercall-earn-covered-calls/" class="row" aria-label="Read $2,000 in Quotrons Rewards on Hypercall Earn"> <time class="date" datetime="2026-09-03T00:00:00.000Z">SEP 03, 2026</time> <div> <h3>$2,000 in Quotrons Rewards on Hypercall Earn</h3> <p class="desc">Earn upfront premium on your xStocks, plus a share of $2,000 in Quotrons campaign rewards for eligible covered-call sellers on Ink.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/hypercall-community-layer-is-live/" class="row" aria-label="Read Trading Is Becoming More Social"> <time class="date" datetime="2026-08-19T00:00:00.000Z">AUG 19, 2026</time> <div> <h3>Trading Is Becoming More Social</h3> <p class="desc">Hypercall’s public profiles turn options flow into a readable record of traders, positions, badges, collections, and competition results.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/baba-sndk-options-are-live/" class="row" aria-label="Read BABA + SNDK Options Are Live on Hypercall"> <time class="date" datetime="2026-08-14T00:00:00.000Z">AUG 14, 2026</time> <div> <h3>BABA + SNDK Options Are Live on Hypercall</h3> <p class="desc">Alibaba and SanDisk options are live. Eight stock listings, Analyst, gasless deposits, referrals, and a faster app shipped since MU and NVDA.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/mu-nvda-options-coming-to-hypercall/" class="row" aria-label="Read MU + NVDA Options Are Live on Hypercall"> <time class="date" datetime="2026-07-10T00:00:00.000Z">JUL 10, 2026</time> <div> <h3>MU + NVDA Options Are Live on Hypercall</h3> <p class="desc">MU and NVDA options are live. Deposit Address, localization, and clearer quote context shipped after SP500.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/sp500-options-are-live/" class="row" aria-label="Read SP500 Options Are Live on Hypercall"> <time class="date" datetime="2026-06-27T00:00:00.000Z">JUN 27, 2026</time> <div> <h3>SP500 Options Are Live on Hypercall</h3> <p class="desc">Hypercall now supports live S&amp;P 500 options trading, Standard Margin shorting, and a much more complete trading frontend.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/hypercall-is-live-spacex-options/" class="row" aria-label="Read Hypercall Is Live: The Only Options Market on SpaceX"> <time class="date" datetime="2026-06-01T00:00:00.000Z">JUN 01, 2026</time> <div> <h3>Hypercall Is Live: The Only Options Market on SpaceX</h3> <p class="desc">Hypercall is live on mainnet with real USDC settlement, SPCX options, deposits, withdrawals, and the launch trading surface we hardened through testnet.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/product-update-week-7-of-testnet/" class="row" aria-label="Read Product Update: Week 7 Of Testnet"> <time class="date" datetime="2026-05-21T00:00:00.000Z">MAY 21, 2026</time> <div> <h3>Product Update: Week 7 Of Testnet</h3> <p class="desc">SpaceX pre-IPO options are live. A full strategy builder. Desktop chat bridged to Telegram. A new order form. Profile images. Mainnet prep. Three weeks of shipping in one update.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/product-update-week-6-of-testnet/" class="row" aria-label="Read Product Update: Week 6 Of Testnet"> <time class="date" datetime="2026-04-29T00:00:00.000Z">APR 29, 2026</time> <div> <h3>Product Update: Week 6 Of Testnet</h3> <p class="desc">RFQ trading is live. Multi-leg strategy builder with 28 auto-detected strategies. P&amp;L attribution charts. Two-phase liquidations. A full PWA overhaul. Our biggest release since launch.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/product-update-week-4-of-testnet/" class="row" aria-label="Read Week 4: Desktop Goes Live"> <time class="date" datetime="2026-04-10T00:00:00.000Z">APR 10, 2026</time> <div> <h3>Week 4: Desktop Goes Live</h3> <p class="desc">Desktop trading with TradingView charts, usernames, ghost mode, instant market switching, candle charts on every instrument, and a ticker bar showing top movers.</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/product-update-week-3-of-testnet/" class="row" aria-label="Read Product Update: Week 3 Of Testnet"> <time class="date" datetime="2026-04-06T00:00:00.000Z">APR 06, 2026</time> <div> <h3>Product Update: Week 3 Of Testnet</h3> <p class="desc">Week three of testnet focused on building competitive infrastructure and refining the desktop trading experience. The first Hypercall trading competition…</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/trade-testnet-options-win-real-prizes/" class="row" aria-label="Read Trade Testnet Options, Win Real Prizes"> <time class="date" datetime="2026-04-06T00:00:00.000Z">APR 06, 2026</time> <div> <h3>Trade Testnet Options, Win Real Prizes</h3> <p class="desc">Hypercall is running a monthly trading competition on testnet . $1,000 in SYN tokens on the line. No registration, no real capital at risk. Place a trade…</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/product-update-week-2-of-testnet/" class="row" aria-label="Read Product Update: Week 2 of Testnet"> <time class="date" datetime="2026-03-27T00:00:00.000Z">MAR 27, 2026</time> <div> <h3>Product Update: Week 2 of Testnet</h3> <p class="desc">Week two of Mobile Testnet. Last week was about correctness, legibility, and product feel. This week was about giving users real tools to understand what is…</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/product-update-week-1-of-testnet/" class="row" aria-label="Read Product Update: Week 1 of Testnet"> <time class="date" datetime="2026-03-20T00:00:00.000Z">MAR 20, 2026</time> <div> <h3>Product Update: Week 1 of Testnet</h3> <p class="desc">On Monday, we announced the Mobile Testnet . Since then, dozens of users have submitted feedback from the app. Some of it is great, some is not so good, but…</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/launching-hypercall-mobile-testnet/" class="row" aria-label="Read Launching Hypercall Mobile Testnet"> <time class="date" datetime="2026-03-16T00:00:00.000Z">MAR 16, 2026</time> <div> <h3>Launching Hypercall Mobile Testnet</h3> <p class="desc">Today, we&#39;re announcing Hypercall Mobile Testnet is live . This marks an important milestone for Hypercall. For the first time, users will be able to trade…</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/hypercall-consensus-hong-kong/" class="row" aria-label="Read Hypercall @ Consensus HK"> <time class="date" datetime="2026-02-11T00:00:00.000Z">FEB 11, 2026</time> <div> <h3>Hypercall @ Consensus HK</h3> <p class="desc">During Consensus Hong Kong 2026, the Hypercall team was on the ground running demos and pressure testing our design with professional market makers…</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/road-to-mainnet-phase-1/" class="row" aria-label="Read Road To Mainnet: Phase 1"> <time class="date" datetime="2026-02-09T00:00:00.000Z">FEB 09, 2026</time> <div> <h3>Road To Mainnet: Phase 1</h3> <p class="desc">Note: Mobile Trading is now live! You can try it out here and read our announcement here . Public testnet and mobile trading are not yet live. Both are…</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/hypercall-options-education-path/" class="row" aria-label="Read Hypercall: Options Education Path"> <time class="date" datetime="2026-01-28T00:00:00.000Z">JAN 28, 2026</time> <div> <h3>Hypercall: Options Education Path</h3> <p class="desc">Announcing the Hypercall Options Education Path. We just launched a full beginner to intermediate options curriculum in the Hypercall docs. This release…</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/hypercall-docs-release/" class="row" aria-label="Read Docs First: Hypercall’s Path to Mainnet"> <time class="date" datetime="2026-01-23T00:00:00.000Z">JAN 23, 2026</time> <div> <h3>Docs First: Hypercall’s Path to Mainnet</h3> <p class="desc">Today, we&#39;re releasing the first version of Hypercall Docs . This is a concrete step towards a public Hypercall release and it is also the fastest way for…</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/december-update/" class="row" aria-label="Read December Update"> <time class="date" datetime="2025-12-24T00:00:00.000Z">DEC 24, 2025</time> <div> <h3>December Update</h3> <p class="desc">Tl;DR: Demand: 40+ trader calls, 12+ market makers, 15+ integration conversations. Current Priority : Getting testnet to market Next: public testnet early Q1…</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li><li> <a href="/hypercall-the-options-layer-on-hyperliquid/" class="row" aria-label="Read Hypercall: Building the Options Layer on Hyperliquid"> <time class="date" datetime="2025-11-24T00:00:00.000Z">NOV 24, 2025</time> <div> <h3>Hypercall: Building the Options Layer on Hyperliquid</h3> <p class="desc">The Biggest Opportunity in All of Crypto We are building the world&#39;s largest options venue. On Hyperliquid. Options trading is now mainstream for retail…</p> </div> <span class="arrow" aria-hidden="true">→</span> </a> </li> </ul> </section>  </main> <section id="subscribe" class="subscribe-section"> <div class="subscribe-inner"> <div class="subscribe-kicker">The Hypercall letter</div> <h2>Volatility, flow and market structure, in your inbox.</h2> <p>A weekly read on what moved, what it cost, and what it means. No shilling, no price targets.</p> <form action="https://buttondown.com/api/emails/embed-subscribe/hypercall" method="post" target="_blank"> <input type="hidden" name="embed" value="1"> <input type="hidden" name="tag" value="blog"> <input type="hidden" name="metadata__source" value="blog"> <label for="blog-subscribe-email">Email address</label> <input id="blog-subscribe-email" type="email" name="email" required placeholder="you@desk.com"> <button type="submit">Subscribe</button> </form> </div> </section> <footer class="site"> <div class="inner"> <span>© 2026 HYPERCALL</span> <span>OPTIONS. ON HYPERLIQUID.</span> </div> <p class="legal">
+The information provided is for educational and informational purposes only and does not constitute financial advice. Always consult a licensed professional before making investment decisions. By using this site you agree to the  <a href="https://app.hypercall.xyz/legal/terms?s=f884">Terms of Use</a> 
+and  <a href="https://app.hypercall.xyz/legal/privacy?s=f884">Privacy Policy</a>.
+</p> </footer> <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer" data-astro-cid-gixpweiw> <button class="lightbox-close" type="button" aria-label="Close image viewer" data-astro-cid-gixpweiw>×</button> <img class="lightbox-img" alt="" data-astro-cid-gixpweiw> <div class="lightbox-caption" data-astro-cid-gixpweiw></div> </div>  <script>
+  (function () {
+    if (typeof document === 'undefined') return;
+    const lb = document.getElementById('lightbox');
+    if (!lb) return;
+    const lbImg = lb.querySelector('.lightbox-img');
+    const lbCaption = lb.querySelector('.lightbox-caption');
+    const lbClose = lb.querySelector('.lightbox-close');
+    let prevOverflow = '';
+
+    const open = (src, alt, caption) => {
+      lbImg.src = src;
+      lbImg.alt = alt || '';
+      lbCaption.textContent = caption || alt || '';
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden', 'false');
+      prevOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+    };
+
+    const close = () => {
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = prevOverflow;
+      // Clear src after transition so the next open animates in.
+      setTimeout(() => { lbImg.src = ''; }, 200);
+    };
+
+    // Delegate clicks on any <img> inside .prose.
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!(target instanceof HTMLImageElement)) return;
+      if (!target.closest('.prose')) return;
+      e.preventDefault();
+      // Prefer the largest variant from srcset if present.
+      let src = target.currentSrc || target.src;
+      if (target.srcset) {
+        const biggest = target.srcset
+          .split(',')
+          .map((s) => s.trim().split(/\s+/))
+          .sort((a, b) => parseInt(b[1] || '0') - parseInt(a[1] || '0'))[0];
+        if (biggest) src = new URL(biggest[0], location.href).toString();
+      }
+      // Use figcaption text if we're inside a <figure>.
+      const fig = target.closest('figure');
+      const captionEl = fig && fig.querySelector('figcaption');
+      open(src, target.alt, captionEl ? captionEl.textContent : target.alt);
+    });
+
+    lbClose.addEventListener('click', close);
+    lb.addEventListener('click', (e) => {
+      if (e.target === lb) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lb.classList.contains('open')) close();
+    });
+  })();
+</script> </body></html>

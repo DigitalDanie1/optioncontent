@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-08T16:32:53.496457+00:00",
+  "checkedAt": "2026-11-09T03:43:12.340820+00:00",
   "venues": {
     "Coinbase": [
       "DRV"
@@ -9,9 +9,13 @@
       "DRV",
       "NUTS",
       "SYN"
+    ],
+    "Binance": [
+      "AEVO",
+      "SYN"
     ]
   },
   "limits": [
-    "Binance spot check unavailable: HTTPError"
+    "Official news Aevo unavailable: ValueError"
   ]
 }

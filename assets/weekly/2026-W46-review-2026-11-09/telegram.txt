@@ -3,17 +3,25 @@
 
 【1부】주간 온체인
 
-최근 7일 새 공식 발표를 직접 확인하지 못했습니다. 아래 수치 갱신을 신규 출시로 해석하지 않습니다.
+Derive · 11-06
+옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.
+공식 제목: Road to Expiry with Kinetiq
+https://insights.derive.xyz/road-to-expiry-with-kinetiq/
+
+Hypercall · 11-06
+옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.
+공식 제목: Hypercall vaults: putting strategies at the heart of the exchange
+https://blog.hypercall.xyz/hypercall-vaults/
 
 토큰 프로젝트 · 데이터 업데이트
 • Derive · DRV $0.319992
   옵션 명목 거래량 7D $686.31M · 현물 Coinbase, Gate
 • Aevo · AEVO $0.01892323
-  옵션 명목 거래량 7D $14.91M · 현물 Gate
+  옵션 명목 거래량 7D $14.91M · 현물 Gate, Binance
 • Thetanuts · NUTS $0.00095703
   옵션 명목 거래량 7D $66,891 · 현물 Gate
 • Hypercall · SYN $0.143158
-  옵션 명목 거래량 7D $15.63M · 현물 Gate
+  옵션 명목 거래량 7D $15.63M · 현물 Gate, Binance
 
 Pre-TGE 관찰
 • CallPut: 7D $6.02M

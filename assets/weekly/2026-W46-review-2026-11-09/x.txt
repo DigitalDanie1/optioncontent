@@ -6,6 +6,20 @@ Options, every week — defidaniel.
 
 ---
 
+Derive | 2026-11-06
+
+Official update: Road to Expiry with Kinetiq. Publication verified; read the source for product status and terms.
+https://insights.derive.xyz/road-to-expiry-with-kinetiq/
+
+---
+
+Hypercall | 2026-11-06
+
+Official update: Hypercall vaults: putting strategies at the heart of the exchange. Publication verified; read the source for product status and terms.
+https://blog.hypercall.xyz/hypercall-vaults/
+
+---
+
 Derive / DRV
 Price $0.319992
 Rolling 7D options notional: $686.31M

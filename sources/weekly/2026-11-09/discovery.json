@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-09T03:43:12.340820+00:00",
+  "automatic": true,
+  "news": [
+    {
+      "project": "Derive",
+      "date": "2026-11-06",
+      "url": "https://insights.derive.xyz/road-to-expiry-with-kinetiq/",
+      "title": "Road to Expiry with Kinetiq",
+      "source": "https://insights.derive.xyz/rss/",
+      "originalTitle": "Road to Expiry with Kinetiq",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: Road to Expiry with Kinetiq",
+      "en": "Official update: Road to Expiry with Kinetiq. Publication verified; read the source for product status and terms.",
+      "verify": "Road to Expiry with Kinetiq"
+    },
+    {
+      "project": "Hypercall",
+      "date": "2026-11-06",
+      "url": "https://blog.hypercall.xyz/hypercall-vaults/",
+      "title": "Hypercall vaults: putting strategies at the heart of the exchange",
+      "source": "https://blog.hypercall.xyz/",
+      "originalTitle": "Hypercall vaults: putting strategies at the heart of the exchange",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: Hypercall vaults: putting strategies at the heart of the exchange",
+      "en": "Official update: Hypercall vaults: putting strategies at the heart of the exchange. Publication verified; read the source for product status and terms.",
+      "verify": "Hypercall vaults: putting strategies at the h"
+    },
+    {
+      "project": "Aevo",
+      "date": "2026-11-02",
+      "url": "https://t.me/aevoupdates/538",
+      "title": "10M $AEVO has now been bought back with exchange trading fees and burned through the monthly program in 2026. November’s 1M burn is now onchain 🔮 https://ethers",
+      "source": "https://t.me/s/aevoupdates",
+      "originalTitle": "10M $AEVO has now been bought back with exchange trading",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: 10M $AEVO has now been bought back with exchange trading",
+      "en": "Official update: 10M $AEVO has now been bought back with exchange trading. Publication verified; read the source for product status and terms.",
+      "verify": "10M $AEVO has now been bought back with excha"
+    }
+  ],
+  "events": [],
+  "limits": []
+}
