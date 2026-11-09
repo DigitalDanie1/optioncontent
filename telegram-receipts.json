@@ -60,6 +60,10 @@
         "status": "sent",
         "message_id": 16,
         "at": "2026-11-09T03:47:22.351Z"
+      },
+      "text": {
+        "status": "sending",
+        "at": "2026-11-09T03:47:23.511Z"
       }
     }
   }
