@@ -1,16 +1,17 @@
 {
-  "preparedAt": "2026-11-15T10:33:29.519Z",
-  "sourceWindowStart": "2026-11-08",
-  "sourceWindowEnd": "2026-11-14",
+  "preparedAt": "2026-11-15T16:51:39.695Z",
+  "sourceWindowStart": "2026-11-09",
+  "sourceWindowEnd": "2026-11-15",
   "snapshotAt": "2026-11-15T07:47:01.813Z",
   "deliveryDate": "2026-11-16",
-  "configId": "2026-W46-review-2026-11-15",
-  "text": "assets/weekly/2026-W46-review-2026-11-15/telegram.txt",
-  "photo": "assets/weekly/2026-W46-review-2026-11-15/onepager-ko.png",
-  "englishPhoto": "assets/weekly/2026-W46-review-2026-11-15/onepager-en.png",
-  "englishText": "assets/weekly/2026-W46-review-2026-11-15/x.txt",
-  "sources": "sources/weekly/2026-11-15",
+  "configId": "2026-W47-review-2026-11-16",
+  "text": "assets/weekly/2026-W47-review-2026-11-16/telegram.txt",
+  "photo": "assets/weekly/2026-W47-review-2026-11-16/onepager-ko.png",
+  "englishPhoto": "assets/weekly/2026-W47-review-2026-11-16/onepager-en.png",
+  "englishText": "assets/weekly/2026-W47-review-2026-11-16/x.txt",
+  "sources": "sources/weekly/2026-11-16",
   "limitations": [
+    "Binance spot check unavailable: HTTPError",
     "No executable quotes; payoff is an illustrative 100/95 debit-2 example.",
     "No exhaustive X timeline collection.",
     "No new video produced."
@@ -23,8 +24,8 @@
       "title": "How to Sell a Cash-Secured Put",
       "source": "https://insights.derive.xyz/rss/",
       "originalTitle": "How to Sell a Cash-Secured Put",
-      "ko": "현금담보 풋 매도 교육 글을 공개했습니다. 프리미엄이 최대 이익이며, 행사가 아래로 내려가면 손실이 커지는 구조를 설명합니다.",
-      "en": "Derive published a cash-secured put guide explaining the premium cap and downside below the strike.",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: How to Sell a Cash-Secured Put",
+      "en": "Official update: How to Sell a Cash-Secured Put. Publication verified; read the source for product status and terms.",
       "verify": "How to Sell a Cash-Secured Put"
     },
     {
@@ -34,17 +35,17 @@
       "title": "Announcing the ANT Trading Championship",
       "source": "https://blog.hypercall.xyz/",
       "originalTitle": "Announcing the ANT Trading Championship",
-      "ko": "ANT 옵션 거래 지원과 3주간의 거래 대회를 발표했습니다. 대회 상금은 총 1,000달러 상당의 SYN입니다.",
-      "en": "Hypercall said ANT options are live and announced a three-week competition with a $1,000 prize pool paid in SYN.",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: Announcing the ANT Trading Championship",
+      "en": "Official update: Announcing the ANT Trading Championship. Publication verified; read the source for product status and terms.",
       "verify": "Announcing the ANT Trading Championship"
     }
   ],
   "macro": [],
   "hashes": {
-    "assets/weekly/2026-W46-review-2026-11-15/telegram.txt": "8f8087b0f99191a361f4a87c59ee310a7808cca67872b126e74409cf5a343950",
-    "assets/weekly/2026-W46-review-2026-11-15/onepager-ko.png": "4f5509beee1c75b7dcabb86282aa0ff51999f31a1356933f058bde6678ccd481",
-    "assets/weekly/2026-W46-review-2026-11-15/onepager-en.png": "e729b49988db7a486e5e4bf1d45ee8e4f4c0e6be49f8377a7430a065c5bd32e6",
-    "assets/weekly/2026-W46-review-2026-11-15/x.txt": "71deee93dd63c25a9b04218dc32152f987e7e67edb9ee51d0fc3fa6aed2a832c"
+    "assets/weekly/2026-W47-review-2026-11-16/telegram.txt": "86a7591f46c6bffcd28f65bfdc499142d11e7ce1d4532d90992026d9ce1a9f63",
+    "assets/weekly/2026-W47-review-2026-11-16/onepager-ko.png": "6e9a3b9920546dbc6249b391dcc45d346b9f0ba8df0836246f4592b5cec55016",
+    "assets/weekly/2026-W47-review-2026-11-16/onepager-en.png": "3dc56955075a7c3d1cb2241e7155625d58e22b6c49bbe63b5f68bafee5c70304",
+    "assets/weekly/2026-W47-review-2026-11-16/x.txt": "a74a95571534c087087b1f3eb1bc33327c658fb24947dc42ee87813ed5258b00"
   },
   "validated": true
 }
