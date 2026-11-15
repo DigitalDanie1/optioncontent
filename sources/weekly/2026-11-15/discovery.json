@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-11-15T10:32:34.169725+00:00",
+  "automatic": true,
+  "news": [
+    {
+      "project": "Derive",
+      "date": "2026-11-11",
+      "url": "https://insights.derive.xyz/how-to-sell-a-cash-secured-put/",
+      "title": "How to Sell a Cash-Secured Put",
+      "source": "https://insights.derive.xyz/rss/",
+      "originalTitle": "How to Sell a Cash-Secured Put",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: How to Sell a Cash-Secured Put",
+      "en": "Official update: How to Sell a Cash-Secured Put. Publication verified; read the source for product status and terms.",
+      "verify": "How to Sell a Cash-Secured Put"
+    },
+    {
+      "project": "Hypercall",
+      "date": "2026-11-11",
+      "url": "https://blog.hypercall.xyz/ant-trading-championship/",
+      "title": "Announcing the ANT Trading Championship",
+      "source": "https://blog.hypercall.xyz/",
+      "originalTitle": "Announcing the ANT Trading Championship",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: Announcing the ANT Trading Championship",
+      "en": "Official update: Announcing the ANT Trading Championship. Publication verified; read the source for product status and terms.",
+      "verify": "Announcing the ANT Trading Championship"
+    }
+  ],
+  "events": [],
+  "limits": []
+}

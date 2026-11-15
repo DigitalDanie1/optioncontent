@@ -1,0 +1,46 @@
+{
+  "scope": "Selected option tokens only; full response not stored",
+  "fullResponseSha256": "5b658d97b1cca2776decd4ba86031cbf68fc59581c3d0c719c4251a6f4138670",
+  "records": [
+    {
+      "id": "DRV-USD",
+      "base_currency": "DRV",
+      "quote_currency": "USD",
+      "quote_increment": "0.00001",
+      "base_increment": "0.1",
+      "display_name": "DRV/USD",
+      "min_market_funds": "1",
+      "margin_enabled": false,
+      "post_only": false,
+      "limit_only": false,
+      "cancel_only": false,
+      "status": "online",
+      "status_message": "",
+      "trading_disabled": false,
+      "fx_stablecoin": false,
+      "max_slippage_percentage": "0.03000000",
+      "auction_mode": false,
+      "high_bid_limit_percentage": ""
+    },
+    {
+      "id": "SYN-USD",
+      "base_currency": "SYN",
+      "quote_currency": "USD",
+      "quote_increment": "0.001",
+      "base_increment": "0.01",
+      "display_name": "SYN-USD",
+      "min_market_funds": "1",
+      "margin_enabled": false,
+      "post_only": false,
+      "limit_only": false,
+      "cancel_only": false,
+      "status": "delisted",
+      "status_message": "",
+      "trading_disabled": true,
+      "fx_stablecoin": false,
+      "max_slippage_percentage": "0.05000000",
+      "auction_mode": false,
+      "high_bid_limit_percentage": ""
+    }
+  ]
+}

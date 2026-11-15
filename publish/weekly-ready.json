@@ -1,17 +1,16 @@
 {
-  "preparedAt": "2026-11-09T03:43:33.630Z",
-  "sourceWindowStart": "2026-11-02",
-  "sourceWindowEnd": "2026-11-08",
-  "snapshotAt": "2026-11-08T07:12:54.901Z",
-  "deliveryDate": "2026-11-09",
-  "configId": "2026-W46-review-2026-11-09",
-  "text": "assets/weekly/2026-W46-review-2026-11-09/telegram.txt",
-  "photo": "assets/weekly/2026-W46-review-2026-11-09/onepager-ko.png",
-  "englishPhoto": "assets/weekly/2026-W46-review-2026-11-09/onepager-en.png",
-  "englishText": "assets/weekly/2026-W46-review-2026-11-09/x.txt",
-  "sources": "sources/weekly/2026-11-09",
+  "preparedAt": "2026-11-15T10:33:29.519Z",
+  "sourceWindowStart": "2026-11-08",
+  "sourceWindowEnd": "2026-11-14",
+  "snapshotAt": "2026-11-15T07:47:01.813Z",
+  "deliveryDate": "2026-11-16",
+  "configId": "2026-W46-review-2026-11-15",
+  "text": "assets/weekly/2026-W46-review-2026-11-15/telegram.txt",
+  "photo": "assets/weekly/2026-W46-review-2026-11-15/onepager-ko.png",
+  "englishPhoto": "assets/weekly/2026-W46-review-2026-11-15/onepager-en.png",
+  "englishText": "assets/weekly/2026-W46-review-2026-11-15/x.txt",
+  "sources": "sources/weekly/2026-11-15",
   "limitations": [
-    "Official news Aevo unavailable: ValueError",
     "No executable quotes; payoff is an illustrative 100/95 debit-2 example.",
     "No exhaustive X timeline collection.",
     "No new video produced."
@@ -19,33 +18,33 @@
   "news": [
     {
       "project": "Derive",
-      "date": "2026-11-06",
-      "url": "https://insights.derive.xyz/road-to-expiry-with-kinetiq/",
-      "title": "Road to Expiry with Kinetiq",
+      "date": "2026-11-11",
+      "url": "https://insights.derive.xyz/how-to-sell-a-cash-secured-put/",
+      "title": "How to Sell a Cash-Secured Put",
       "source": "https://insights.derive.xyz/rss/",
-      "originalTitle": "Road to Expiry with Kinetiq",
-      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: Road to Expiry with Kinetiq",
-      "en": "Official update: Road to Expiry with Kinetiq. Publication verified; read the source for product status and terms.",
-      "verify": "Road to Expiry with Kinetiq"
+      "originalTitle": "How to Sell a Cash-Secured Put",
+      "ko": "현금담보 풋 매도 교육 글을 공개했습니다. 프리미엄이 최대 이익이며, 행사가 아래로 내려가면 손실이 커지는 구조를 설명합니다.",
+      "en": "Derive published a cash-secured put guide explaining the premium cap and downside below the strike.",
+      "verify": "How to Sell a Cash-Secured Put"
     },
     {
       "project": "Hypercall",
-      "date": "2026-11-06",
-      "url": "https://blog.hypercall.xyz/hypercall-vaults/",
-      "title": "Hypercall vaults: putting strategies at the heart of the exchange",
+      "date": "2026-11-11",
+      "url": "https://blog.hypercall.xyz/ant-trading-championship/",
+      "title": "Announcing the ANT Trading Championship",
       "source": "https://blog.hypercall.xyz/",
-      "originalTitle": "Hypercall vaults: putting strategies at the heart of the exchange",
-      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: Hypercall vaults: putting strategies at the heart of the exchange",
-      "en": "Official update: Hypercall vaults: putting strategies at the heart of the exchange. Publication verified; read the source for product status and terms.",
-      "verify": "Hypercall vaults: putting strategies at the h"
+      "originalTitle": "Announcing the ANT Trading Championship",
+      "ko": "ANT 옵션 거래 지원과 3주간의 거래 대회를 발표했습니다. 대회 상금은 총 1,000달러 상당의 SYN입니다.",
+      "en": "Hypercall said ANT options are live and announced a three-week competition with a $1,000 prize pool paid in SYN.",
+      "verify": "Announcing the ANT Trading Championship"
     }
   ],
   "macro": [],
   "hashes": {
-    "assets/weekly/2026-W46-review-2026-11-09/telegram.txt": "5ce40f410e79d1b8a84df7862ad1b97dbe53febec4fac2354badcfdf0b1fd500",
-    "assets/weekly/2026-W46-review-2026-11-09/onepager-ko.png": "28393f588911d5cc9dcf5758ceb99753ba7ccfbd93e7e75ca5345bd5a1ae4f90",
-    "assets/weekly/2026-W46-review-2026-11-09/onepager-en.png": "77c325af67c1dfd18a12c047c7cb478df08eec1870912eb3601e8ff02baff009",
-    "assets/weekly/2026-W46-review-2026-11-09/x.txt": "762710a49c363c81aa4d134385e7e4e7c28090a6e6174510c39d3e0a8b7f3398"
+    "assets/weekly/2026-W46-review-2026-11-15/telegram.txt": "8f8087b0f99191a361f4a87c59ee310a7808cca67872b126e74409cf5a343950",
+    "assets/weekly/2026-W46-review-2026-11-15/onepager-ko.png": "4f5509beee1c75b7dcabb86282aa0ff51999f31a1356933f058bde6678ccd481",
+    "assets/weekly/2026-W46-review-2026-11-15/onepager-en.png": "e729b49988db7a486e5e4bf1d45ee8e4f4c0e6be49f8377a7430a065c5bd32e6",
+    "assets/weekly/2026-W46-review-2026-11-15/x.txt": "71deee93dd63c25a9b04218dc32152f987e7e67edb9ee51d0fc3fa6aed2a832c"
   },
   "validated": true
 }
