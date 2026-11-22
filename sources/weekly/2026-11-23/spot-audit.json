@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-22T17:40:38.183167+00:00",
+  "venues": {
+    "Coinbase": [
+      "DRV"
+    ],
+    "Gate": [
+      "AEVO",
+      "DRV",
+      "NUTS",
+      "SYN"
+    ]
+  },
+  "limits": [
+    "Official news Aevo unavailable: ValueError",
+    "Binance spot check unavailable: HTTPError"
+  ]
+}

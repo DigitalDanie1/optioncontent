@@ -1,0 +1,74 @@
+Onchain Options Weekly | 2026-W48
+
+Metrics as of 11/22 15:56 SGT. Source-backed project review, conditional strategy education and macro watch.
+
+Options, every week — defidaniel.
+
+---
+
+Derive | 2026-11-18
+
+Official update: How to Set Up a Put Spread. Publication verified; read the source for product status and terms.
+https://insights.derive.xyz/how-to-set-up-a-put-spread/
+
+---
+
+Hypercall | 2026-11-17
+
+Official update: How Hypercall Handles the SNDK 8-for-1 Split. Publication verified; read the source for product status and terms.
+https://blog.hypercall.xyz/sndk-stock-split/
+
+---
+
+Derive / DRV
+Price $0.318872
+Rolling 7D options notional: $863.25M
+
+OPSHNZ snapshot: 11/22 15:56 SGT. Missing volume is not zero.
+
+---
+
+Aevo / AEVO
+Price $0.01544307
+Rolling 7D options notional: $13.69M
+
+OPSHNZ snapshot: 11/22 15:56 SGT. Missing volume is not zero.
+
+---
+
+Thetanuts / NUTS
+Price $0.00092277
+Rolling 7D options notional: $108,991
+
+OPSHNZ snapshot: 11/22 15:56 SGT. Missing volume is not zero.
+
+---
+
+Hypercall / SYN
+Price $0.110348
+Rolling 7D options notional: $15.96M
+
+OPSHNZ snapshot: 11/22 15:56 SGT. Missing volume is not zero.
+
+---
+
+BTC 30D IV 54.63% / RV 50.28%
+As of 11/22 15:58 SGT.
+
+Historical realised volatility is not a forecast. This comparison alone does not establish a short-volatility edge.
+
+---
+
+Illustrative bear put spread:
+Buy 100 put, sell 95 put, pay net 2. Same underlying/expiry, equal size.
+
+Expiry max loss 2; max profit 3; break-even 98. Not live prices. Fees/slippage excluded.
+
+---
+
+SWOT | Bear put spread
+
+S: capped loss, lower debit than a standalone put.
+W: theta decay, capped gain.
+O: reassess after a confirmed breakdown.
+T: rebound, IV decline, poor leg execution.

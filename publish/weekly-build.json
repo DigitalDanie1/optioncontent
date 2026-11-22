@@ -1,16 +1,17 @@
 {
-  "preparedAt": "2026-11-15T16:51:33.389053+00:00",
-  "sourceWindowStart": "2026-11-09",
-  "sourceWindowEnd": "2026-11-15",
-  "snapshotAt": "2026-11-15T07:47:01.813Z",
-  "deliveryDate": "2026-11-16",
-  "configId": "2026-W47-review-2026-11-16",
-  "text": "assets/weekly/2026-W47-review-2026-11-16/telegram.txt",
-  "photo": "assets/weekly/2026-W47-review-2026-11-16/onepager-ko.png",
-  "englishPhoto": "assets/weekly/2026-W47-review-2026-11-16/onepager-en.png",
-  "englishText": "assets/weekly/2026-W47-review-2026-11-16/x.txt",
-  "sources": "sources/weekly/2026-11-16",
+  "preparedAt": "2026-11-22T17:40:38.183167+00:00",
+  "sourceWindowStart": "2026-11-16",
+  "sourceWindowEnd": "2026-11-22",
+  "snapshotAt": "2026-11-22T07:56:41.502Z",
+  "deliveryDate": "2026-11-23",
+  "configId": "2026-W48-review-2026-11-23",
+  "text": "assets/weekly/2026-W48-review-2026-11-23/telegram.txt",
+  "photo": "assets/weekly/2026-W48-review-2026-11-23/onepager-ko.png",
+  "englishPhoto": "assets/weekly/2026-W48-review-2026-11-23/onepager-en.png",
+  "englishText": "assets/weekly/2026-W48-review-2026-11-23/x.txt",
+  "sources": "sources/weekly/2026-11-23",
   "limitations": [
+    "Official news Aevo unavailable: ValueError",
     "Binance spot check unavailable: HTTPError",
     "No executable quotes; payoff is an illustrative 100/95 debit-2 example.",
     "No exhaustive X timeline collection.",
@@ -19,25 +20,25 @@
   "news": [
     {
       "project": "Derive",
-      "date": "2026-11-11",
-      "url": "https://insights.derive.xyz/how-to-sell-a-cash-secured-put/",
-      "title": "How to Sell a Cash-Secured Put",
+      "date": "2026-11-18",
+      "url": "https://insights.derive.xyz/how-to-set-up-a-put-spread/",
+      "title": "How to Set Up a Put Spread",
       "source": "https://insights.derive.xyz/rss/",
-      "originalTitle": "How to Sell a Cash-Secured Put",
-      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: How to Sell a Cash-Secured Put",
-      "en": "Official update: How to Sell a Cash-Secured Put. Publication verified; read the source for product status and terms.",
-      "verify": "How to Sell a Cash-Secured Put"
+      "originalTitle": "How to Set Up a Put Spread",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: How to Set Up a Put Spread",
+      "en": "Official update: How to Set Up a Put Spread. Publication verified; read the source for product status and terms.",
+      "verify": "How to Set Up a Put Spread"
     },
     {
       "project": "Hypercall",
-      "date": "2026-11-11",
-      "url": "https://blog.hypercall.xyz/ant-trading-championship/",
-      "title": "Announcing the ANT Trading Championship",
+      "date": "2026-11-17",
+      "url": "https://blog.hypercall.xyz/sndk-stock-split/",
+      "title": "How Hypercall Handles the SNDK 8-for-1 Split",
       "source": "https://blog.hypercall.xyz/",
-      "originalTitle": "Announcing the ANT Trading Championship",
-      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: Announcing the ANT Trading Championship",
-      "en": "Official update: Announcing the ANT Trading Championship. Publication verified; read the source for product status and terms.",
-      "verify": "Announcing the ANT Trading Championship"
+      "originalTitle": "How Hypercall Handles the SNDK 8-for-1 Split",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: How Hypercall Handles the SNDK 8-for-1 Split",
+      "en": "Official update: How Hypercall Handles the SNDK 8-for-1 Split. Publication verified; read the source for product status and terms.",
+      "verify": "How Hypercall Handles the SNDK 8-for-1 Split"
     }
   ],
   "macro": []

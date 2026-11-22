@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-22T17:40:38.183167+00:00",
+  "automatic": true,
+  "news": [
+    {
+      "project": "Derive",
+      "date": "2026-11-18",
+      "url": "https://insights.derive.xyz/how-to-set-up-a-put-spread/",
+      "title": "How to Set Up a Put Spread",
+      "source": "https://insights.derive.xyz/rss/",
+      "originalTitle": "How to Set Up a Put Spread",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: How to Set Up a Put Spread",
+      "en": "Official update: How to Set Up a Put Spread. Publication verified; read the source for product status and terms.",
+      "verify": "How to Set Up a Put Spread"
+    },
+    {
+      "project": "Aevo",
+      "date": "2026-11-18",
+      "url": "https://t.me/aevoupdates/539",
+      "title": "Aevo’s L2 transfer routes are getting an upgrade To complete the upgrade and properly test each connection before reopening, deposits and withdrawals via Arbitr",
+      "source": "https://t.me/s/aevoupdates",
+      "originalTitle": "Aevo’s L2 transfer routes are getting an upgrade To complete",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: Aevo’s L2 transfer routes are getting an upgrade To complete",
+      "en": "Official update: Aevo’s L2 transfer routes are getting an upgrade To complete. Publication verified; read the source for product status and terms.",
+      "verify": "Aevo’s L2 transfer routes are getting an upgr"
+    },
+    {
+      "project": "Hypercall",
+      "date": "2026-11-17",
+      "url": "https://blog.hypercall.xyz/sndk-stock-split/",
+      "title": "How Hypercall Handles the SNDK 8-for-1 Split",
+      "source": "https://blog.hypercall.xyz/",
+      "originalTitle": "How Hypercall Handles the SNDK 8-for-1 Split",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: How Hypercall Handles the SNDK 8-for-1 Split",
+      "en": "Official update: How Hypercall Handles the SNDK 8-for-1 Split. Publication verified; read the source for product status and terms.",
+      "verify": "How Hypercall Handles the SNDK 8-for-1 Split"
+    }
+  ],
+  "events": [],
+  "limits": []
+}

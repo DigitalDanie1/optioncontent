@@ -1,16 +1,17 @@
 {
-  "preparedAt": "2026-11-15T16:51:39.695Z",
-  "sourceWindowStart": "2026-11-09",
-  "sourceWindowEnd": "2026-11-15",
-  "snapshotAt": "2026-11-15T07:47:01.813Z",
-  "deliveryDate": "2026-11-16",
-  "configId": "2026-W47-review-2026-11-16",
-  "text": "assets/weekly/2026-W47-review-2026-11-16/telegram.txt",
-  "photo": "assets/weekly/2026-W47-review-2026-11-16/onepager-ko.png",
-  "englishPhoto": "assets/weekly/2026-W47-review-2026-11-16/onepager-en.png",
-  "englishText": "assets/weekly/2026-W47-review-2026-11-16/x.txt",
-  "sources": "sources/weekly/2026-11-16",
+  "preparedAt": "2026-11-22T17:40:45.225Z",
+  "sourceWindowStart": "2026-11-16",
+  "sourceWindowEnd": "2026-11-22",
+  "snapshotAt": "2026-11-22T07:56:41.502Z",
+  "deliveryDate": "2026-11-23",
+  "configId": "2026-W48-review-2026-11-23",
+  "text": "assets/weekly/2026-W48-review-2026-11-23/telegram.txt",
+  "photo": "assets/weekly/2026-W48-review-2026-11-23/onepager-ko.png",
+  "englishPhoto": "assets/weekly/2026-W48-review-2026-11-23/onepager-en.png",
+  "englishText": "assets/weekly/2026-W48-review-2026-11-23/x.txt",
+  "sources": "sources/weekly/2026-11-23",
   "limitations": [
+    "Official news Aevo unavailable: ValueError",
     "Binance spot check unavailable: HTTPError",
     "No executable quotes; payoff is an illustrative 100/95 debit-2 example.",
     "No exhaustive X timeline collection.",
@@ -19,33 +20,33 @@
   "news": [
     {
       "project": "Derive",
-      "date": "2026-11-11",
-      "url": "https://insights.derive.xyz/how-to-sell-a-cash-secured-put/",
-      "title": "How to Sell a Cash-Secured Put",
+      "date": "2026-11-18",
+      "url": "https://insights.derive.xyz/how-to-set-up-a-put-spread/",
+      "title": "How to Set Up a Put Spread",
       "source": "https://insights.derive.xyz/rss/",
-      "originalTitle": "How to Sell a Cash-Secured Put",
-      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: How to Sell a Cash-Secured Put",
-      "en": "Official update: How to Sell a Cash-Secured Put. Publication verified; read the source for product status and terms.",
-      "verify": "How to Sell a Cash-Secured Put"
+      "originalTitle": "How to Set Up a Put Spread",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: How to Set Up a Put Spread",
+      "en": "Official update: How to Set Up a Put Spread. Publication verified; read the source for product status and terms.",
+      "verify": "How to Set Up a Put Spread"
     },
     {
       "project": "Hypercall",
-      "date": "2026-11-11",
-      "url": "https://blog.hypercall.xyz/ant-trading-championship/",
-      "title": "Announcing the ANT Trading Championship",
+      "date": "2026-11-17",
+      "url": "https://blog.hypercall.xyz/sndk-stock-split/",
+      "title": "How Hypercall Handles the SNDK 8-for-1 Split",
       "source": "https://blog.hypercall.xyz/",
-      "originalTitle": "Announcing the ANT Trading Championship",
-      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: Announcing the ANT Trading Championship",
-      "en": "Official update: Announcing the ANT Trading Championship. Publication verified; read the source for product status and terms.",
-      "verify": "Announcing the ANT Trading Championship"
+      "originalTitle": "How Hypercall Handles the SNDK 8-for-1 Split",
+      "ko": "옵션 프로젝트의 새 공식 글을 확인했습니다. 발표 범위와 적용 조건은 원문에서 확인합니다.\n공식 제목: How Hypercall Handles the SNDK 8-for-1 Split",
+      "en": "Official update: How Hypercall Handles the SNDK 8-for-1 Split. Publication verified; read the source for product status and terms.",
+      "verify": "How Hypercall Handles the SNDK 8-for-1 Split"
     }
   ],
   "macro": [],
   "hashes": {
-    "assets/weekly/2026-W47-review-2026-11-16/telegram.txt": "86a7591f46c6bffcd28f65bfdc499142d11e7ce1d4532d90992026d9ce1a9f63",
-    "assets/weekly/2026-W47-review-2026-11-16/onepager-ko.png": "6e9a3b9920546dbc6249b391dcc45d346b9f0ba8df0836246f4592b5cec55016",
-    "assets/weekly/2026-W47-review-2026-11-16/onepager-en.png": "3dc56955075a7c3d1cb2241e7155625d58e22b6c49bbe63b5f68bafee5c70304",
-    "assets/weekly/2026-W47-review-2026-11-16/x.txt": "a74a95571534c087087b1f3eb1bc33327c658fb24947dc42ee87813ed5258b00"
+    "assets/weekly/2026-W48-review-2026-11-23/telegram.txt": "d98f2983f42348a148b61748aa38544a0ea6cc29e57f9bd5f7aa062021067876",
+    "assets/weekly/2026-W48-review-2026-11-23/onepager-ko.png": "99d5fc9e9b4b89eb0625a36c1f3fd55f2b4db91e8fa8f0c486ce1523dd350b1c",
+    "assets/weekly/2026-W48-review-2026-11-23/onepager-en.png": "357de9303bcc9ae78d8ca79265876016051a4fc566c7e5f01036f1e6c0391dec",
+    "assets/weekly/2026-W48-review-2026-11-23/x.txt": "a9c1e2eb9fb8f66a0e104505faa1c501ecc9a2a1f9f6a374ca73f89be18e9174"
   },
   "validated": true
 }
